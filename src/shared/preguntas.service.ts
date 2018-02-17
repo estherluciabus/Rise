@@ -12,7 +12,7 @@ export class PreguntasService {
     this.preguntasObservable = this.preguntasReference.snapshotChanges()
     .map(cambios => {
       return cambios.map(cambio =>{
-        return cambio.paylod.val();
+        return cambio.payload.val();
       })
     });
 
