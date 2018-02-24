@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +7,21 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(private toastCtrl: ToastController) {
 
   }
 
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'esta es una alarma',
+      duration: 3000,
+      position: 'bottom'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+  }
 }

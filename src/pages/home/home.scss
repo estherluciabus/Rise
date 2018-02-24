@@ -4,48 +4,62 @@ page-home {
  display: flex;
  flex-direction:column;
   }
- .column-container {
+ .padre-container {
   display : flex;
   flex-direction:column;
-  height: 50%
+  height: 100%
  }
- .row-container{
+ .botones-container{
    display: flex;
    flex-direction:row;
+    width: 100%;
  }
- .map-container{
+ .fecha-container{
    display : flex;
-   flex-direction:row;
-   height: 50%;
-   width: 90%;
+   flex-direction:column;
+   height: 10%;
+   width: 100%;
+  }
+  .centro-container{
+    display: flex;
+    flex-direction:row;
+    height:60%;
+    width: 100%;
+    border:5px solid black;
+  }
   .semaforo-container{
-    display: flex;
-    flex-direction:column;
-    height:80%;
-    width: 90%;
-    border:5px solid black;
-  }
-  .totaltap-container{
-    display: flex;
-    flex-direction:row;
-    height:50%;
-    width: 50%;
-    border:5px solid black;
-  }
-  .tap-container{
-    display: flex;
-    flex-direction:row;
-    height:20%;
-    width:50%;
-    border:5px solid black;
-  }
-  .row-container{
-    display: flex;
-    flex-direction:row;
-    height:10%;
-    width: 20%;
-    border: 5px solid black;
-  }
+    width: 40%;
 
   }
- }
+  .derecha-container{
+    display: flex;
+    flex-direction:column;
+    width:60%;
+    border:5px solid black;
+  }
+    .map-container {
+      display: flex;
+      flex-direction:column;
+      width:100%;
+      height:80%;
+      border:5px solid black;
+    }
+
+    .aviso-container{
+      display: flex;
+      flex-direction:column;
+      width:100%;
+      height:20%;
+      border:5px solid black;
+
+      }
+        .alarma-container{
+          display: flex;
+          flex-direction:column;
+          width:100%;
+          height:10%;
+          border:5px solid black;
+
+        }
+
+    }

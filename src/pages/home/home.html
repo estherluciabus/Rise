@@ -7,19 +7,26 @@
 </ion-header>
 
 <ion-content class ="eventos-container">
-  <div class="column-container">
-    <div class="row-container">
-    <button ion-button color="danger" outline round>1</button>
-    <button ion-button>2</button>
-    <button ion-button>3</button>
-    <button ion-button>4</button>
-    <button ion-button>5</button>
+  <div class="padre-container">
+    <div class="botones-container">
+      <button ion-button>1</button>
+      <button ion-button>2</button>
+      <button ion-button><ion-icon name="home"></ion-icon></button>
+      <button ion-button>4</button>
+      <button ion-button>5</button>
     </div>
-    <div class="map-container"></div>
-    <div class="semaforo-container"></div>
-    <div class="totaltap-container"></div>
-    <div class="tap-container"></div>
-    <div class="row-container"></div>
+    <div class="fecha-container">HOLA</div>
+    <div class="centro-container">
+      <div class="semaforo-container">SEMAFORO</div>
+      <div class="derecha-container">
+        <div class="map-container">MAPA</div>
+        <div class="aviso-container">AVISO</div>
+      </div>
+   </div>
+   <div class="alarma-container">ALARMA
+   <button ion-button (click)="presentToast()">ALARMA</button>
+  </div>
+
 
  </div>
 </ion-content>
