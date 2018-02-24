@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { preguntasService} from '../shared/preguntas.service';
+import { PreguntasService} from '../shared/preguntas.service';
 
 
 import{config} from '../firebaseConfig';
@@ -31,6 +31,7 @@ import{AngularFireModule} from 'angularfire2';
   providers: [
     StatusBar,
     SplashScreen,
+    PreguntasService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
