@@ -4,28 +4,24 @@ page-home {
  display: flex;
  flex-direction:column;
   }
+
  .padre-container {
   display : flex;
   flex-direction:column;
   height: 100%
  }
- .botones-container{
+ .tab-container{
    display: flex;
    flex-direction:row;
     width: 100%;
+
  }
  .fecha-container{
    display : flex;
    flex-direction:column;
    height: 10%;
    width: 100%;
-  }
-  .centro-container{
-    display: flex;
-    flex-direction:row;
-    height:60%;
-    width: 100%;
-    border:5px solid black;
+
   }
   .semaforo-container{
     width: 40%;

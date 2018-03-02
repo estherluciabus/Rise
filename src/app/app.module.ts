@@ -6,20 +6,27 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SaludPage } from '../pages/salud/salud';
+import { MenuPage } from '../pages/menu/menu';
+import { ConfiguracionPage } from '../pages/configuracion/configuracion';
+
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { PreguntasService} from '../shared/preguntas.service';
 
 
-import{config} from '../firebaseConfig';
-import{AngularFireDatabaseModule} from 'angularfire2/database';
-import{AngularFireModule} from 'angularfire2';
+import{ config} from '../firebaseConfig';
+import{ AngularFireDatabaseModule } from 'angularfire2/database';
+import{ AngularFireModule } from 'angularfire2';
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
-    HomePage
+    HomePage,
+    SaludPage,
+    MenuPage,
+    ConfiguracionPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,10 @@ import{AngularFireModule} from 'angularfire2';
   entryComponents: [
     MyApp,
     TabsPage,
-    HomePage
+    HomePage,
+    SaludPage,
+    MenuPage,
+    Configuracion
   ],
   providers: [
     StatusBar,
@@ -37,5 +47,8 @@ import{AngularFireModule} from 'angularfire2';
     PreguntasService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
+
+
+
 })
 export class AppModule {}

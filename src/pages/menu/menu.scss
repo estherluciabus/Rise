@@ -1,0 +1,56 @@
+page-menu{
+.menu-container{
+  .scroll-content {
+  display: flex;
+  flex-direction:column;
+  }
+}
+.padre-container {
+ display : flex;
+ flex-direction:column;
+ height: 100%
+
+}
+.fecha-container{
+  display : flex;
+  flex-direction:column;
+  height: 10%;
+  width: 100%;
+
+ }
+ .semaforo-container{
+   width: 40%;
+
+ }
+ .derecha-container{
+   display: flex;
+   flex-direction:column;
+   width:60%;
+   border:5px solid black;
+ }
+   .map-container {
+     display: flex;
+     flex-direction:column;
+     width:100%;
+     height:80%;
+     border:5px solid black;
+   }
+
+   .aviso-container{
+     display: flex;
+     flex-direction:column;
+     width:100%;
+     height:20%;
+     border:5px solid black;
+
+     }
+       .alarma-container{
+         display: flex;
+         flex-direction:column;
+         width:100%;
+         height:10%;
+         border:5px solid black;
+
+       }
+
+   }

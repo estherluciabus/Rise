@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title>SALUD
+
+      <div class="seleccion-container">
+        <ion-toolbar>
+          <ion-segment [(ngModel)]="salud">
+            <ion-segment-button value="C">
+              C
+            </ion-segment-button>
+            <ion-segment-button value="A">
+              A
+            </ion-segment-button>
+            <ion-segment-button value="P">
+            P
+            </ion-segment-button>
+            <ion-segment-button value="I">
+            I
+            </ion-segment-button>
+          </ion-segment>
+        </ion-toolbar>
+      </div>
+
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="informacion-content">
+  <div class="madre-container">
+    <div class="titulo-container">Alimentacion</div>
+      <div class="concepto-container">concepto</div>
+
+       <div class="miplato-container">
+        <button ion-button>MI PLATO</button></div>
+
+<div class="centro-container">
+
+  <div class="izquierda-container">
+
+      <div class="superior-container">
+       <div class="bebida-container">bebida</div>
+       <div class="fruta-container">fruta</div>
+     </div>
+
+      <div class="inferior-container">
+       <div class="plato-container-container">plato</div>
+         <div class="info-container">
+           <button ion-button>I</button>
+         </div>
+       </div>
+
+    </div>
+              <div class="derecha1-container">
+                <div class="menu-container">Menu
+                  <div class="botones-container">
+                    <button ion-button>1</button>
+                    <button ion-button>2</button>
+                    <button ion-button>3</button>
+                    <button ion-button>4</button>
+                    <button ion-button>5</button>
+                  </div>
+                </div>
+              </div>
+</div>
+          <div class="mensajes-container">
+            <div class="nube-container">nube</div>
+            <div class="perrito-container">perro</div>
+          </div>
+
+    </div>
+</ion-content>

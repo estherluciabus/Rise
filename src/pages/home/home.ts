@@ -8,7 +8,6 @@ import { ToastController } from 'ionic-angular';
 export class HomePage {
 
   constructor(private toastCtrl: ToastController) {
-
   }
 
   presentToast() {
@@ -23,5 +22,7 @@ export class HomePage {
     });
 
     toast.present();
+
+
   }
 }
