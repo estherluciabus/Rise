@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar >
     <ion-title>SALUD
-
+<ion-content class = "Alimentacion">
       <div class="seleccion-container">
         <ion-toolbar>
           <ion-segment [(ngModel)]="salud">
@@ -66,7 +66,12 @@
           </ion-segment>
         </ion-toolbar>
       </div>
-
+</ion-content>
     </ion-title>
   </ion-navbar>
 </ion-header>
+
+<ion-content padding>
+  <p>ejemplo de como ir a otra pagna></p>
+  <button ion-button (click)="otraPagina"()>A otra pagina</button>
+</ion-content>

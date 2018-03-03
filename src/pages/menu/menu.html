@@ -1,6 +1,8 @@
 
   <ion-menu [content]="mycontent">
-<ion-toolbar>
+
+      <ion-toolbar>
+
     <div class = "menu">SunRise</div>
     <ion-buttons end>
       <button ion-button (click)="doClick()">
@@ -10,16 +12,20 @@
     <button ion-button menuToggle right>
     <ion-icon name="menu"></ion-icon>
   </button>
-<ion-navbar>
-  <ion-list>
+
+    </ion-toolbar>
+    <ion-list>
     <div class="buttons-container">
     <button ion-button full>Bloqueadores</button>
-    <button ion-button small>facebook</button>
+    <button ion-button block>Salud</button>
+    <button ion-button block>Testimonios <ion-icon name="star"></ion-icon>
+</button>
+<button ion-button small>facebook</button>
     </div>
-  </ion-list>
-</ion-navbar>
-</ion-toolbar>
-</ion-menu>
+    </ion-list>
+  </ion-menu>
+
+
 
 <ion-content class ="eventos-container">
   <div class="padre-container">
@@ -35,7 +41,7 @@
      <button ion-button (click)="presentToast()">ALARMA</button>
     </div>
   </div>
-  </ion-content>
+</ion-content>
 
 
 <ion-nav #mycontent [root]="rootPage"></ion-nav>

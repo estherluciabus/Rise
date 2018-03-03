@@ -1,6 +1,16 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { AlimentacionPage } from '../alimentacion/alimentacion';
 
+class SaludComponent {
+  constructor(public navCtrl: NavController) {
 
+  }
+otraPagina(){
+  this.navCtrl.push(AlimentacionPage);
+}
+
+}
 
 @Component({
 
