@@ -8,7 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
-import { MenuPage } from '../pages/menu/menu';
 import { AlimentacionPage } from '../pages/alimentacion/alimentacion';
 
 import { TabsPage } from '../pages/tabs/tabs';
@@ -26,7 +25,6 @@ import{ AngularFireModule } from 'angularfire2';
     TabsPage,
     HomePage,
     SaludPage,
-    MenuPage,
     AlimentacionPage
 
 
@@ -41,7 +39,6 @@ import{ AngularFireModule } from 'angularfire2';
     TabsPage,
     HomePage,
     SaludPage,
-    MenuPage,
     AlimentacionPage
 
 

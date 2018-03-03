@@ -1,8 +1,15 @@
-<ion-tabs>
 
+<ion-tabs tabsPlacement="top">
+  <ion-header>
+<ion-navbar>
+  <button ion-button icon-only clear menuToggle>
+    <ion-icon name="ios-menu"></ion-icon>
+  </button>
+</ion-navbar>
+</ion-header>
     <ion-tab [root]="HomeRoote" tabTitle="home" tabIcon="home"></ion-tab>
   <ion-tab [root]="SaludRoote" tabTitle="salud" tabIcon="salud"></ion-tab>
-  <ion-tab [root]="MenuRoote" tabTitle="menu" tabIcon="menu"></ion-tab>
+
 
 
 
