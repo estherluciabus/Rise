@@ -4,11 +4,12 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
 import { MenuPage } from '../pages/menu/menu';
-import { ConfiguracionPage } from '../pages/configuracion/configuracion';
+
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -25,8 +26,9 @@ import{ AngularFireModule } from 'angularfire2';
     TabsPage,
     HomePage,
     SaludPage,
-    MenuPage,
-    ConfiguracionPage
+    MenuPage
+
+
   ],
   imports: [
     BrowserModule,
@@ -38,8 +40,9 @@ import{ AngularFireModule } from 'angularfire2';
     TabsPage,
     HomePage,
     SaludPage,
-    MenuPage,
-    Configuracion
+    MenuPage
+
+
   ],
   providers: [
     StatusBar,

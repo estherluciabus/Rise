@@ -6,10 +6,9 @@ import { SaludPage } from '../salud/salud';
 
 import { MenuPage } from '../menu/menu';
 
-import { ConfiguracionPage } from '../configuracion/configuracion';
-
 @Component({
-  templateUrl: 'tabs.html'
+  templateUrl: 'tabs.html',
+
 
 })
 export class TabsPage {
@@ -17,7 +16,7 @@ export class TabsPage {
   HomeRoote = HomePage;
 SaludRoote =  SaludPage;
   MenuRoote = MenuPage;
-  ConfiguracionRoote = ConfiguracionPage;
+
 
 
 

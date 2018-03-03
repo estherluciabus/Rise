@@ -1,7 +1,6 @@
 
   <ion-menu [content]="mycontent">
-    <ion-list>
-      <ion-toolbar>
+<ion-toolbar>
     <div class = "menu">SunRise</div>
     <ion-buttons end>
       <button ion-button (click)="doClick()">
@@ -11,11 +10,18 @@
     <button ion-button menuToggle right>
     <ion-icon name="menu"></ion-icon>
   </button>
-  </ion-toolbar>
-</ion-list>
-  </ion-menu>
-  <ion-content class ="eventos-container">
+<ion-navbar>
+  <ion-list>
+    <div class="buttons-container">
+    <button ion-button full>Bloqueadores</button>
+    <button ion-button small>facebook</button>
+    </div>
+  </ion-list>
+</ion-navbar>
+</ion-toolbar>
+</ion-menu>
 
+<ion-content class ="eventos-container">
   <div class="padre-container">
       <div class="fecha-container">HOLA</div>
       <div class="centro-container">
