@@ -5,11 +5,14 @@ page-home {
  flex-direction:column;
   }
 
+
+
  .padre-container {
   display : flex;
   flex-direction:column;
   height: 100%
  }
+
 
  .fecha-container{
    display : flex;
@@ -18,6 +21,14 @@ page-home {
    width: 100%;
 
  }
+ .centro-container{
+     display: flex;
+     flex-direction:row;
+     height:60%;
+     width: 100%;
+     border:5px solid black;
+  }
+
   .semaforo-container{
     width: 40%;
 
@@ -26,14 +37,14 @@ page-home {
     display: flex;
     flex-direction:column;
     width:60%;
-    border:5px solid black;
+    border:5px solid pink;
   }
     .map-container {
       display: flex;
       flex-direction:column;
       width:100%;
       height:80%;
-      border:5px solid black;
+      border:5px solid green;
     }
 
     .aviso-container{
@@ -49,7 +60,7 @@ page-home {
           flex-direction:column;
           width:100%;
           height:10%;
-          border:5px solid black;
+          border:5px solid red;
 
         }
 

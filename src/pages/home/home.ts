@@ -14,7 +14,7 @@ export class HomePage {
     let toast = this.toastCtrl.create({
       message: 'esta es una alarma',
       duration: 3000,
-      position: 'bottom'
+      position: 'top'
     });
 
     toast.onDidDismiss(() => {
