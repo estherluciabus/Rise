@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
 import { AlimentacionPage } from '../pages/alimentacion/alimentacion';
 
+
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { PreguntasService} from '../shared/preguntas.service';
@@ -28,6 +29,7 @@ import{ AngularFireModule } from 'angularfire2';
     AlimentacionPage
 
 
+
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import{ AngularFireModule } from 'angularfire2';
     HomePage,
     SaludPage,
     AlimentacionPage
+
 
 
   ],

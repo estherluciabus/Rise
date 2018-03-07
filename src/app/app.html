@@ -1,4 +1,4 @@
-
+<ion-navbar></ion-navbar>
 <ion-menu [content]="content">
 <ion-header>
 <ion-toolbar>
@@ -7,17 +7,21 @@
 </ion-header>
 <ion-content>
 <ion-list>
-<button ion-item (click)="openPage(homePage)">
+
+<button ion-item>
+  <ion-icon item-left name="home"(click)="openPage(alimentacionPage)"></ion-icon>
   Bloqueadores
 </button>
-<button ion-item (click)="irSalud()">
+<button ion-item>
+  <ion-icon item-left name="home"(click)="irSalud(saludPage)"></ion-icon>
   Salud
 </button>
-<button ion-item (click)="openPage(eventsPage)">
+<button ion-item>
+  <ion-icon item-left name="star" (click)="openPage(eventsPage)"></ion-icon>
   Testimonios
 </button>
-<button ion-item (click)="closeMenu()">
-  Close Menu
+<button ion-item>
+  <ion-icon item-left name="facebook" (click)="closeMenu()"></ion-icon>
 </button>
 </ion-list>
 </ion-content>

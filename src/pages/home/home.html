@@ -1,25 +1,100 @@
 
-
   <ion-navbar>
   </ion-navbar>
 
-
 <ion-content class ="eventos-container">
   <div class="padre-container">
-<div class="padre-container">
-     <div class="fecha-container">2 DE ABRIL 2018</div>
-     <div class="centro-container">
-       <div class="semaforo-container">SEMAFORO</div>
-       <div class="derecha-container">
-        <div class="map-container">MAPA</div>
-         <div class="aviso-container">AVISO</div>
-       </div>
-    </div>
-    <div class="alarma-container">ALARMA
-    <button ion-button (click)="presentToast()">ALARMA</button>
-   </div>
+     <div class="fecha-container">
+       <button ion-button full outline>2 de abril 2015</button>
+     </div>
+
+          <div class="centro-container">
+            <div class="imagen-container"></div>
+              <div class="botones-container">
+                <ion-list>
 
 
- </div>
-</div>
+                      <button ion-fab color="green"><ion-icon name="add"></ion-icon>
+                        <ion-fab-list side="button">
+                          <ion-item>
+                            <ion-note><p>Indice UV</p>
+                            </ion-note>5-8
+                            <ion-note><p>Riesgo</p></ion-note>Muy alto
+                            <ion-note><p>Limite de exposicion</p></ion-note>25min
+                            <ion-note><p>Proteccion</p></ion-note><img src=""/>
+                          </ion-item>
+                        </ion-fab-list>
+                        </button>
+
+
+
+                <button ion-item>
+                  <ion-fab>
+                    <button ion-fab color="yellow"><ion-icon name="add"></ion-icon></button>
+                  <ion-fab-list side="lefth">
+                      <ion-item>
+                        <ion-note><p>Indice UV</p>
+                        </ion-note>3-5
+                        <ion-note><p>Riesgo</p></ion-note>Muy alto
+                        <ion-note><p>Limite de exposicion</p></ion-note>45min
+                        <ion-note><p>Proteccion</p></ion-note><img src=""/>
+                      </ion-item>
+                    </ion-fab-list>
+                  </ion-fab>
+                </button>
+
+
+                  <ion-fab>
+                    <button ion-fab color="orange"><ion-icon name="add"></ion-icon></button>
+                      <ion-fab-list side="lefth">
+                        <ion-item>
+                          <ion-note><p>Indice UV</p>
+                          </ion-note>6-7
+                          <ion-note><p>Riesgo</p></ion-note>Muy alto
+                          <ion-note><p>Limite de exposicion</p></ion-note>30min
+                          <ion-note><p>Proteccion</p></ion-note><img src=""/>
+                        </ion-item>
+                      </ion-fab-list>
+                    </ion-fab>
+
+                    <ion-fab>
+                      <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+                        <ion-fab-list side="right">
+                          <ion-item>
+                            <ion-note><p>Indice UV</p>
+                            </ion-note>8-10
+                            <ion-note><p>Riesgo</p></ion-note>Muy alto
+                            <ion-note><p>Limite de exposicion</p></ion-note>25min
+                            <ion-note><p>Proteccion</p></ion-note><img src=""/>
+                          </ion-item>
+                        </ion-fab-list>
+                      </ion-fab>
+
+                      <ion-fab>
+                        <button ion-item>
+                        <button ion-fab color="purple"><ion-icon name="add"></ion-icon></button>
+                          <ion-fab-list side="right">
+                            <ion-item>
+                              <ion-note><p>Indice UV</p>
+                              </ion-note>6-8
+                              <ion-note><p>Riesgo</p></ion-note>Muy alto
+                              <ion-note><p>Limite de exposicion</p></ion-note>25min
+                              <ion-note><p>Proteccion</p></ion-note><img src=""/>
+                            </ion-item>
+                          </ion-fab-list>
+                        </button>
+                      </ion-fab>
+                      </ion-list>
+                    </div>
+
+            <div class="derecha-container">
+                <div class="map-container">MAPA</div>
+                <div class="aviso-container">AVISO</div>
+            </div>
+            </div>
+
+            <div class="alarma-container">
+              <button ion-button color="danger"(click)="presentToast()"><ion-icon name="alarm"></ion-icon>ALARMA</button>
+            </div>
+  </div>
  </ion-content>

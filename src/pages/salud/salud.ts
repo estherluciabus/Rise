@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 
 })
 export class SaludPage {
-  salud: string = "puppies";
+  salud : string = "salud";
+
   isAndroid: boolean = false;
+
 }

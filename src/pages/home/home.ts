@@ -12,11 +12,10 @@ export class HomePage {
 
   presentToast() {
     let toast = this.toastCtrl.create({
-      message: 'esta es una alarma',
+      message: ' Cada 2h aplicate el bloqueador para una completa proteccion ',
       duration: 3000,
-      position: 'top'
+      position: 'button'
     });
-
     toast.onDidDismiss(() => {
       console.log('Dismissed toast');
     });

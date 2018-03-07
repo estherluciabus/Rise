@@ -1,16 +1,14 @@
 page-home {
-
-  .scroll-content {
+.scroll-content {
  display: flex;
  flex-direction:column;
-  }
-
-
+}
 
  .padre-container {
   display : flex;
   flex-direction:column;
-  height: 100%
+  height: 100%;
+  border:5px solid 0;
  }
 
 
@@ -20,19 +18,33 @@ page-home {
    height: 10%;
    width: 100%;
 
+
  }
  .centro-container{
      display: flex;
      flex-direction:row;
      height:60%;
      width: 100%;
-     border:5px solid black;
+     border:5px solid 0;
   }
 
-  .semaforo-container{
+  .imagen-container {
     width: 40%;
+    height: 100%;
+    background-color: black;
+    border: 5px solid 0;
+  }
+
+  .botones-container{
+    position: fixed;
+    display: flex;
+    flex-direction:column;
+    width: 40%;
+    height:52%;
+    border: 5px solid yellow;
 
   }
+
   .derecha-container{
     display: flex;
     flex-direction:column;
@@ -60,7 +72,6 @@ page-home {
           flex-direction:column;
           width:100%;
           height:10%;
-          border:5px solid red;
 
         }
 
