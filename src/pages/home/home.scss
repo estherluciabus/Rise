@@ -33,18 +33,50 @@ page-home {
     height: 100%;
     background-color: black;
     border: 5px solid 0;
-  }
-
-  .botones-container{
-    position: fixed;
-    display: flex;
-    flex-direction:column;
-    width: 40%;
-    height:52%;
-    border: 5px solid yellow;
+    position: relative;
 
   }
 
+  .uno{
+    position:absolute;
+    top: 2%;
+    left: 30%;
+    width: 120px;
+    height: 120px;
+  
+  }
+    .dos{
+      position:absolute;
+      top: 20%;
+      left: 30%;
+      width: 120px;
+      height: 120px;
+
+}
+    .tres{
+      position:absolute;
+      top: 38%;
+      left: 30%;
+      width: 120px;
+      height: 120px;
+}
+
+    .cuatro{
+      position:absolute;
+      top: 56%;
+      left: 30%;
+      width: 120px;
+      height: 120px;
+
+}
+    .cinco{
+  position:absolute;
+  top: 74%;
+  left: 30%;
+  width: 120px;
+  height: 120px;
+
+}
   .derecha-container{
     display: flex;
     flex-direction:column;
@@ -70,8 +102,9 @@ page-home {
         .alarma-container{
           display: flex;
           flex-direction:column;
-          width:100%;
-          height:10%;
+          width:40%;
+          height:20%;
+          right: 10%;
 
         }
 
