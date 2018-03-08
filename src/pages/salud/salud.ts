@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
 
   selector: 'page-salud',
@@ -11,4 +12,8 @@ export class SaludPage {
 
   isAndroid: boolean = false;
 
+  constructor(){
+
+
+  }
 }
