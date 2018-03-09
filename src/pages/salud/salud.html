@@ -1,8 +1,6 @@
 
   <ion-navbar>
   </ion-navbar>
-  <ion-navbar>
-  </ion-navbar>
 
   <ion-toolbar color="danger">
       <ion-segment [(ngModel)]="salud" color="dark" mode="ios">
@@ -32,30 +30,47 @@
 
         <ion-list *ngSwitchCase="'A'">
           <ion-item>
-            <ion-thumbnail item-start>
-              <img src="assets/img/thumbnail-kitten-1.jpg">
-            </ion-thumbnail>
-            <h2>Luna</h2>
+            <h2>Alimentacion</h2>
           </ion-item>
+
+           <button ion-item>
+             <ion-icon item-left name="happy">
+               <p>concepto</p>
+             </ion-icon>
+           </button>
+
+           <ion-item>
+             <h2>MI PLATO</h2>
+           </ion-item>
+             <button ion-button color="danger">
+               CONCEPTTO
+             </button>
+
           <ion-item>
-            <ion-thumbnail item-start>
-              <img src="assets/img/thumbnail-kitten-3.jpg">
-            </ion-thumbnail>
-            <h2>Milo</h2>
+
+              <img src="assets/img/thumbnail-kitten-4.jpg"/>
           </ion-item>
+
+          <button ion-item>
+            <ion-icon item-left name="happy">
+              <p>concepto</p>
+            </ion-icon>
+          </button>
+
           <ion-item>
-            <ion-thumbnail item-start>
-              <img src="assets/img/thumbnail-kitten-4.jpg">
-            </ion-thumbnail>
-            <h2>Bandit</h2>
+              <img src="assets/img/thumbnail-kitten-4.jpg"/>
           </ion-item>
+
+          <button ion-button full block color="danger">
+            CONCEPTTO
+          </button>
+
           <ion-item>
-            <ion-thumbnail item-start>
-              <img src="assets/img/thumbnail-kitten-2.jpg">
-            </ion-thumbnail>
-            <h2>Nala</h2>
+              <img src="assets/img/thumbnail-kitten-4.jpg"/>
           </ion-item>
+
         </ion-list>
+
 
         <ion-list *ngSwitchCase="'P'">
           <ion-navbar>
@@ -64,7 +79,7 @@
             <h2>PROTECCIONl</h2>
           </ion-item>
 
-            <ion-item>
+            <ion-item mini>
               <ion-icon item-right name="home"><ion-icon item-top name="star"></ion-icon></ion-icon>
             </ion-item>
 
@@ -93,14 +108,16 @@
             <ion-thumbnail item-start>
               <img src="assets/img/thumbnail-puppy-3.jpg">
             </ion-thumbnail>
-            <h2>DÍAMETRO</h2>
+                <ion-icon item-start name="home">DÍAMETRO</ion-icon>
           </ion-item>
           <ion-item>
             <ion-thumbnail item-start>
               <img src="assets/img/thumbnail-puppy-3.jpg">
             </ion-thumbnail>
-            <h2>EVOLUCION</h2>
+                <ion-icon item-start name="home">EVOLUCION</ion-icon>
           </ion-item>
+
+
 
       </ion-list>
 

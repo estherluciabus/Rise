@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { ToastController } from 'ionic-angular';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
+
 })
 export class HomePage {
 
-  constructor(private toastCtrl: ToastController) {
+  constructor(public toastCtrl: ToastController) {
   }
 
   presentToast() {
@@ -22,6 +24,7 @@ export class HomePage {
 
     toast.present();
 
-
   }
+
+
 }

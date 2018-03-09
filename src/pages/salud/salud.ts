@@ -12,8 +12,4 @@ export class SaludPage {
 
   isAndroid: boolean = false;
 
-  constructor(){
-
-
-  }
-}
+ }
