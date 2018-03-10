@@ -7,22 +7,24 @@
 
  <ion-content>
  <ion-list>
- <button ion-item>
-   <ion-icon item-left name="home"(click)="openPage(alimentacionPage)"></ion-icon>
-   Bloqueadores
- </button>
+ <button ion-item (click)="pushPage()">
+ yo
+</button>
  <button ion-item>
    <ion-icon item-left name="home"(click)="irSalud(saludPage)"></ion-icon>
-   Salud
+    Bloqueadores
  </button>
  <button ion-item>
    <ion-icon item-left name="star" (click)="openPage(eventsPage)"></ion-icon>
+   Salud
  </button>
  <button ion-item>
    <ion-icon item-left name="facebook" (click)="closeMenu()"></ion-icon>
+   Testimonio
     </button>
+
  </ion-list>
  </ion-content>
  </ion-menu>
 
- <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+ <ion-nav  #content [root]="rootPage"></ion-nav>
