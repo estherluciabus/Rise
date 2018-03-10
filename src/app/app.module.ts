@@ -33,7 +33,11 @@ import{ AngularFireModule } from 'angularfire2';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule
+
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

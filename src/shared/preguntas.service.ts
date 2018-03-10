@@ -9,14 +9,18 @@ export class PreguntasService {
 
   constructor(public db: AngularFireDatabase){
     this.preguntasReference =db.list('preguntas');
-    this.preguntasObservable = this.preguntasReference.snapshotChanges()
-    .map(cambios => {
-      return cambios.map(cambio =>{
-        return cambio.payload.val();
-      })
+    this.preguntasObservable = this.preguntasReference.snapshotChanges().map(cambios => {
+      return cambios.map(change => {
+        return {
+          key: change.key,
+          ...change.payload.val()
+        };
+      });
     });
+  }
+  getPreguntas():Observable<any>{
+    return this.preguntasObservable;
 
   }
-
 
 }
