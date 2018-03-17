@@ -18,23 +18,13 @@ export class PreguntasService {
       });
     });
   }
-  getPreguntas():Observable<any>{
-    return this.preguntasObservable;
 
-  }
-
-  return {
-    key: change.key,
-          ...change.payload.val()
-        };
-      });
-    });
-  }
   getPreguntas():Observable<any>{
     return this.preguntasObservable;
   }
+  
   updateRespuesta(key: string, password: string) {
     this.preguntasReference.update(key, {contraseña: password})
   }
 
-    }
+}
