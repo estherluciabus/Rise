@@ -1,16 +1,47 @@
-// http://ionicframework.com/docs/theming/
+.titulo{
+  background-color: #FF7043;
+  opacity: 0.7;
+  height: 2%;
+}
+.logo{
+  background-image: src "(assets/imgs/1.png)";
+  background-color: #FFA07A;
+  opacity: 0.7;
+  height: 20%;
+}
 
+  .boton1{
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+    background-color:#FDD835;
+    padding: 2px;
+    font-size: 2em;
+
+    font-family: Arial, Helvetica,sans-serif;
+  }
+
+    .boton2{
+
+      background-color: #FC7B55;
+      padding: 2px;
+      font-size: 2em;
+
+      font-family: Arial, Helvetica,sans-serif;
+    }
+
+      .boton3{
+
+        background-color:#80DEEA;
+        padding: 2px;
+        font-size: 2em;
+
+        font-family: Arial, Helvetica,sans-serif;
+      }
+
+        .boton4{
+
+          background-color:#55FC8A;
+          padding: 2px;
+          font-size: 2em;
+
+          font-family: Arial, Helvetica,sans-serif;
+        }

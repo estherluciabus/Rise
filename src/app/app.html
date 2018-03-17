@@ -1,29 +1,43 @@
+
 <ion-menu [content]="content">
  <ion-header>
- <ion-toolbar>
--<ion-title>SUNRISE</ion-title>
- </ion-toolbar>
+
+
+<ion-title class ="titulo">
+  <h1>unser name</h1>
+  <h3>SUNRISE</h3>
+</ion-title>
+
  </ion-header>
 
- <ion-content>
- <ion-list>
- <button ion-item (click)="pushPage()">
- yo
-</button>
- <button ion-item>
-   <ion-icon item-left name="home"(click)="irSalud(saludPage)"></ion-icon>
-    Bloqueadores
- </button>
- <button ion-item>
-   <ion-icon item-left name="star" (click)="openPage(eventsPage)"></ion-icon>
-   Salud
- </button>
- <button ion-item>
-   <ion-icon item-left name="facebook" (click)="closeMenu()"></ion-icon>
-   Testimonio
-    </button>
+ <ion-content >
+   <div class ="logo">
+   <img src="assets/imgs/1.png"/>
+   </div>
+     <ion-list>
+       <button class ="boton1" ion-item (click)="pushregistro()">
+         <ion-icon item-left name="home"></ion-icon>
+         alimentacion
+      </button>
+       <button class ="boton2"ion-item (click)="pushhome()">
+         <ion-icon item-left name="ios-happy"></ion-icon>
+         Home
+      </button>
+      <button  class="boton3" ion-item (click)="pushsalud()">
+        <ion-icon item-left name="ios-people"></ion-icon>
+        Salud
+     </button>
+        <button class="boton4" ion-item (click)="pushbloqueadores()">
+          <ion-icon item-left name="ios-cog"></ion-icon>
+          Bloqueadores
+        </button>
 
- </ion-list>
+        <button ion-item (click)="pushtestimonio()">
+          <ion-icon item-left name="star"></ion-icon>
+          Testimonio
+        </button>
+
+     </ion-list>
  </ion-content>
  </ion-menu>
 

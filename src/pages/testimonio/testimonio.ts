@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'page-testimonio',
   templateUrl: 'testimonio.html'
 })
-export class TestimonionPage {
+export class TestimonioPage {
 
 }

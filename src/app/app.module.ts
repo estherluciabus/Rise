@@ -7,7 +7,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
+import { RegistrarsePage } from '../pages/registrarse/registrarse';
 import { AlimentacionPage } from '../pages/alimentacion/alimentacion';
+import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
+import { TestimonioPage } from '../pages/testimonio/testimonio';
 
 
 import { TabsPage } from '../pages/tabs/tabs';
@@ -25,14 +28,20 @@ import{ AngularFireModule } from 'angularfire2';
     TabsPage,
     HomePage,
     SaludPage,
-    AlimentacionPage
-
+    RegistrarsePage,
+    AlimentacionPage,
+    BloqueadoresPage,
+    TestimonioPage
 
 
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config),
+   AngularFireDatabaseModule
+
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +49,10 @@ import{ AngularFireModule } from 'angularfire2';
     TabsPage,
     HomePage,
     SaludPage,
-    AlimentacionPage
+    RegistrarsePage,
+    AlimentacionPage,
+    BloqueadoresPage,
+    TestimonioPage
 
 
 

@@ -1,0 +1,49 @@
+page-bloqueadores {
+  .color-container{
+    background-color:#FFB871;
+  }
+
+    .titulo-container{
+      align-content: center;
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      text-align: center;
+
+  }
+  .bottones-container{
+
+    position: relative;
+    width: 60%;
+    height:690%;
+  }
+  .derecha{
+    background-color:#83B8CE;
+
+    position: absolute;
+  }
+  .izquierda{
+    background-color:#83B8CE;
+    width: 25%;
+    height:20%;
+    position: absolute;
+
+  }
+  .derecha2{
+    position: absolute;
+    background-color:#83B8CE;
+    width: 40%;
+    height:20%;
+    top: 2%;
+    left: 60%;
+  }
+  .izquierda2{
+    position: absolute;
+    background-color:#83B8CE;
+    width: 40%;
+    height:80%;
+    top: 10%;
+    left: 60%;
+  }
+
+  }

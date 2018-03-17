@@ -1,0 +1,110 @@
+
+<ion-content class ="color-container">
+  <ion-navbar>
+  <ion-title>
+    <h2>Bloqueadores
+
+</h2>
+  </ion-title>
+</ion-navbar>
+
+<ion-list>
+  <ion-card-content>
+      <div class="titulo-container">
+        <button ion-button style="background-color:#FC7B55"> Para usar un bloqueador debes saber:</button>
+      </div>
+
+        <ion-item style="background-color : #FC7B55">
+          <div class="bottones-container">
+
+            <button ion-button mini class ="derecha">
+          <font size=1>El FPS, IP y SPF=<br/>índice de<br/> protección
+             solar</font>
+            </button>
+
+            <button ion-button mini class ="izquierda">
+          <font size=1>  Contener protección:<br/> IR ,UVA Y UVB</font>
+            </button>
+            <button ion-button mini class ="derecha2">
+              Buen protector
+              Dioxido de Titanio y Oxido de Zinc
+            </button>
+            <button ion-button mini class ="izquierda2">
+              <font size=1>  Peligro :oxi-<br/>benzona o <br/>palmitato de<br/> retinol riesgo<br/> de tener cancer</font>
+            </button>
+          </div>
+        </ion-item>
+
+      </ion-card-content>
+
+    <button ion-button full outline >FOTOTIPO</button>
+
+    <ion-card-content>
+      <ion-item >
+         <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-puppy-3.jpg">
+          </ion-thumbnail>
+             <p>TIPO:  I y II
+              Utilizar  bloqueador con nomenclatura :50+ SPF Muy alta  </p>
+            </ion-item>
+         <ion-item>
+            <ion-thumbnail item-start>
+              <img src="assets/img/thumbnail-puppy-3.jpg">
+            </ion-thumbnail>
+               <p>TIPO: III y IV
+                 Utilizar  bloqueador con nomenclatura :30+ SPF Muy alta</p>
+         </ion-item>
+
+          <ion-item>
+             <ion-thumbnail item-start>
+               <img src="assets/img/thumbnail-puppy-3.jpg"/>
+             </ion-thumbnail>
+                <p>TIPO  V y VI
+                    Usar un bloqueador con nomenclatura 15 o 20 SPF  </p>
+          </ion-item>
+    </ion-card-content>
+
+      <button ion-button full outline >TEXTURAS /  TIPOS DE PIEL  </button>
+
+      <ion-card-content>
+          <ion-item-sliding #item>
+          <ion-item>
+          Item
+          </ion-item>
+          <ion-item-options side="left">
+          <button ion-button (click)="favorite(item)">Favorite</button>
+          <button ion-button color="danger" (click)="share(item)">Share</button>
+          </ion-item-options>
+
+          <ion-item-options side="right">
+          <button ion-button (click)="unread(item)">Unread</button>
+          </ion-item-options>
+          </ion-item-sliding>
+        </ion-card-content>
+
+        <ion-card-content>
+          <button ion-button full block style="background-color:#CC0033">RECOMENDACIONES</button>
+
+          <ion-item>
+             <ion-thumbnail item-start>
+               <img src="assets/img/thumbnail-puppy-3.jpg">
+             </ion-thumbnail>
+
+                <p> Aplicarse a partir de los 6 meses
+                    Para niñas(os) factor 50 SPF a más,
+                    tipo :filtros físicos o patalla
+                    Sin  PABA y perfume (conservante de bloqueador) producir alergias (piel).</p>
+          </ion-item>
+        </ion-card-content>
+
+          <ion-item>
+             <ion-thumbnail item-start>
+               <img src="assets/img/thumbnail-puppy-3.jpg">
+             </ion-thumbnail>
+
+               <p> El bloqueador  falcial no  irrita los ojos por ser suave y delicado a
+                  comparación del corporal que irrita los ojos y es más aceitosa.</p>
+
+          </ion-item>
+    </ion-list>
+    </ion-content>

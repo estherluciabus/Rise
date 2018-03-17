@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import {  Platform, Nav} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AlimentacionPage } from '../pages/alimentacion/alimentacion';
+import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
+import { TestimonioPage } from '../pages/testimonio/testimonio';
+import { HomePage } from '../pages/home/home';
+import { SaludPage } from '../pages/salud/salud';
+
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -9,7 +15,10 @@ import { TabsPage } from '../pages/tabs/tabs';
   templateUrl: 'app.html',
 })
 export class MyApp {
+   @ViewChild(Nav) nav: Nav
+
   rootPage:any = TabsPage;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
@@ -19,7 +28,21 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-  }
+}
 
-
+pushhome(){
+  this.nav.push(HomePage);
+}
+pushsalud(){
+  this.nav.push(SaludPage);
+}
+pushregistro(){
+  this.nav.push(AlimentacionPage);
+}
+pushbloqueadores(){
+  this.nav.push(BloqueadoresPage);
+}
+pushtestimonio(){
+  this.nav.push(TestimonioPage);
+}
 }
