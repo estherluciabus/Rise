@@ -28,21 +28,21 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-}
+  }
 
-pushhome(){
-  this.nav.push(HomePage);
-}
-pushsalud(){
-  this.nav.push(SaludPage);
-}
-pushregistro(){
-  this.nav.push(AlimentacionPage);
-}
-pushbloqueadores(){
-  this.nav.push(BloqueadoresPage);
-}
-pushtestimonio(){
-  this.nav.push(TestimonioPage);
-}
+  pushhome(){
+    this.nav.push(HomePage);
+  }
+  pushsalud(){
+    this.nav.push(SaludPage);
+  }
+  pushregistro(){
+    this.nav.push(AlimentacionPage);
+  }
+  pushbloqueadores(){
+    this.nav.push(BloqueadoresPage);
+  }
+  pushtestimonio(){
+    this.nav.push(TestimonioPage);
+  }
 }
