@@ -16,6 +16,8 @@ import { TestimonioPage } from '../pages/testimonio/testimonio';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { PreguntasService} from '../shared/preguntas.service';
+import { GoogleMaps } from '@ionic-native/google-maps';
+import { Geolocation } from '@ionic-native/geolocation';
 
 
 import{ config} from '../firebaseConfig';
@@ -61,7 +63,9 @@ import{ AngularFireModule } from 'angularfire2';
     StatusBar,
     SplashScreen,
     PreguntasService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Geolocation,
+    GoogleMaps
   ]
 
 

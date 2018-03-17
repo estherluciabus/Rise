@@ -27,7 +27,7 @@
 
 
                 <ion-fab class="dos">
-                    <button ion-fab mini style="background-color:#eee409"><ion-icon name="add"></ion-icon></button>
+                    <button ion-fab mini ><ion-icon name="add"></ion-icon></button>
                       <ion-fab-list side="right">
                         <ion-item style="background-color:#F7E86C">
 
@@ -84,10 +84,13 @@
                     </div>
 
                           <div class="derecha-container">
-                            <div class="map-container"></div>
+                            <div class="map-container" id="map_canvas">
+
+
+                            </div>
 
                             <div class="aviso-container">
-                              <ion-chip #chip2>
+                              <ion-chip #chip2 (click)="loadMap()">
                                 <ion-icon name="pin" color="primary"></ion-icon>
                                 <ion-label>Conectar con GPS </ion-label>
 
