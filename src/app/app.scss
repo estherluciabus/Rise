@@ -4,10 +4,15 @@
   height: 2%;
 }
 .logo{
-  background-image: src "(assets/imgs/1.png)";
   background-color: #FFA07A;
-  opacity: 0.7;
-  height: 20%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    height: 100%;
+    opacity: 0.5;
+  }
 }
 
   .boton1{
