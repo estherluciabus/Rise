@@ -1,13 +1,13 @@
 
 <ion-menu [content]="content">
  <ion-header>
-
-
 <ion-title class ="titulo">
   <h1>unser name</h1>
   <h3>SUNRISE</h3>
 </ion-title>
-
+<button menuToggle ="menu" (click)="hom()">
+  <ion-icon name="menu"></ion-icon>
+</button>
  </ion-header>
 
  <ion-content >
@@ -34,9 +34,23 @@
 
         <button ion-item (click)="pushtestimonio()">
           <ion-icon item-left name="star"></ion-icon>
-          Testimonio
+          configuraciones
         </button>
 
+        <button ion-item (click)="pushsoporte()">
+          <ion-icon item-left name="star"></ion-icon>
+          Soporte de problemas
+        </button>
+
+        <button ion-item (click)="pushayuda()">
+          <ion-icon item-left name="help"></ion-icon>
+          Ayuda
+        </button>
+
+        <button ion-item (click)="inicioslide()">
+          <ion-icon item-left name="star"></ion-icon>
+          sline
+        </button>
      </ion-list>
  </ion-content>
  </ion-menu>

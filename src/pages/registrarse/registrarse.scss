@@ -1,18 +1,22 @@
 page-registrarse{
-  .list-content{
+  .MiniFormulario{
     display:flex;
     flex-direction:column;
-    justify-content: center;
-    background-color:  #FFA500 ;
-
-  .input-label{
-    margin: 5%;
-      background-color:#FFEB3B  ;
+    background-color: #FFA500 ;
   }
 
+    .test-container{
+
+
+    .subtest{
+      background-color: #FFA500 ;
+  
+    }
+
+  .alternativas{
+
+     top:15%;
+
   }
-
-
-
-
+}
 }

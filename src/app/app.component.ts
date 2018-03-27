@@ -4,10 +4,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AlimentacionPage } from '../pages/alimentacion/alimentacion';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
-import { TestimonioPage } from '../pages/testimonio/testimonio';
 import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
-
+import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
+import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
+import { InicioPage } from '../pages/inicio/inicio';
+import { AyudaPage } from '../pages/ayuda/ayuda';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -15,10 +17,8 @@ import { TabsPage } from '../pages/tabs/tabs';
   templateUrl: 'app.html',
 })
 export class MyApp {
-   @ViewChild(Nav) nav: Nav
-
+   @ViewChild(Nav) nav: Nav;
   rootPage:any = TabsPage;
-
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
@@ -33,6 +33,7 @@ export class MyApp {
   pushhome(){
     this.nav.push(HomePage);
   }
+
   pushsalud(){
     this.nav.push(SaludPage);
   }
@@ -43,6 +44,16 @@ export class MyApp {
     this.nav.push(BloqueadoresPage);
   }
   pushtestimonio(){
-    this.nav.push(TestimonioPage);
+    this.nav.push(ConfiguracionesPage);
   }
+  pushsoporte(){
+    this.nav.push(SoportedeproblemaPage);
+  }
+  inicioslide(){
+    this.nav.push(InicioPage);
+  }
+  pushayuda(){
+    this.nav.push(AyudaPage);
+  }
+
 }

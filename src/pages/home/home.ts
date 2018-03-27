@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { ToastController } from 'ionic-angular';
-import{ PreguntasService} from '../../shared/preguntas.service';
+import { Component } from '@angular/core';
+
 import {
  GoogleMaps,
  GoogleMap,
@@ -14,16 +14,12 @@ import { Geolocation } from '@ionic-native/geolocation';
   templateUrl: 'home.html'
 
 })
-export class HomePage implements OnInit {
+export class HomePage{
   map: GoogleMap;
-  constructor(private geolocation : Geolocation, public toastCtrl: ToastController,public preguntasService:PreguntasService) {
+  constructor(private geolocation : Geolocation, public toastCtrl: ToastController ) {
   }
 
-  ngOnInit() {
-    this.preguntasService.getPreguntas().subscribe(preguntas => {
-      console.log(preguntas)
-    })
-  }
+
 
   loadMap(): void {
 
@@ -77,4 +73,5 @@ export class HomePage implements OnInit {
     toast.present();
 
   }
+
 }

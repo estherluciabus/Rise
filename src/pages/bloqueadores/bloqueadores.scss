@@ -2,48 +2,107 @@ page-bloqueadores {
   .color-container{
     background-color:#FFB871;
   }
-
     .titulo-container{
       align-content: center;
       display:flex;
       flex-direction:column;
       justify-content: center;
       text-align: center;
-
-  }
-  .bottones-container{
-
+    }
+    .botones{
     position: relative;
-    width: 60%;
-    height:690%;
-  }
-  .derecha{
+    width:  95%;
+    height: 32%;
+    left: 2.3%;
+    background-color:0;
     background-color:#83B8CE;
-
-    position: absolute;
   }
+  .bloqueador{
+    position: absolute;
+    width: 40%;
+    top: 0%;
+    left:31%;
+    height:60%;
+  }
+    .derecha{
+      background-color:#83B8CE;
+      position:absolute;
+      left:10px;
+      bottom: 10px;
+
+      .button-wp {
+    border-radius: 0;
+    height: 5.6rem;
+    border: 3px solid transparent;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #488aff;
+    margin: 0.4rem 0.2rem;
+    padding: 0 1.1em;
+
+    }
+  }
+    .derecha2{
+      position: absolute;
+      background-color:#83B8CE;
+      left:60%;
+      bottom:10px;
+
+      .button-wp {
+  	border-radius: 0;
+  	height: 5.6rem;
+  	border: 3px solid transparent;
+  	font-size: 1.4rem;
+  	color: #fff;
+  	background-color: #488aff;
+  	margin: 0.4rem 0.2rem;
+  	padding: 0 1.1em;
+
+  }
+}
   .izquierda{
     background-color:#83B8CE;
-    width: 25%;
-    height:20%;
     position: absolute;
-
-  }
-  .derecha2{
-    position: absolute;
-    background-color:#83B8CE;
-    width: 40%;
-    height:20%;
-    top: 2%;
-    left: 60%;
+    width: 0%;
+    height:0%;
+    left:60%;
+    .button-wp {
+	border-radius: 0;
+	height: 5.6rem;
+	border: 3px solid transparent;
+	font-size: 2.4rem;
+	color: #fff;
+	background-color: #488aff;
+	margin: 0.4rem 0.2rem;
+	padding: 0 1.1em;
+}
   }
   .izquierda2{
     position: absolute;
     background-color:#83B8CE;
-    width: 40%;
-    height:80%;
-    top: 10%;
-    left: 60%;
+    width: 0%;
+    height:0%;
+    left:10px;
+    .button-wp {
+	border-radius: 0;
+	height: 5.6rem;
+	border: 3px solid transparent;
+	font-size: 1.4rem;
+	color: #fff;
+	background-color: #488aff;
+	margin: 0.4rem 0.2rem;
+	padding: 0 1.1em;
+}
   }
-
+  .imagenes-container{
+    left: 0;
+    top:20px;
+    height:10%;
+    position: relative;
   }
+  .card-content-wp {
+  	padding: 13px 16px;
+  	font-size: 4.4rem;
+  	line-height: 1.5;
+  }
+}

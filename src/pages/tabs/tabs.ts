@@ -6,6 +6,8 @@ import { SaludPage } from '../salud/salud';
 
 import { RegistrarsePage } from '../registrarse/registrarse';
 
+import { NavController } from 'ionic-angular';
+
 
 @Component({
   templateUrl: 'tabs.html',
@@ -17,8 +19,11 @@ export class TabsPage {
 SaludRoote =  SaludPage;
 RegistrarseRoote = RegistrarsePage;
 
-  constructor() {
+  constructor(public navCtrl: NavController) {
 
+  }
+  hom(){
+      this.navCtrl.popToRoot();
   }
 
 }

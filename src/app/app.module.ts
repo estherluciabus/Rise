@@ -11,6 +11,10 @@ import { RegistrarsePage } from '../pages/registrarse/registrarse';
 import { AlimentacionPage } from '../pages/alimentacion/alimentacion';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
 import { TestimonioPage } from '../pages/testimonio/testimonio';
+import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
+import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
+import { InicioPage } from '../pages/inicio/inicio';
+import { AyudaPage } from '../pages/ayuda/ayuda';
 
 
 import { TabsPage } from '../pages/tabs/tabs';
@@ -33,7 +37,11 @@ import{ AngularFireModule } from 'angularfire2';
     RegistrarsePage,
     AlimentacionPage,
     BloqueadoresPage,
-    TestimonioPage
+    TestimonioPage,
+    ConfiguracionesPage,
+    SoportedeproblemaPage,
+    InicioPage,
+    AyudaPage
 
 
   ],
@@ -54,7 +62,11 @@ import{ AngularFireModule } from 'angularfire2';
     RegistrarsePage,
     AlimentacionPage,
     BloqueadoresPage,
-    TestimonioPage
+    TestimonioPage,
+    ConfiguracionesPage,
+    SoportedeproblemaPage,
+    InicioPage,
+    AyudaPage
 
 
 

@@ -10,19 +10,19 @@ import{ PreguntasService} from '../../shared/preguntas.service';
 })
 export class RegistrarsePage implements OnInit {
 
-   respuestas: Array<any> = [];
+    preguntas: Array<any> = [];
+
    constructor(public preguntasService:PreguntasService) {
 
    }
    ngOnInit() {
-     this.preguntasService.getPreguntas().subscribe(preguntas => {
-       console.log(preguntas)
+      this.preguntasService.getPreguntas().subscribe(preguntas => {
+      this.preguntas = preguntas;
+       console.log(this.preguntas);
    })
-
- }
- updateRespuesta(key: string, password: string) {
-   this.preguntasService.updateRespuesta(key,'password');
- }
-
+   }
+   agregarRespuesta(){
+     this.preguntasService.agregarRespuestaTest('2', '0','preguntas')
+   }
 
 }

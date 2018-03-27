@@ -1,14 +1,8 @@
-<ion-navbar>
-</ion-navbar>
-<ion-navbar>
-  <button menuToggle>
-    <ion-icon name="menu"></ion-icon>
-  </button>
-</ion-navbar>
+<button menuToggle>
+  <ion-icon name="menu" class="e"></ion-icon>
+</button>
 <ion-tabs tabsPlacement="top">
-
-<ion-tab [root]="HomeRoote" tabTitle="home" tabIcon="home"></ion-tab>
-<ion-tab [root]="SaludRoote"  tabIcon="salud" tabTitle="salud"></ion-tab>
-<ion-tab [root]="RegistrarseRoote"  tabIcon="registrarse" tabTitle="registrarse"></ion-tab>
-
+  <ion-tab [root]="HomeRoote" tabTitle="home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="SaludRoote"  tabIcon="md-medkit" tabTitle="salud"></ion-tab>
+  <ion-tab [root]="RegistrarseRoote"  tabIcon="md-notifications" tabTitle="registrarse"></ion-tab>
 </ion-tabs>

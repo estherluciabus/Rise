@@ -1,64 +1,28 @@
-
 <ion-navbar>
 </ion-navbar>
 
-<ion-content class ="MiniFormulario">
-    <ion-navbar>
-      <ion-title >
-    MiniTest
-      </ion-title>
-    </ion-navbar>
+<ion-content class="MiniFormulario">
+  <ion-navbar>
+    <ion-title>
+      MiniTest
+    </ion-title>
+  </ion-navbar>
 
-    <ion-card-content>
-
-    <div class="list-content">
-      <label class ="item item-input item-select">
-        <div class ="input-label">
-            ¿En qué te fijas cuando compras un bloqueador solar?
-        </div>
-          <select style ="background-color:#00BCD4">
-            <option>Factor de proteccion</option>
-            <option selected>Precio</option>
-            <option>Marca</option>
+  <ion-card-content class="test-container">
+    <ion-list>
+      <ion-item class="subtest" *ngFor="let pregunta of preguntas">
+      {{pregunta.pregunta}}
+      <select class="alternativas">
+        <option
+           *ngFor="let alternativa of pregunta.alternativas"
+            [value]="alternativas">
+            {{alternativa.texto}}
+          </option>
           </select>
-
-          <div class ="input-label">
-            ¿En qué te fijas cuando compras lentes de sol?
-          </div>
-            <select>
-              <option>Calidad del filtro</option>
-              <option selected>Estética</option>
-              <option>Precio</option>
-              <option>Marca</option>
-            </select>
-
-
-            <div class ="input-label">
-              ¿Tienes antecedentes familiares con cáncer de piel?
-            </div>
-              <select>
-                <option>Si</option>
-                <option selected>No</option>
-
-              </select>
-
-              <div class ="input-label">
-              ¿Qué tipo de color de piel tienes?
-              </div>
-                <select>
-                  <option></option>
-                  <option selected>Estética</option>
-                  <option>Precio</option>
-                  <option>Marca</option>
-                </select>
-
-      </label>
-      <ion-item no-line>
-        <input type="text" #key/>
-        <button ion-button block outline color="primary" (click)="updateRespuesta(key.value)">Enviar</button>
       </ion-item>
-
-      </div>
-
+    </ion-list>
+    <ion-item>
+    <button ion-button block outline color="primary" (click)="agregarRespuesta()">Finalizar</button>
+     </ion-item>
   </ion-card-content>
-  </ion-content>
+</ion-content>
