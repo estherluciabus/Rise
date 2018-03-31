@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav} from 'ionic-angular';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
+import { GooglePlus } from '@ionic-native/google-plus';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -18,12 +19,31 @@ import { TabsPage } from '../pages/tabs/tabs';
   templateUrl: 'app.html',
 })
 export class MyApp {
-   @ViewChild(Nav) nav: Nav;
-  rootPage :any = TabsPage;
-  inicioslide = true;
+  @ViewChild(Nav) nav: Nav;
+  rootPage: any = TabsPage;
+  user = null;
+  slides = [
+    {
+      title: "Bienvenida(o) a <br/>SUNRISE!",
+      description: "EN SUNRISE ALIMENTARAS <br/>TU CULTURA PREVENTIVA SOBRE<br/> EL CANCER DE PIEL Y <br/> APRENDERAS COMO CUIDAR TU PIEL.",
+      image: "assets/img/uno.png"
+    },
+    {
+      title: "LOGIN",
+      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript."
+    },
+    {
+      title: "Test Previo",
+      description: "No te asustes, solo queremos conocerte más <br/> tu informacion esta protegida."
+    }
+  ];
 
-
-  constructor( platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(
+    platform: Platform,
+    statusBar: StatusBar,
+    splashScreen: SplashScreen,
+    private googlePlus: GooglePlus
+  ) {
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -33,49 +53,41 @@ export class MyApp {
     });
   }
 
-  pushhome(){
+  pushhome() {
     this.nav.push(HomePage);
   }
 
-  pushbloqueadores(){
+  pushbloqueadores() {
     this.nav.push(BloqueadoresPage);
   }
-  pushtestimonio(){
+  pushtestimonio() {
     this.nav.push(TestimonioPage);
   }
-  pushconfirguracion(){
+  pushconfirguracion() {
     this.nav.push(ConfiguracionesPage);
   }
-  pushsoporte(){
+  pushsoporte() {
     this.nav.push(SoportedeproblemaPage);
   }
 
-  pushayuda(){
+  pushayuda() {
     this.nav.push(AyudaPage);
   }
 
-inicio(){
+  inicio() {
     this.inicioslide = false;
+  }
+
+  login() {
+    this.googlePlus.login({
+      'offline': true
+    }).then(res => {
+      this.user =res;
+    }, err => alert('error'));
+  }
+
+  logout() {
+    this.googlePlus.logout().then(() => this.user = null);
+  }
+
 }
-
-  slides = [
-
-  {
-    title: "Bienvenida(o) a <br/>SUNRISE!",
-    description: "EN SUNRISE ALIMENTARAS <br/>TU CULTURA PREVENTIVA SOBRE<br/> EL CANCER DE PIEL Y <br/> APRENDERAS COMO CUIDAR TU PIEL.",
-    image: "assets/img/uno.png",
-  },
-
-  {
-    title: "LOGIN",
-    description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-
-  },
-
-  {
-    title: "Test Previo",
-    description: "No te asustes, solo queremos conocerte más <br/> tu informacion esta protegida.",
-
-  }
-  ];
-  }

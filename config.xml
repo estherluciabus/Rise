@@ -91,4 +91,7 @@
         <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="Show your location on the map" />
         <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="Trace your location on the map" />
     </plugin>
+    <plugin name="cordova-plugin-googleplus" spec="^5.2.2">
+        <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.881177989537-saqtq68vb3ju4dm5932k2qsjehu2ku7p" />
+    </plugin>
 </widget>

@@ -1,67 +1,67 @@
-<ion-content *ngIf="inicioslide" class="tutorial-page">
- <ion-slides pager>
-       <ion-slide *ngFor="let slide of slides">
-         <ion-toolbar>
-         </ion-toolbar>
-         <img [src]="slide.image" class="slide-image"/>
-         <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-         <p [innerHTML]="slide.description"></p>
-       </ion-slide>
-   <ion-slide>
-       <ion-toolbar>
-         </ion-toolbar>
-         <h2 class="slide-title">cargando /</h2>
-          <button ion-button large clear icon-end color="primary" (click)="inicio()">
+<ion-content *ngIf="!user" class="tutorial-page">
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar>
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image" />
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <h2 class="slide-title">cargando /</h2>
+      <button ion-button large clear icon-end color="primary" (click)="inicio()">
             Continue
          <ion-icon name="arrow-forward"></ion-icon>
          </button>
-     </ion-slide>
- </ion-slides>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
 
-<ion-content>
-    <ion-menu [content]="content">
-     <ion-header>
-    <ion-title class ="titulo">
-      <h1>unser name</h1>
-      <h3>SUNRISE</h3>
-    </ion-title>
-     </ion-header>
+<ion-content *ngIf="user">
+  <ion-menu [content]="content">
+    <ion-header>
+      <ion-title class="titulo">
+        <h1>unser name</h1>
+        <h3>SUNRISE</h3>
+      </ion-title>
+    </ion-header>
 
-     <ion-content >
-       <div class ="logo">
-         <img src="assets/img/uno.png"/>
-       </div>
-         <ion-list>
-           <button class ="boton1" ion-item (click)="pushhome()">
+    <ion-content>
+      <div class="logo">
+        <img src="assets/img/uno.png" />
+      </div>
+      <ion-list>
+        <button class="boton1" ion-item (click)="pushhome()">
              <ion-icon item-left name="home"></ion-icon>
               Home
           </button>
-           <button class ="boton2"ion-item (click)="pushbloqueadores()">
+        <button class="boton2" ion-item (click)="pushbloqueadores()">
              <ion-icon item-left name="ios-happy"></ion-icon>
               Bloquead..
           </button>
-          <button  class="boton3" ion-item (click)="pushtestimonio()">
+        <button class="boton3" ion-item (click)="pushtestimonio()">
             <ion-icon item-left name="ios-people"></ion-icon>
             Testimonio
          </button>
-            <button class="boton4" ion-item (click)="pushconfirguracion()">
+        <button class="boton4" ion-item (click)="pushconfirguracion()">
               <ion-icon item-left name="ios-cog"></ion-icon>
             Configuraciones
             </button>
 
-            <button ion-item (click)="pushsoporte()">
+        <button ion-item (click)="pushsoporte()">
               <ion-icon item-left name="construct"></ion-icon>
             Soporte de problemas
             </button>
 
-            <button ion-item (click)="pushayuda()">
+        <button ion-item (click)="pushayuda()">
               <ion-icon item-left name="help"></ion-icon>
               Salir
             </button>
 
-         </ion-list>
-     </ion-content>
- </ion-menu>
- <ion-nav  #content [root]="rootPage"></ion-nav>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-nav #content [root]="rootPage"></ion-nav>
 </ion-content>
