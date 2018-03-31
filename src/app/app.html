@@ -1,19 +1,18 @@
 <ion-content *ngIf="inicioslide" class="tutorial-page">
  <ion-slides pager>
-   <ion-slide *ngFor="let slide of slides">
-     <ion-toolbar>
-     </ion-toolbar>
-     <img [src]="slide.image" class="slide-image"/>
-     <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-     <p [innerHTML]="slide.description"></p>
-   </ion-slide>
-   <ion-slide>
+       <ion-slide *ngFor="let slide of slides">
          <ion-toolbar>
          </ion-toolbar>
-
+         <img [src]="slide.image" class="slide-image"/>
+         <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+         <p [innerHTML]="slide.description"></p>
+       </ion-slide>
+   <ion-slide>
+       <ion-toolbar>
+         </ion-toolbar>
          <h2 class="slide-title">cargando /</h2>
-         <button ion-button large clear icon-end color="primary" (click)="inicio()">
-         Continue
+          <button ion-button large clear icon-end color="primary" (click)="inicio()">
+            Continue
          <ion-icon name="arrow-forward"></ion-icon>
          </button>
      </ion-slide>
@@ -58,7 +57,7 @@
 
             <button ion-item (click)="pushayuda()">
               <ion-icon item-left name="help"></ion-icon>
-              Ayuda
+              Salir
             </button>
 
          </ion-list>

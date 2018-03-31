@@ -68,6 +68,7 @@ export class HomePage{
       message: message,
       duration: 3000,
       position: 'button'
+
     });
     toast.onDidDismiss(() => {
       console.log('Dismissed toast');
@@ -76,5 +77,6 @@ export class HomePage{
     toast.present();
 
   }
+
 
 }
