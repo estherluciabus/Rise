@@ -1,25 +1,31 @@
 <ion-content class ="color-container">
   <ion-navbar>
     <ion-title>
-      <h2>Bloqueadores</h2>
+      <h2>Configuraciones</h2>
     </ion-title>
   </ion-navbar>
 
-  <ion-content class="list-avatar-page">
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="img/avatar-cher.png">
-        </ion-avatar>
-        <ion-label>Permitir notificaciones</ion-label>
-        <ion-toggle disabled checked="true"></ion-toggle>
-      </ion-item>
+      <ion-content>
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-icon name="notifications"></ion-icon>
+          </ion-avatar>
+            <ion-label>Permitir notificaciones</ion-label>
+          <ion-toggle disabled checked="true"></ion-toggle>
+        </ion-item>
     <ion-item>Alarma</ion-item>
         <ion-item>
           <ion-avatar item-start>
-            <img src="img/avatar-cher.png">
+            <ion-icon name="musical-notes"></ion-icon>
           </ion-avatar>
-          <ion-label>Sonido</ion-label>
-          <ion-toggle disabled checked="false"></ion-toggle>
+            <ion-label>Sonido</ion-label>
+              <ion-toggle disabled checked="false"></ion-toggle>
+        <ion-item>
+          <ion-range [(ngModel)]="brightness">
+            <ion-icon range-left small name="sunny"></ion-icon>
+              <ion-icon range-right name="sunny"></ion-icon>
+              </ion-range>
+            </ion-item>
         </ion-item>
         <ion-item>
           <ion-avatar item-start>
@@ -31,15 +37,13 @@
     <ion-item>About SunRise</ion-item>
         <ion-item>
           <ion-avatar item-start>
-            <img src="img/avatar-cher.png">
+            <ion-icon name="alert"></ion-icon>
           </ion-avatar>
           <ion-label>version</ion-label>
           <ion-toggle disabled checked="false"></ion-toggle>
         </ion-item>
         <ion-item>
-          <ion-avatar item-start>
-            <img src="img/avatar-cher.png">
-          </ion-avatar>
+
           <ion-label>Actualizaciones</ion-label>
           <ion-toggle disabled checked="false"></ion-toggle>
         </ion-item>

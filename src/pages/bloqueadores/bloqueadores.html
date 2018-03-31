@@ -1,126 +1,106 @@
-
 <ion-content class ="color-container">
   <ion-navbar>
     <ion-title>
-      <h2>Bloqueadores
-      </h2>
-        <button ion-fab mini (click) ="menu()">jj</button>
+      <h2>Bloqueadores</h2>
     </ion-title>
+    <button ion-fab mini (click)="menu()">jj</button>
   </ion-navbar>
-  <ion-card-content>
-      <div class="titulo-container">
-        <button ion-button style="background-color:#FC7B55"> Para usar un bloqueador debes saber:</button>
-      </div>
+  <ion-card-content class ="inicio">
+    <div class ="titulo-container">
+      <button ion-button style="background-color:#FC7B55"> Para usar un bloqueador debes saber:</button>
+    </div>
+      <div class ="bloqueador">
+        <img src="assets/img/bloqueador.png"/>
+     </div>
+    <div class="izquierda">
+      <button ion-button mini>
+        <font size=1>El FPS, <br/>IP y SPF=<br/>índice de<br/>protección<br/>
+        solar</font>
+      </button>
+    </div>
+
+    <div class ="izquierda2">
+      <button ion-button mini>
+        <font size=1>  Contener<br/> protección:<br/> IR ,UVA Y UVB</font>
+      </button>
+    </div>
+
+    <div class ="derecha2">
+      <button ion-button mini>
+        <font size=1>Buen protector</font>
+      </button>
+    </div>
+
+    <div class="derecha">
+      <button ion-button mini>
+      <font size=1>  Peligro : riesgo<br/> de tener cancer</font>
+      </button>
+    </div>
   </ion-card-content>
 
-    <ion-card-content class ="botones">
-      <div class = "bloqueador">
-        <img src="assets/imgs/bloqueador.png"/>
-      </div>
-
-          <div class ="izquierda">
-              <button ion-button mini>
-              <font size=1>El FPS, <br/>IP y SPF=<br/>índice de<br/>
-                protección<br/>
-                solar</font>
-              </button>
-
-          </div>
-
-          <div class ="izquierda2">
-                <button ion-button mini>
-              <font size=1>  Contener<br/> protección:<br/> IR ,UVA Y UVB</font>
-                </button>
-            </div>
-              <div class ="derecha">
-                <button ion-button mini>
-                  <font size=1>Buen protector</font>
-                </button>
-            </div>
-
-            <div class ="derecha2">
-              <button ion-button mini >
-                <font size=1>  Peligro : riesgo<br/> de tener cancer</font>
-              </button>
-            </div>
-
-      </ion-card-content>
-
-    <ion-card-content>
-
-      <div class="imagenes-container">
-          <button ion-button mini><font size=1.5>CARACTERISTICA<br/> FISICA</font></button>
-      </div>
-         <ion-item >
-          <ion-thumbnail item-start>
-            <img src="assets/imgs/rostro.png">
+  <ion-card-content>
+    <div class="botoncaracterisstica">
+      <button ion-button mini><font size=1.5>CARACTERISTICA<br/> FISICA</font></button>
+    </div>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/rostro.png">
           </ion-thumbnail>
           <ion-thumbnail item-start>
-            <p>Utilizar  bloqueador<br/> de Proteccion muy alta :50+<br/> (SPF/IP/FPS)</p>
-          </ion-thumbnail>
-        </ion-item>
+          <p>Utilizar bloqueador<br/> de Proteccion muy alta :50+<br/> (SPF/IP/FPS)</p>
+        </ion-thumbnail>
+      </ion-item>
 
-            <ion-item>
-              <ion-thumbnail item-start>
-                <img src="assets/img/thumbnail-puppy-3.jpg">
-              </ion-thumbnail>
-                <ion-thumbnail item-start>
-                   <p>Utilizar  bloqueador<br/> de Proteccion alta :30+<br/> (SPF/IP/FPS)</p>
-                </ion-thumbnail>
-            </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/img/thumbnail-puppy-3.jpg">
+        </ion-thumbnail>
+        <ion-thumbnail item-start>
+        <p>Utilizar bloqueador<br/> de Proteccion alta :30+<br/> (SPF/IP/FPS)</p>
+      </ion-thumbnail>
+    </ion-item>
 
-            <ion-item item-start>
-              <ion-thumbnail item-start>
-                <img src="assets/img/thum bnail-puppy-3.jpg"/>
-              </ion-thumbnail>
-              <ion-thumbnail item-start>
-                <p>Utilizar  bloqueador<br/> de Proteccion media :15 o 20 SPF <br/> (SPF/IP/FPS)</p>
-              </ion-thumbnail>
-             </ion-item>
+    <ion-item item-start>
+      <ion-thumbnail item-start>
+        <img src="assets/img/thum bnail-puppy-3.jpg" />
+        </ion-thumbnail>
+        <ion-thumbnail item-start>
+          <p>Utilizar bloqueador<br/> de Proteccion media :15 o 20 SPF <br/> (SPF/IP/FPS)</p>
+        </ion-thumbnail>
+    </ion-item>
+  </ion-card-content>
 
-    </ion-card-content>
+<ion-card-content>
+  <button ion-button full outline>TEXTURAS /  TIPOS DE PIEL  </button>
+    <ion-item-sliding #item>
+      <ion-item>
+        Item
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button (click)="favorite(item)">Favorite</button>
+        <button ion-button color="danger" (click)="share(item)">Share</button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button (click)="unread(item)">Unread</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-card-content>
 
-      <button ion-button full outline >TEXTURAS /  TIPOS DE PIEL  </button>
+  <ion-card-content>
+    <button ion-button full block style="background-color:#CC0033">RECOMENDACIONES</button>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/niños.png">
+        </ion-thumbnail>
+      <p> Aplicarse a partir de los 6 meses<br/> Para niñas(os) factor 50 SPF a más,<br/> tipo :filtros físicos o patalla<br/> Sin PABA y perfume (conservante de <br/>bloqueador) producir alergias (piel).</p>
+    </ion-item>
+  </ion-card-content>
 
-      <ion-card-content>
-          <ion-item-sliding #item>
-          <ion-item>
-          Item
-          </ion-item>
-          <ion-item-options side="left">
-          <button ion-button (click)="favorite(item)">Favorite</button>
-          <button ion-button color="danger" (click)="share(item)">Share</button>
-          </ion-item-options>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="assets/img/thumbnail-puppy-3.jpg">
+      </ion-thumbnail>
+      <p> El bloqueador falcial no irrita los ojos por ser suave y delicado a comparación del corporal que irrita los ojos y es más aceitosa.</p>
+  </ion-item>
 
-          <ion-item-options side="right">
-          <button ion-button (click)="unread(item)">Unread</button>
-          </ion-item-options>
-          </ion-item-sliding>
-        </ion-card-content>
-
-        <ion-card-content>
-          <button ion-button full block style="background-color:#CC0033">RECOMENDACIONES</button>
-
-          <ion-item>
-             <ion-thumbnail item-start>
-               <img src="assets/img/thumbnail-puppy-3.jpg">
-             </ion-thumbnail>
-
-                <p> Aplicarse a partir de los 6 meses
-                    Para niñas(os) factor 50 SPF a más,
-                    tipo :filtros físicos o patalla
-                    Sin  PABA y perfume (conservante de bloqueador) producir alergias (piel).</p>
-          </ion-item>
-        </ion-card-content>
-
-          <ion-item>
-             <ion-thumbnail item-start>
-               <img src="assets/img/thumbnail-puppy-3.jpg">
-             </ion-thumbnail>
-
-               <p> El bloqueador  falcial no  irrita los ojos por ser suave y delicado a
-                  comparación del corporal que irrita los ojos y es más aceitosa.</p>
-
-          </ion-item>
-
-    </ion-content>
+</ion-content>

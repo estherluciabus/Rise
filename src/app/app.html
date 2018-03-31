@@ -1,58 +1,68 @@
+<ion-content *ngIf="inicioslide" class="tutorial-page">
+ <ion-slides pager>
+   <ion-slide *ngFor="let slide of slides">
+     <ion-toolbar>
+     </ion-toolbar>
+     <img [src]="slide.image" class="slide-image"/>
+     <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+     <p [innerHTML]="slide.description"></p>
+   </ion-slide>
+   <ion-slide>
+         <ion-toolbar>
+         </ion-toolbar>
 
-<ion-menu [content]="content">
- <ion-header>
-<ion-title class ="titulo">
-  <h1>unser name</h1>
-  <h3>SUNRISE</h3>
-</ion-title>
-<button menuToggle ="menu" (click)="hom()">
-  <ion-icon name="menu"></ion-icon>
-</button>
- </ion-header>
+         <h2 class="slide-title">cargando /</h2>
+         <button ion-button large clear icon-end color="primary" (click)="inicio()">
+         Continue
+         <ion-icon name="arrow-forward"></ion-icon>
+         </button>
+     </ion-slide>
+ </ion-slides>
+</ion-content>
 
- <ion-content >
-   <div class ="logo">
-     <img src="assets/imgs/1.png"/>
-   </div>
-     <ion-list>
-       <button class ="boton1" ion-item (click)="pushregistro()">
-         <ion-icon item-left name="home"></ion-icon>
-         alimentacion
-      </button>
-       <button class ="boton2"ion-item (click)="pushhome()">
-         <ion-icon item-left name="ios-happy"></ion-icon>
-         Home
-      </button>
-      <button  class="boton3" ion-item (click)="pushsalud()">
-        <ion-icon item-left name="ios-people"></ion-icon>
-        Salud
-     </button>
-        <button class="boton4" ion-item (click)="pushbloqueadores()">
-          <ion-icon item-left name="ios-cog"></ion-icon>
-          Bloqueadores
-        </button>
+<ion-content>
+    <ion-menu [content]="content">
+     <ion-header>
+    <ion-title class ="titulo">
+      <h1>unser name</h1>
+      <h3>SUNRISE</h3>
+    </ion-title>
+     </ion-header>
 
-        <button ion-item (click)="pushtestimonio()">
-          <ion-icon item-left name="star"></ion-icon>
-          configuraciones
-        </button>
+     <ion-content >
+       <div class ="logo">
+         <img src="assets/img/uno.png"/>
+       </div>
+         <ion-list>
+           <button class ="boton1" ion-item (click)="pushhome()">
+             <ion-icon item-left name="home"></ion-icon>
+              Home
+          </button>
+           <button class ="boton2"ion-item (click)="pushbloqueadores()">
+             <ion-icon item-left name="ios-happy"></ion-icon>
+              Bloquead..
+          </button>
+          <button  class="boton3" ion-item (click)="pushtestimonio()">
+            <ion-icon item-left name="ios-people"></ion-icon>
+            Testimonio
+         </button>
+            <button class="boton4" ion-item (click)="pushconfirguracion()">
+              <ion-icon item-left name="ios-cog"></ion-icon>
+            Configuraciones
+            </button>
 
-        <button ion-item (click)="pushsoporte()">
-          <ion-icon item-left name="star"></ion-icon>
-          Soporte de problemas
-        </button>
+            <button ion-item (click)="pushsoporte()">
+              <ion-icon item-left name="construct"></ion-icon>
+            Soporte de problemas
+            </button>
 
-        <button ion-item (click)="pushayuda()">
-          <ion-icon item-left name="help"></ion-icon>
-          Ayuda
-        </button>
+            <button ion-item (click)="pushayuda()">
+              <ion-icon item-left name="help"></ion-icon>
+              Ayuda
+            </button>
 
-        <button ion-item (click)="inicioslide()">
-          <ion-icon item-left name="star"></ion-icon>
-          sline
-        </button>
-     </ion-list>
- </ion-content>
+         </ion-list>
+     </ion-content>
  </ion-menu>
-
  <ion-nav  #content [root]="rootPage"></ion-nav>
+</ion-content>

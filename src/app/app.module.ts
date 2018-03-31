@@ -8,12 +8,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
 import { RegistrarsePage } from '../pages/registrarse/registrarse';
-import { AlimentacionPage } from '../pages/alimentacion/alimentacion';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
 import { TestimonioPage } from '../pages/testimonio/testimonio';
 import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
 import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
-import { InicioPage } from '../pages/inicio/inicio';
 import { AyudaPage } from '../pages/ayuda/ayuda';
 
 
@@ -35,12 +33,10 @@ import{ AngularFireModule } from 'angularfire2';
     HomePage,
     SaludPage,
     RegistrarsePage,
-    AlimentacionPage,
     BloqueadoresPage,
     TestimonioPage,
     ConfiguracionesPage,
     SoportedeproblemaPage,
-    InicioPage,
     AyudaPage
 
 
@@ -49,7 +45,7 @@ import{ AngularFireModule } from 'angularfire2';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
-   AngularFireDatabaseModule
+    AngularFireDatabaseModule
 
 
   ],
@@ -60,12 +56,10 @@ import{ AngularFireModule } from 'angularfire2';
     HomePage,
     SaludPage,
     RegistrarsePage,
-    AlimentacionPage,
     BloqueadoresPage,
     TestimonioPage,
     ConfiguracionesPage,
     SoportedeproblemaPage,
-    InicioPage,
     AyudaPage
 
 

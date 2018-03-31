@@ -10,8 +10,8 @@ import { NavController } from 'ionic-angular';
 export class BloqueadoresPage{
   constructor(public navCtrl: NavController) {
  }
-  menu(){
-      this.navCtrl.popToRoot();
-  }
+ menu(){
+     this.navCtrl.popToRoot();
+ }
 
 }

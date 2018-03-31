@@ -10,19 +10,21 @@
 
   <ion-card-content class="test-container">
     <ion-list>
+
       <ion-item class="subtest" *ngFor="let pregunta of preguntas">
       {{pregunta.pregunta}}
-      <select class="alternativas">
+      <select class="alternativas"(change)="test (pregunta.key, $event.target.value)">
         <option
            *ngFor="let alternativa of pregunta.alternativas"
-            [value]="alternativas">
+            [value]="pregunta.alternativas.indexOf(alternativa)">
             {{alternativa.texto}}
           </option>
-          </select>
+      </select>
       </ion-item>
+
     </ion-list>
     <ion-item>
-    <button ion-button block outline color="primary" (click)="agregarRespuesta()">Finalizar</button>
+    <button ion-button block outline color="primary">Finalizar</button>
      </ion-item>
   </ion-card-content>
 </ion-content>

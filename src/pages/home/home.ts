@@ -1,5 +1,6 @@
 import { ToastController } from 'ionic-angular';
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 import {
  GoogleMaps,
@@ -16,7 +17,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class HomePage{
   map: GoogleMap;
-  constructor(private geolocation : Geolocation, public toastCtrl: ToastController ) {
+  constructor(public navCtrl: NavController, private geolocation : Geolocation, public toastCtrl: ToastController ) {
   }
 
 

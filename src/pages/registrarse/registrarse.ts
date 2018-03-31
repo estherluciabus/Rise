@@ -20,9 +20,10 @@ export class RegistrarsePage implements OnInit {
       this.preguntas = preguntas;
        console.log(this.preguntas);
    })
+
    }
-   agregarRespuesta(){
-     this.preguntasService.agregarRespuestaTest('2', '0','preguntas')
+   test(preguntaKey:string, respuesta: string) {
+       this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'salome');
    }
 
 }
