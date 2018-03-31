@@ -13,7 +13,7 @@ import { TestimonioPage } from '../pages/testimonio/testimonio';
 import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
 import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
 import { AyudaPage } from '../pages/ayuda/ayuda';
-
+import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -37,7 +37,8 @@ import{ AngularFireModule } from 'angularfire2';
     TestimonioPage,
     ConfiguracionesPage,
     SoportedeproblemaPage,
-    AyudaPage
+    AyudaPage,
+    NotificacionesPage
 
 
   ],
@@ -60,7 +61,8 @@ import{ AngularFireModule } from 'angularfire2';
     TestimonioPage,
     ConfiguracionesPage,
     SoportedeproblemaPage,
-    AyudaPage
+    AyudaPage,
+    NotificacionesPage
 
 
 
