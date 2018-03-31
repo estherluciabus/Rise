@@ -61,11 +61,13 @@ export class HomePage{
 
   }
 
+
   presentToast() {
     let toast = this.toastCtrl.create({
       message: ' Cada 2h aplicate el bloqueador para una completa proteccion ',
-      duration: 3000,
+      duration: 6000,
       position: 'button'
+
     });
     toast.onDidDismiss(() => {
       console.log('Dismissed toast');
@@ -74,5 +76,6 @@ export class HomePage{
     toast.present();
 
   }
+  
 
 }

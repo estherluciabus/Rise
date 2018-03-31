@@ -1,8 +1,9 @@
- <ion-navbar>
+
+<ion-navbar>
 </ion-navbar>
 <ion-navbar>
 </ion-navbar>
-                                        
+
 <ion-content class ="eventos-container">
   <div class="padre-container">
       <div class="fecha-container">
@@ -16,7 +17,7 @@
                         <ion-fab-list side="right">
                           <ion-item  style="background-color: #BDF758">
 
-                            <ion-note><h3>Riesgo</h3></ion-note>Muy alto
+                            <ion-note><h3>Riesgo</h3></ion-note>BAJO
                             <ion-note><p>Limite de exposicion</p></ion-note>25min
                             <ion-note><p>Proteccion</p></ion-note><img src=""/>
                             <ion-note><p>Indice UV</p>
@@ -31,7 +32,7 @@
                       <ion-fab-list side="right">
                         <ion-item style="background-color:#F7E86C">
 
-                          <ion-note><h2>Riesgo</h2></ion-note><strong>…</strong>
+                          <ion-note><h2>Riesgo</h2></ion-note><strong>MODERADO</strong>
                           <ion-note><h2>Limite de exposicion(sin proteccion)</h2></ion-note><strong>45min</strong>
                           <ion-note><h1>Proteccion</h1></ion-note><img src=""/>
                           <ion-note><h2>Indice UV</h2>
@@ -44,7 +45,7 @@
                     <button ion-fab mini class="tres3"><ion-icon name="arrow-dropring"></ion-icon></button>
                       <ion-fab-list side="right">
                         <ion-item style="background-color:#FBBE45">
-                          <ion-note><h1>Riesgo</h1></ion-note><strong>…</strong>
+                          <ion-note><h1>Riesgo</h1></ion-note><strong>ALTA</strong>
                           <ion-note><h1>Limite de exposicion</h1></ion-note><strong>30min</strong>
                           <ion-note><h1>Proteccion</h1></ion-note><img src=""/>
                           <ion-note><h1>Indice UV</h1>
@@ -59,7 +60,7 @@
                         <ion-fab-list side="right">
                           <ion-item style="background-color: #EF7B68">
 
-                            <ion-note><h1>Riesgo</h1></ion-note><strong><h1>	Muy alto </h1> </strong>
+                            <ion-note><h1>Riesgo</h1></ion-note><strong><h1>MUY ALTO</h1> </strong>
                             <ion-note><h1>Limite de exposicion</h1></ion-note><strong> <h1>25min </h1> </strong>
                             <ion-note><h1>Proteccion</h1></ion-note><img src=""/>
                             <ion-note><h1>Indice UV</h1></ion-note><strong> <h1> 8-10 </h1> </strong>
@@ -70,7 +71,7 @@
                         <button ion-fab mini class ="cinco5"><ion-icon name="arrow-dropring"></ion-icon></button>
                           <ion-fab-list side="right">
                             <ion-item  style="background-color: #CB9CE3">
-                              <ion-note><h1>Riesgo</h1></ion-note><strong><h1>	Muy alto </h1> </strong>
+                              <ion-note><h1>Riesgo</h1></ion-note><strong><h1>EXTREMADAMENTE ALTO</h1> </strong>
                               <ion-note><h1>Limite de exposicion</h1></ion-note><strong> <h1>25min </h1> </strong>
                               <ion-note><h1>Proteccion</h1></ion-note><img src=""/>
                               <ion-note><h1>Indice UV</h1>
@@ -97,8 +98,8 @@
                   </div>
 
               <div class="alarma-container">
-                <button ion-button color="danger"(click)="presentToast()"><ion-icon name="alarm"></ion-icon>ALARMA</button>
+                <button ion-button color="danger"(click)="presentToast()">
+                  <ion-icon name="alarm"></ion-icon>ALARMA</button>
               </div>
-
-  </div>
- </ion-content>
+            </div>
+           </ion-content>
