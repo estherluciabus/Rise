@@ -43,6 +43,8 @@ export class HomePage{
 
       this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
 
+        this.presentToast('La radiación está muy fuerte');
+
         this.map.on(GoogleMapsEvent.MAP_LONG_CLICK)
           .subscribe((latLng: LatLng) => {
 
@@ -61,9 +63,9 @@ export class HomePage{
 
   }
 
-  presentToast() {
+  presentToast(message: string = 'Cada 2h aplicate el bloqueador para una completa proteccion') {
     let toast = this.toastCtrl.create({
-      message: ' Cada 2h aplicate el bloqueador para una completa proteccion ',
+      message: message,
       duration: 3000,
       position: 'button'
     });

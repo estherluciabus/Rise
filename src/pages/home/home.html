@@ -1,104 +1,126 @@
- <ion-navbar>
+<ion-navbar>
 </ion-navbar>
 <ion-navbar>
 </ion-navbar>
-                                        
-<ion-content class ="eventos-container">
+
+<ion-content class="eventos-container">
   <div class="padre-container">
-      <div class="fecha-container">
-          <button ion-button full style="background-color: #FF9900">2 de abril 2015</button>
+    <div class="fecha-container">
+      <button ion-button full style="background-color: #FF9900">2 de abril 2015</button>
+    </div>
+    <div class="centro-container">
+      <div class="imagen-container">
+
+        <ion-fab class="uno">
+          <button ion-fab mini class="uno1"><ion-icon name="arrow-dropring"></ion-icon></button>
+          <ion-fab-list side="right">
+            <ion-item style="background-color: #BDF758">
+
+              <ion-note>
+                <h3>Riesgo</h3></ion-note>Muy alto
+              <ion-note>
+                <p>Limite de exposicion</p>
+              </ion-note>25min
+              <ion-note>
+                <p>Proteccion</p>
+              </ion-note><img src="" />
+              <ion-note>
+                <p>Indice UV</p>
+              </ion-note>5-8
+            </ion-item>
+          </ion-fab-list>
+        </ion-fab>
+
+
+        <ion-fab class="dos">
+          <button ion-fab mini class="dos2"><ion-icon name="arrow-dropring"></ion-icon></button>
+          <ion-fab-list side="right">
+            <ion-item style="background-color:#F7E86C">
+
+              <ion-note>
+                <h2>Riesgo</h2></ion-note><strong>…</strong>
+              <ion-note>
+                <h2>Limite de exposicion(sin proteccion)</h2></ion-note><strong>45min</strong>
+              <ion-note>
+                <h1>Proteccion</h1></ion-note><img src="" />
+              <ion-note>
+                <h2>Indice UV</h2>
+              </ion-note><strong>3-5</strong>
+            </ion-item>
+          </ion-fab-list>
+        </ion-fab>
+
+        <ion-fab class="tres">
+          <button ion-fab mini class="tres3"><ion-icon name="arrow-dropring"></ion-icon></button>
+          <ion-fab-list side="right">
+            <ion-item style="background-color:#FBBE45">
+              <ion-note>
+                <h1>Riesgo</h1></ion-note><strong>…</strong>
+              <ion-note>
+                <h1>Limite de exposicion</h1></ion-note><strong>30min</strong>
+              <ion-note>
+                <h1>Proteccion</h1></ion-note><img src="" />
+              <ion-note>
+                <h1>Indice UV</h1>
+              </ion-note><strong>6-7</strong>
+            </ion-item>
+
+          </ion-fab-list>
+        </ion-fab>
+
+        <ion-fab class="cuatro">
+          <button ion-fab mini class="cuatro4"><ion-icon name="arrow-dropring"></ion-icon></button>
+          <ion-fab-list side="right">
+            <ion-item style="background-color: #EF7B68">
+
+              <ion-note>
+                <h1>Riesgo</h1></ion-note><strong><h1>	Muy alto </h1> </strong>
+              <ion-note>
+                <h1>Limite de exposicion</h1></ion-note><strong> <h1>25min </h1> </strong>
+              <ion-note>
+                <h1>Proteccion</h1></ion-note><img src="" />
+              <ion-note>
+                <h1>Indice UV</h1></ion-note><strong> <h1> 8-10 </h1> </strong>
+            </ion-item>
+          </ion-fab-list>
+        </ion-fab>
+        <ion-fab class="cinco">
+          <button ion-fab mini class="cinco5"><ion-icon name="arrow-dropring"></ion-icon></button>
+          <ion-fab-list side="right">
+            <ion-item style="background-color: #CB9CE3">
+              <ion-note>
+                <h1>Riesgo</h1></ion-note><strong><h1>	Muy alto </h1> </strong>
+              <ion-note>
+                <h1>Limite de exposicion</h1></ion-note><strong> <h1>25min </h1> </strong>
+              <ion-note>
+                <h1>Proteccion</h1></ion-note><img src="" />
+              <ion-note>
+                <h1>Indice UV</h1>
+              </ion-note><strong><h1>6-8 </h1></strong>
+            </ion-item>
+          </ion-fab-list>
+        </ion-fab>
+
+      </div>
+
+      <div class="derecha-container">
+        <div class="map-container" id="map_canvas">
+
         </div>
-            <div class="centro-container">
-              <div class="imagen-container">
 
-                  <ion-fab class="uno">
-                      <button ion-fab mini class="uno1"><ion-icon name="arrow-dropring"></ion-icon></button>
-                        <ion-fab-list side="right">
-                          <ion-item  style="background-color: #BDF758">
+        <div class="aviso-container">
+          <ion-chip #chip2 (click)="loadMap()">
+            <ion-icon name="pin" color="primary"></ion-icon>
+            <ion-label>Conectar con GPS </ion-label>
 
-                            <ion-note><h3>Riesgo</h3></ion-note>Muy alto
-                            <ion-note><p>Limite de exposicion</p></ion-note>25min
-                            <ion-note><p>Proteccion</p></ion-note><img src=""/>
-                            <ion-note><p>Indice UV</p>
-                            </ion-note>5-8
-                          </ion-item>
-                        </ion-fab-list>
-                  </ion-fab>
+          </ion-chip>
+        </div>
+      </div>
+    </div>
 
-
-                <ion-fab class="dos">
-                    <button ion-fab mini class="dos2"><ion-icon name="arrow-dropring"></ion-icon></button>
-                      <ion-fab-list side="right">
-                        <ion-item style="background-color:#F7E86C">
-
-                          <ion-note><h2>Riesgo</h2></ion-note><strong>…</strong>
-                          <ion-note><h2>Limite de exposicion(sin proteccion)</h2></ion-note><strong>45min</strong>
-                          <ion-note><h1>Proteccion</h1></ion-note><img src=""/>
-                          <ion-note><h2>Indice UV</h2>
-                          </ion-note><strong>3-5</strong>
-                        </ion-item>
-                      </ion-fab-list>
-                  </ion-fab>
-
-                  <ion-fab class="tres">
-                    <button ion-fab mini class="tres3"><ion-icon name="arrow-dropring"></ion-icon></button>
-                      <ion-fab-list side="right">
-                        <ion-item style="background-color:#FBBE45">
-                          <ion-note><h1>Riesgo</h1></ion-note><strong>…</strong>
-                          <ion-note><h1>Limite de exposicion</h1></ion-note><strong>30min</strong>
-                          <ion-note><h1>Proteccion</h1></ion-note><img src=""/>
-                          <ion-note><h1>Indice UV</h1>
-                          </ion-note><strong>6-7</strong>
-                        </ion-item>
-
-                      </ion-fab-list>
-                    </ion-fab>
-
-                    <ion-fab class="cuatro">
-                      <button ion-fab mini class ="cuatro4"><ion-icon name="arrow-dropring"></ion-icon></button>
-                        <ion-fab-list side="right">
-                          <ion-item style="background-color: #EF7B68">
-
-                            <ion-note><h1>Riesgo</h1></ion-note><strong><h1>	Muy alto </h1> </strong>
-                            <ion-note><h1>Limite de exposicion</h1></ion-note><strong> <h1>25min </h1> </strong>
-                            <ion-note><h1>Proteccion</h1></ion-note><img src=""/>
-                            <ion-note><h1>Indice UV</h1></ion-note><strong> <h1> 8-10 </h1> </strong>
-                          </ion-item>
-                        </ion-fab-list>
-                      </ion-fab>
-              <ion-fab class="cinco">
-                        <button ion-fab mini class ="cinco5"><ion-icon name="arrow-dropring"></ion-icon></button>
-                          <ion-fab-list side="right">
-                            <ion-item  style="background-color: #CB9CE3">
-                              <ion-note><h1>Riesgo</h1></ion-note><strong><h1>	Muy alto </h1> </strong>
-                              <ion-note><h1>Limite de exposicion</h1></ion-note><strong> <h1>25min </h1> </strong>
-                              <ion-note><h1>Proteccion</h1></ion-note><img src=""/>
-                              <ion-note><h1>Indice UV</h1>
-                              </ion-note><strong><h1>6-8 </h1></strong>
-                            </ion-item>
-                          </ion-fab-list>
-                      </ion-fab>
-
-                    </div>
-
-                          <div class="derecha-container">
-                            <div class="map-container" id="map_canvas">
-
-                            </div>
-
-                            <div class="aviso-container">
-                              <ion-chip #chip2 (click)="loadMap()">
-                                <ion-icon name="pin" color="primary"></ion-icon>
-                                <ion-label>Conectar con GPS </ion-label>
-
-                                 </ion-chip>
-                            </div>
-                          </div>
-                  </div>
-
-              <div class="alarma-container">
-                <button ion-button color="danger"(click)="presentToast()"><ion-icon name="alarm"></ion-icon>ALARMA</button>
-              </div>
+    <div class="alarma-container">
+      <button ion-button color="danger" (click)="presentToast()"><ion-icon name="alarm"></ion-icon>ALARMA</button>
+    </div>
 
   </div>
- </ion-content>
+</ion-content>
