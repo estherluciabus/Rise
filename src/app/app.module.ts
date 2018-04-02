@@ -25,6 +25,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import{ config} from '../firebaseConfig';
 import{ AngularFireDatabaseModule } from 'angularfire2/database';
 import{ AngularFireModule } from 'angularfire2';
+import { GooglePlus } from '@ionic-native/google-plus';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,9 @@ import{ AngularFireModule } from 'angularfire2';
     PreguntasService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
-    GoogleMaps
+    GoogleMaps,
+    GooglePlus
+
   ]
 
 
