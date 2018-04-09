@@ -75,7 +75,7 @@ export class MyApp {
   }
 
   inicio() {
-    this.inicioslide = false;
+    this.user= {};
   }
 
   login() {

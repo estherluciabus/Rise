@@ -14,6 +14,7 @@ import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
 import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
 import { AyudaPage } from '../pages/ayuda/ayuda';
 import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
+import { MitosPage } from '../pages/mitos/mitos';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -39,8 +40,8 @@ import { GooglePlus } from '@ionic-native/google-plus';
     ConfiguracionesPage,
     SoportedeproblemaPage,
     AyudaPage,
-    NotificacionesPage
-
+    NotificacionesPage,
+    MitosPage
 
   ],
   imports: [
@@ -63,8 +64,8 @@ import { GooglePlus } from '@ionic-native/google-plus';
     ConfiguracionesPage,
     SoportedeproblemaPage,
     AyudaPage,
-    NotificacionesPage
-
+    NotificacionesPage,
+    MitosPage
 
 
   ],
