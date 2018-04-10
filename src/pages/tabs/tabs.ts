@@ -8,6 +8,9 @@ import { SaludPage } from '../salud/salud';
 
 import { NavController } from 'ionic-angular';
 
+import { NotificacionesPage } from '../notificaciones/notificaciones';
+
+
 
 @Component({
   templateUrl: 'tabs.html',
@@ -16,9 +19,15 @@ import { NavController } from 'ionic-angular';
 export class TabsPage {
 
   HomeRoote = HomePage;
+<<<<<<< HEAD
   SaludRoote =  SaludPage;
 // RegistrarseRoote = RegistrarsePage;
 
+=======
+SaludRoote =  SaludPage;
+RegistrarseRoote = RegistrarsePage;
+NotificacionesRoote = NotificacionesPage;
+>>>>>>> c81df2fc94de0dc03e8ee242dd14634187ebc75c
   constructor(public navCtrl: NavController) {
 
   }

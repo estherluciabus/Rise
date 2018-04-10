@@ -13,7 +13,8 @@ import { TestimonioPage } from '../pages/testimonio/testimonio';
 import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
 import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
 import { AyudaPage } from '../pages/ayuda/ayuda';
-
+import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
+import { MitosPage } from '../pages/mitos/mitos';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -40,8 +41,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     TestimonioPage,
     ConfiguracionesPage,
     SoportedeproblemaPage,
-    AyudaPage
-
+    AyudaPage,
+    NotificacionesPage,
+    MitosPage
 
   ],
   imports: [
@@ -66,8 +68,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     TestimonioPage,
     ConfiguracionesPage,
     SoportedeproblemaPage,
-    AyudaPage
-
+    AyudaPage,
+    NotificacionesPage,
+    MitosPage
 
 
   ],

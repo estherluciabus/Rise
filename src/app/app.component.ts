@@ -73,7 +73,11 @@ export class MyApp implements OnInit {
   }
 
   inicio() {
+<<<<<<< HEAD
     this.user = {};
+=======
+    this.user= {};
+>>>>>>> c81df2fc94de0dc03e8ee242dd14634187ebc75c
   }
 
   login() {
