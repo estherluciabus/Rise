@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
-import { RegistrarsePage } from '../pages/registrarse/registrarse';
+// import { RegistrarsePage } from '../pages/registrarse/registrarse';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
 import { TestimonioPage } from '../pages/testimonio/testimonio';
 import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
@@ -19,13 +19,15 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { PreguntasService} from '../shared/preguntas.service';
 import { GoogleMaps } from '@ionic-native/google-maps';
-import { Geolocation } from '@ionic-native/geolocation';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { ClimaService } from '../shared/clima.service';
 
 
 import{ config} from '../firebaseConfig';
 import{ AngularFireDatabaseModule } from 'angularfire2/database';
 import{ AngularFireModule } from 'angularfire2';
 import { GooglePlus } from '@ionic-native/google-plus';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
     TabsPage,
     HomePage,
     SaludPage,
-    RegistrarsePage,
+    // RegistrarsePage,
     BloqueadoresPage,
     TestimonioPage,
     ConfiguracionesPage,
@@ -46,7 +48,10 @@ import { GooglePlus } from '@ionic-native/google-plus';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpClientModule,
+    HttpClientJsonpModule
+
 
 
   ],
@@ -56,7 +61,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
     TabsPage,
     HomePage,
     SaludPage,
-    RegistrarsePage,
+    // RegistrarsePage,
     BloqueadoresPage,
     TestimonioPage,
     ConfiguracionesPage,
@@ -73,7 +78,8 @@ import { GooglePlus } from '@ionic-native/google-plus';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
     GoogleMaps,
-    GooglePlus
+    GooglePlus,
+    ClimaService
 
   ]
 

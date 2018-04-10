@@ -1,34 +1,26 @@
 page-home {
-.scroll-content {
- display: flex;
- flex-direction:column;
- background-color: #FCCB3F;
-}
-
- .padre-container {
-  display : flex;
-  flex-direction:column;
-  height: 100%;
-  border:5px solid 0;
- }
-
-
- .fecha-container{
-   display : flex;
+  .scroll-content {
+   display: flex;
    flex-direction:column;
-   height: 10%;
-   width: 100%;
+   background: #a8ecf5;
+  }
+
+   .padre-container {
+    display : flex;
+    flex-direction:column;
+    height: 100%;
+    border:5px solid green;
+   }
 
 
- }
- .centro-container{
-     display: flex;
-     flex-direction:row;
-     height:70%;
-     width: 100%;
-     border:5px solid 0;
-     align-content: center;
-     justify-content: center;
+   .centro-container{
+       display: flex;
+       flex-direction:row;
+       height:70%;
+       width: 100%;
+       border:5px solid yellow;
+       align-content: center;
+       justify-content: center;
 
 
   }
@@ -36,29 +28,33 @@ page-home {
   .imagen-container {
     width: 30%;
     height: 95%;
-    background-color:#2E4053;
-    left: 1%;
-    border: 4px solid 0;
+    background-color:#232323;
+    left:0;
+    border: 0px solid 0;
     border:none;
     border-radius: 9px;
+    top: 3%;
     position: relative;
+
 
   }
 
 
   .uno{
-    position:absolute;
-    top: 2%;
+
     left: 20%;
-    width: 120px;
-    height: 120px;
+    width: 45%;
+    height: 30%;
+    bottom: 67%;
+    position: absolute;
 
   }
   .uno1{
-      background-color: #50B700;
+      background-color: #3A792D;
   }
+
   .uno1:hover{
-    background-color:#99FFFF;
+    background-color:#64FF00;
     border: #FFFFFF solid 2px;
   }
     .dos{
@@ -70,10 +66,11 @@ page-home {
 
     }
     .dos2{
-        background-color: #D0C700;
+        background-color:#BCB604;
     }
+
     .dos2:hover{
-      background-color:#FDD835;
+      background-color:#FFF81C;
       border: #FFFFFF solid 2px;
     }
         .tres{
@@ -84,10 +81,10 @@ page-home {
           height: 120px;
     }
     .tres3{
-        background-color:#D08100 ;
+        background-color:#C7860B ;
     }
     .tres3:hover{
-      background-color:#F09710;
+      background-color:#FF6F17;
       border: #FFFFFF solid 2px;
     }
 
@@ -97,10 +94,12 @@ page-home {
           left: 20%;
           width: 120px;
           height: 120px;
-    }
+        }
     .cuatro4{
-        background-color:#C60404 ;
+        background-color:#BF3F0B ;
+
     }
+
     .cuatro4:hover{
       background-color:#FF3F3F ;
       border: #FFFFFF solid 2px;
@@ -124,16 +123,18 @@ page-home {
   .derecha-container{
     display: flex;
     flex-direction:column;
-    width:55%;
-    border:5px solid 0;
+    width:65%;
+    border:5px solid #ff6624;
+
 
   }
     .map-container {
       display: flex;
       flex-direction:column;
       width:100%;
-      height:100%;
+      height:90%;
       border:5px solid 0;
+      position: static;
 
     }
 
@@ -142,23 +143,25 @@ page-home {
       flex-direction:row-reverse;
       width:100%;
       height:10%;
-      border:5px solid 0;
+      top:60%;
+      border:5px solid red;
 
       }
+
         .alarma-container{
           display: flex;
-          flex-direction: row-reverse;
-          width:50%;
-          height:20%;
+          flex-direction:row-reverse ;
+          width:40%;
+          height:10%;
           right: 10%;
-          top: 5%;
+          top: 8%;
           left: 50%;
+          border:5px solid black;
           align-content: center;
           justify-content: center;
           text-align: center;
-          border:5px solid 0;
 
-        }
+      }
 
 
     }

@@ -1,8 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { GooglePlus } from '@ionic-native/google-plus';
-
+import{ PreguntasService} from '../shared/preguntas.service';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
@@ -18,27 +18,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 @Component({
   templateUrl: 'app.html',
 })
-export class MyApp {
+export class MyApp implements OnInit {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = TabsPage;
   user = null;
-  slides = [
-    {
-      title: "Bienvenida(o) a <br/>SUNRISE!",
-      description: "EN SUNRISE ALIMENTARAS <br/>TU CULTURA PREVENTIVA SOBRE<br/> EL CANCER DE PIEL Y <br/> APRENDERAS COMO CUIDAR TU PIEL.",
-      image: "assets/img/uno.png"
-    },
-    {
-      title: "LOGIN",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript."
-    },
-    {
-      title: "Test Previo",
-      description: "No te asustes, solo queremos conocerte más <br/> tu informacion esta protegida."
-    }
-  ];
+  preguntas: Array<any> = [];
 
   constructor(
+    public preguntasService:PreguntasService,
     platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
@@ -51,6 +38,17 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+
+  ngOnInit() {
+     this.preguntasService.getPreguntas().subscribe(preguntas => {
+     this.preguntas = preguntas;
+      console.log(this.preguntas);
+  })
+
+  }
+  test(preguntaKey:string, respuesta: string) {
+      this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'salome');
   }
 
   pushhome() {
@@ -75,7 +73,7 @@ export class MyApp {
   }
 
   inicio() {
-    this.inicioslide = false;
+    this.user = {};
   }
 
   login() {
@@ -84,10 +82,40 @@ export class MyApp {
     }).then(res => {
       this.user =res;
     }, err => alert('error'));
+
   }
+
 
   logout() {
     this.googlePlus.logout().then(() => this.user = null);
   }
 
 }
+// import { Component,OnInit } from '@angular/core';
+//
+//
+// @Component({
+//
+//   selector: 'page-registrarse',
+//    templateUrl: 'registrarse.html'
+//
+// })
+// export class RegistrarsePage implements OnInit {
+//
+//     preguntas: Array<any> = [];
+//
+//    constructor(public preguntasService:PreguntasService) {
+//
+//    }
+//    ngOnInit() {
+//       this.preguntasService.getPreguntas().subscribe(preguntas => {
+//       this.preguntas = preguntas;
+//        console.log(this.preguntas);
+//    })
+//
+//    }
+//    test(preguntaKey:string, respuesta: string) {
+//        this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'salome');
+//    }
+//
+// }

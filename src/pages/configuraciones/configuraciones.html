@@ -21,15 +21,14 @@
             <ion-label>Sonido</ion-label>
               <ion-toggle [disabled]="notificacion"></ion-toggle>
               </ion-item>
-              <div class ="item range range-energized">
-                <i class ="icon ion-volume-low"></i>
-                  <input type ="range" name"volume" min="0" max="5" value="5">
-                <i class ="icon ion-volume-high"></i>
-            </div>
+
+            <div class="vertically-stacked-slider">
               <ion-item>
-                <ion-label>Volumen</ion-label>
-                <ion-toggle [disabled]="notificacion"></ion-toggle>
+                Volumen<br/>
+                <input type="range" value="100">
               </ion-item>
+            </div>
+
     <ion-item>About SunRise</ion-item>
         <ion-item>
           <ion-avatar item-start>

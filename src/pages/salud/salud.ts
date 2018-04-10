@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { NavController } from 'ionic-angular';
+import { HomePage } from '../../pages/home/home';
 
 @Component({
 
@@ -8,9 +9,10 @@ import { Component } from '@angular/core';
 
 })
 export class SaludPage {
-  salud : string = "salud";
-
-  isAndroid: boolean = false;
+ constructor(public navCtrl: NavController){}
+ notificacion(){
+     this.navCtrl.push(HomePage)
+ }
 
 
 

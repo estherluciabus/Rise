@@ -3,87 +3,57 @@
     <ion-title>
       <h2>Bloqueadores</h2>
     </ion-title>
-    <button ion-fab mini (click)="menu()">jj</button>
   </ion-navbar>
   <ion-card-content class ="inicio">
     <div class ="titulo-container">
-      <button ion-button style="background-color:#FC7B55"> Para usar un bloqueador debes saber:</button>
+      <button ion-button style="background-color:#8A4B38"> Para usar un bloqueador debes saber:</button>
     </div>
       <div class ="bloqueador">
         <img src="assets/img/bloqueador.png"/>
      </div>
-    <div class="izquierda">
-      <button ion-button mini>
-        <font size=1>El FPS, <br/>IP y SPF=<br/>índice de<br/>protección<br/>
-        solar</font>
-      </button>
-    </div>
-
-    <div class ="izquierda2">
-      <button ion-button mini>
-        <font size=1>  Contener<br/> protección:<br/> IR ,UVA Y UVB</font>
-      </button>
-    </div>
-
-    <div class ="derecha2">
-      <button ion-button mini>
-        <font size=1>Buen protector</font>
-      </button>
-    </div>
-
-    <div class="derecha">
-      <button ion-button mini>
-      <font size=1>  Peligro : riesgo<br/> de tener cancer</font>
-      </button>
-    </div>
   </ion-card-content>
 
-  <ion-card-content>
+  <ion-card-content >
     <div class="botoncaracterisstica">
-      <button ion-button mini><font size=1.5>CARACTERISTICA<br/> FISICA</font></button>
+      <button ion-button mini style="background-color:#8A4B38" (click)="menu()"><font size=1.5>CARACTERISTICA<br/> FISICA</font></button>
     </div>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/rostro.png">
+    <ion-list >
+
+      <ion-item style="background-color: #EE9F8C66">
+            <ion-thumbnail item-start>
+          <img src="assets/img/pelirroja.png">
+          <img src="assets/img/blanca.png" title="eyyyyye">
           </ion-thumbnail>
-          <ion-thumbnail item-start>
-          <p>Utilizar bloqueador<br/> de Proteccion muy alta :50+<br/> (SPF/IP/FPS)</p>
-        </ion-thumbnail>
+            <p>Utilizar bloqueador<br/>
+              de Proteccion muy<br/> alta :50+<br/>
       </ion-item>
+    
 
-    <ion-item>
+
+    <ion-item style="background-color: #EE9F8C66">
       <ion-thumbnail item-start>
-        <img src="assets/img/thumbnail-puppy-3.jpg">
+        <img src="assets/img/rubia.png">
+        <img src="assets/img/clara.png">
         </ion-thumbnail>
-        <ion-thumbnail item-start>
-        <p>Utilizar bloqueador<br/> de Proteccion alta :30+<br/> (SPF/IP/FPS)</p>
-      </ion-thumbnail>
+          <p>Utilizar bloqueador<br/> de Proteccion alta :30+ <br/> (SPF/IP/FPS)</p>
     </ion-item>
 
-    <ion-item item-start>
+
+
+    <ion-item style="background-color: #EE9F8C66">
       <ion-thumbnail item-start>
-        <img src="assets/img/thum bnail-puppy-3.jpg" />
+        <img src="assets/img/trigeña.png" />
+        <img src="assets/img/morena.png" />
         </ion-thumbnail>
         <ion-thumbnail item-start>
-          <p>Utilizar bloqueador<br/> de Proteccion media :15 o 20 SPF <br/> (SPF/IP/FPS)</p>
+          <p>Utilizar bloqueador<br/> de Proteccion media :15+ o 30+ SPF <br/> (SPF/IP/FPS)</p>
         </ion-thumbnail>
     </ion-item>
+    </ion-list>
   </ion-card-content>
 
 <ion-card-content>
   <button ion-button full outline>TEXTURAS /  TIPOS DE PIEL  </button>
-    <ion-item-sliding #item>
-      <ion-item>
-        Item
-      </ion-item>
-      <ion-item-options side="left">
-        <button ion-button (click)="favorite(item)">Favorite</button>
-        <button ion-button color="danger" (click)="share(item)">Share</button>
-      </ion-item-options>
-      <ion-item-options side="right">
-        <button ion-button (click)="unread(item)">Unread</button>
-      </ion-item-options>
-    </ion-item-sliding>
   </ion-card-content>
 
   <ion-card-content>

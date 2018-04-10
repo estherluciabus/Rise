@@ -4,7 +4,7 @@ import { HomePage } from '../home/home';
 
 import { SaludPage } from '../salud/salud';
 
-import { RegistrarsePage } from '../registrarse/registrarse';
+// import { RegistrarsePage } from '../registrarse/registrarse';
 
 import { NavController } from 'ionic-angular';
 
@@ -16,8 +16,8 @@ import { NavController } from 'ionic-angular';
 export class TabsPage {
 
   HomeRoote = HomePage;
-SaludRoote =  SaludPage;
-RegistrarseRoote = RegistrarsePage;
+  SaludRoote =  SaludPage;
+// RegistrarseRoote = RegistrarsePage;
 
   constructor(public navCtrl: NavController) {
 

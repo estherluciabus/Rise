@@ -1,21 +1,69 @@
-<ion-content *ngIf="!user" class="tutorial-page">
+<ion-content *ngIf="!user" class="inicio-page">
   <ion-slides pager>
-    <ion-slide *ngFor="let slide of slides">
-      <ion-toolbar>
-      </ion-toolbar>
-      <img [src]="slide.image" class="slide-image" />
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
+    <ion-slide >
+      <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+      <h2 class="Bienvenida">Bienvenida(o) a <br/>SUNRISE</h2>
+      <div class="logosline">
+        <img src="assets/img/uno.png" />
+      </div>
+      <p class="slide">EN SUNRISE ALIMENTARAS <br/>TU CULTURA PREVENTIVA SOBRE<br/> EL CANCER DE PIEL Y <br/> APRENDERAS COMO CUIDAR TU PIEL.</p>
     </ion-slide>
+
+    <ion-slide  class="informacion-content">
+
+              <ion-card-content class="login">
+                <div class="logosline">
+                  <img src="assets/img/uno.png" />
+                </div>
+                <ion-list no-line>
+                  <button ion-button block color="facebook">
+                      <ion-icon name="logo-facebook"> Entrar con facebook</ion-icon>
+                  </button>
+                  <button ion-button block style="background-color: #FFBD41" (click)="login()">
+                    <ion-icon name="logo-google"> Entrar con tu Gmail</ion-icon>
+                  </button>
+                </ion-list>
+              </ion-card-content>
+
+    </ion-slide>
+
+    <ion-slide class="MiniFormulario">
+        <h2 >Test Previo</h2>
+        <p>No te asustes, solo queremos conocerte más <br/> tu informacion esta protegida.</p>
+          <ion-card-content class="test-container">
+            <ion-list>
+
+              <ion-item class="subtest" *ngFor="let pregunta of preguntas">
+              {{pregunta.pregunta}}
+              <select class="alternativas"(change)="test (pregunta.key, $event.target.value)">
+                <option
+                   *ngFor="let alternativa of pregunta.alternativas"
+                    [value]="pregunta.alternativas.indexOf(alternativa)">
+                    {{alternativa.texto}}
+                  </option>
+              </select>
+            </ion-item>
+
+
+            </ion-list>
+            <ion-item>
+            <button ion-button block outline color="primary">Finalizar</button>
+             </ion-item>
+          </ion-card-content>
+      </ion-slide>
+
     <ion-slide>
-      <ion-toolbar>
-      </ion-toolbar>
-      <h2 class="slide-title">cargando /</h2>
-      <button ion-button large clear icon-end color="primary" (click)="inicio()">
-            Continue
-         <ion-icon name="arrow-forward"></ion-icon>
+        <h2 class="slide-title">FRASE</h2>
+        <div class="cargando">
+          <img src="assets/img/uno.png" />
+        </div>
+          <button class="Entrar"ion-button large clear icon-end color="primary" (click)="inicio()">
+            Entrar
+            <ion-icon name="arrow-forward"></ion-icon>
          </button>
     </ion-slide>
+
+
   </ion-slides>
 </ion-content>
 
@@ -34,29 +82,30 @@
       </div>
       <ion-list>
         <button class="boton1" ion-item (click)="pushhome()">
-             <ion-icon item-left name="home"></ion-icon>
+            <ion-icon  class= "home" ios="ios-home" md="md-home"></ion-icon>
               Home
           </button>
+
         <button class="boton2" ion-item (click)="pushbloqueadores()">
-             <ion-icon item-left name="ios-happy"></ion-icon>
+          <ion-icon item-left name="ios-happy"></ion-icon>
               Bloquead..
           </button>
         <button class="boton3" ion-item (click)="pushtestimonio()">
-            <ion-icon item-left name="ios-people"></ion-icon>
+            <ion-icon class="testimonio" item-left name="ios-people"></ion-icon>
             Testimonio
          </button>
         <button class="boton4" ion-item (click)="pushconfirguracion()">
               <ion-icon item-left name="ios-cog"></ion-icon>
             Configuraciones
-            </button>
+        </button>
 
         <button ion-item (click)="pushsoporte()">
               <ion-icon item-left name="construct"></ion-icon>
             Soporte de problemas
             </button>
 
-        <button ion-item (click)="pushayuda()">
-              <ion-icon item-left name="help"></ion-icon>
+        <button ion-item (click)="logout()">
+          <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
               Salir
             </button>
 

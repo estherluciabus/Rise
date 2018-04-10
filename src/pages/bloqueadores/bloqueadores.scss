@@ -7,6 +7,8 @@ page-bloqueadores {
     flex-direction:column;
     height: 50%;
     border:5px solid 0;
+    position: relative;
+
   }
 
     .titulo-container{
@@ -15,19 +17,21 @@ page-bloqueadores {
       flex-direction:column;
       justify-content: center;
       text-align: center;
+
     }
 
     .bloqueador{
-      background-color:#C384FF;
-      height: 85%;
+      background-color:#EE9F8C66;
+      height: 83%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
+
       img {
         height: 100%;
         max-width: 100%;
       }
+
     }
       .derecha{
       background-color:#83B8CE;
@@ -71,6 +75,14 @@ page-bloqueadores {
     left: 10%;
     width: 0%;
     height: 0%;
+    button {
+      border-radius: 2px;
+      overflow: hidden;
+      height: 5.6rem;
+      font-size: 2.4rem;
+      font-weight: 500;
+      background-color: #000000;
+    }
 
   }
   .botoncaracterisstica{
@@ -78,6 +90,15 @@ page-bloqueadores {
     top:2px;
     height:10%;
     position: relative;
-  }
+
+    p{
+      margin: 0 0 2px;
+      overflow: inherit;
+      font-size: 1.4rem;
+      line-height: normal;
+      text-overflow: inherit;
+      color: #8d5c5c;
+    }
+}
 
 }
