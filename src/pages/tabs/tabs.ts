@@ -19,15 +19,11 @@ import { NotificacionesPage } from '../notificaciones/notificaciones';
 export class TabsPage {
 
   HomeRoote = HomePage;
-<<<<<<< HEAD
+
   SaludRoote =  SaludPage;
 // RegistrarseRoote = RegistrarsePage;
-
-=======
-SaludRoote =  SaludPage;
-RegistrarseRoote = RegistrarsePage;
-NotificacionesRoote = NotificacionesPage;
->>>>>>> c81df2fc94de0dc03e8ee242dd14634187ebc75c
+// RegistrarseRoote = RegistrarsePage;
+  NotificacionesRoote = NotificacionesPage;
   constructor(public navCtrl: NavController) {
 
   }
