@@ -1,202 +1,39 @@
 <ion-navbar>
-  pages-notificaciones
+  notificaciones
 </ion-navbar>
-<ion-content class="card-background-page">
-
+<ion-content>
   <ion-card>
     <ion-list>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-totoro.png">
-        </ion-thumbnail>
-        <h2>ANTHELOS XL GEL CREMA TOQUE SECO</h2>
-        <p>Muy alta protección. Acabado seco. Sin perfume</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-    </ion-list>
-    </ion-card>
-
-    <ion-card>
-      <ion-list>
-        <ion-item>
+      <ion-list-header>
+         adultos
+       </ion-list-header>
+        <ion-item *ngFor="let item of items">
           <ion-thumbnail item-start>
-            <img src="img/thumbnail-totoro.png">
+          <img [src]="item.img" />
           </ion-thumbnail>
-          <h2>ANTHELOS XL GEL CREMA TOQUE SECO C/COLOR</h2>
-          <p>Muy alta protección. Acabado seco. 50 ml</p>
-          <button ion-button clear item-end>View</button>
+            <h2>{{item.titulo}}</h2>
+            <p>{{item.descripcion}}</p>
+           <button ion-button clear item-end>
+            <a href="https://ionicframework.com/framework">ir</a>
+          </button>
         </ion-item>
       </ion-list>
-      </ion-card>
-
-      <ion-card>
-          <ion-list>
-            <ion-item>
-              <ion-thumbnail item-start>
-                <img src="img/thumbnail-totoro.png">
-              </ion-thumbnail>
-              <h2>ANHELOS XL CREMA</h2>
-      <p>Muy alta protección. Textura confortable ideal para piel seca. Sin perfume. 50 ml</p>
-              <button ion-button clear item-end>View</button>
-            </ion-item>
-          </ion-list>
-          </ion-card>
-
-          <ion-card>
-              <ion-list>
-                <ion-item>
-                  <ion-thumbnail item-start>
-                    <img src="img/thumbnail-totoro.png">
-                  </ion-thumbnail>
-                  <h2>ANHELOS XL FLUIDO ULTRALIGERO</h2>
-                  <p>Muy alta protección. Textura Ultra-ligera. Acabado invisible. 50ml</p>
-                  <button ion-button clear item-end>View</button>
-                </ion-item>
-              </ion-list>
-              </ion-card>
-
-        <ion-card>
-       <ion-list>
-            <ion-item>
-              <ion-thumbnail item-start>
-              <img src="img/thumbnail-totoro.png">
-                </ion-thumbnail>
-                <h2>ANHELOS FLUIDO ULTRALIGERO C/COLOR </h2>
-            <p>Muy alta protección. Textura Ultra-ligera. Efecto bronceado natural. Sin perfume. 50ml</p>
-                  <button ion-button clear item-end>View</button>
-                     </ion-item>
-                  </ion-list>
-                  </ion-card>
-
-                    <ion-card>
-                      <ion-list>
-                        <ion-item>
-                          <ion-thumbnail item-start>
-                            <img src="img/thumbnail-totoro.png">
-                          </ion-thumbnail>
-                          <h2>ANTHELIOS UNIFIANT</h2>
-                          <p>Muy alta protección. Efecto matificante que disimula las imperfecciones del rostro. 40 ml</p>
-                          <button ion-button clear item-end>View</button>
-                        </ion-item>
-                      </ion-list>
-                      </ion-card>
-
-                       <ion-card>
-                          <ion-list>
-                            <ion-item>
-                              <ion-thumbnail item-start>
-                                <img src="img/thumbnail-totoro.png">
-                              </ion-thumbnail>
-                              <h2>ANTHELIOS WET SKIN</h2>
-              <p>Muy alta protección. No graso,no pedajoso. Aplicación sobre piel seca y/o mojada. Sin perfume. 250 ml</p>
-                              <button ion-button clear item-end>View</button>
-                            </ion-item>
-                          </ion-list>
-                          </ion-card>
-
-                            <ion-card>
-                              <ion-list>
-                                <ion-item>
-                                  <ion-thumbnail item-start>
-                                    <img src="img/thumbnail-totoro.png">
-                                  </ion-thumbnail>
-                                  <h2>ANTHELIOS XL MIST</h2>
-                                  <p>Muy alta protección. No pegajos Aplicación en aerosol. 200 ml</p>
-                                  <button ion-button clear item-end>View</button>
-                                </ion-item>
-                              </ion-list>
-                              </ion-card>
-
-                               <ion-card>
-                                  <ion-list>
-                                    <ion-item>
-                                      <ion-thumbnail item-start>
-                                        <img src="img/thumbnail-totoro.png">
-                                      </ion-thumbnail>
-                                      <h2>ANTHELIOS BRUMA ROSTRO TOQUE SECO</h2>
-                                      <p>Muy alta protección. Acabado seco. 75 ml</p>
-                                      <button ion-button clear item-end>View</button>
-                                    </ion-item>
-                                  </ion-list>
-                                  </ion-card>
-                                  <ion-card>
-                                    <ion-list>
-                                      <ion-item>
-                                        <ion-thumbnail item-start>
-                                          <img src="img/thumbnail-totoro.png">
-                                        </ion-thumbnail>
-                                        <h2>ANTHELIOS FLUIDO AC</h2>
-                                        <p>Alta protección para una piel o con tendencia acnéica</p>
-                                        <button ion-button clear item-end>View</button>
-                                      </ion-item>
-                                    </ion-list>
-                                    </ion-card>
-
-                                    <ion-card>
-                                      <ion-list>
-                                        <ion-item>
-                                          <ion-thumbnail item-start>
-                                            <img src="img/thumbnail-totoro.png">
-                                          </ion-thumbnail>
-                                          <h2>ANTHELOS XL STICK ZNAS SENSIBLES</h2>
-                                          <p>Muy alta protección para las zonas más sensibles:labios,orejas,nariz,cicatrices,etc. 9 gr</p>
-                                          <button ion-button clear item-end>View</button>
-                                        </ion-item>
-                                      </ion-list>
-                                      </ion-card>
-
-                                       <ion-card>
-                                          <ion-list>
-                                            <ion-item>
-                                              <ion-thumbnail item-start>
-                                                <img src="img/thumbnail-totoro.png">
-                                              </ion-thumbnail>
-                                              <h2>ANTHELIOS XL COMPACTO</h2>
-                                              <p>Muy alta protección. Textura con efecto unifcante. 9 gr</p>
-                                              <button ion-button clear item-end>View</button>
-                                            </ion-item>
-                                          </ion-list>
-                                          </ion-card>
-
-                                          <ion-card>
-                                              <ion-list>
-                                                <ion-item>
-                                                  <ion-thumbnail item-start>
-                                                    <img src="img/thumbnail-totoro.png">
-                                                  </ion-thumbnail>
-                                                  <h2>ANTHELIOS DERMOPEDIÁTRICO LECHE</h2>
-                                                  <p>Muy alta protección´en crema. Textura leche. 100 ml</p>
-                                                  <button ion-button clear item-end>View</button>
-                                                </ion-item>
-                                              </ion-list>
-                                              </ion-card>
-
-                                               <ion-card>
-                                                  <ion-list>
-                                                    <ion-item>
-                                                      <ion-thumbnail item-start>
-                                                        <img src="img/thumbnail-totoro.png">
-                                                      </ion-thumbnail>
-                                                      <h2>ANTHELIOS DERMOPEDIÁTRICO WET SKIN</h2>
-                                                      <p>Muy alta protección. No graso,no pegajoso. Aplicación sobre piel seca y/o mojada. 250 ml</p>
-                                                      <button ion-button clear item-end>View</button>
-                                                    </ion-item>
-                                                  </ion-list>
-                                                  </ion-card>
-
-                                                      <ion-card>
-                                                        <ion-list>
-                                                          <ion-item>
-                                                            <ion-thumbnail item-start>
-                                                              <img src="img/thumbnail-totoro.png">
-                                                            </ion-thumbnail>
-                                                            <h2>ANTHELIOS DERMOPEDIÁTRICO BABY</h2>
-                                                            <p>Muy alta protección. Muy alta tolerancia. Para exposición indirecta al sol. 50 ml</p>
-                                                            <button ion-button clear item-end>View</button>
-                                                          </ion-item>
-                                                        </ion-list>
-                                                        </ion-card>
-
-
-
+  </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-list-header>
+         jovenes
+       </ion-list-header>
+        <ion-item *ngFor="let item of itemss">
+          <ion-thumbnail item-start>
+          <img [src]="item.img" />
+          </ion-thumbnail>
+            <h2>{{item.titulo}}</h2>
+            <p>{{item.descripcion}}</p>
+           <button ion-button clear item-end>
+            <a href="https://ionicframework.com/framework">ir</a>
+          </button>
+         </ion-item>
+      </ion-list>
+  </ion-card>
 </ion-content>
