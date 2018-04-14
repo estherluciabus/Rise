@@ -2,8 +2,9 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { GooglePlus } from '@ionic-native/google-plus';
-import{ PreguntasService} from '../shared/preguntas.service';
+import { PreguntasService} from '../shared/preguntas.service';
 import { SplashScreen } from '@ionic-native/splash-screen';
+// import { App, ViewController } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
@@ -18,7 +19,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 @Component({
   templateUrl: 'app.html',
 })
-export class MyApp implements OnInit {
+export class  MyApp implements OnInit {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = TabsPage;
   user = null;
@@ -30,7 +31,10 @@ export class MyApp implements OnInit {
     statusBar: StatusBar,
     splashScreen: SplashScreen,
     private googlePlus: GooglePlus
-  ) {
+    // public viewCtrl: ViewController,
+    // public appCtrl: App
+  )
+    {
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -51,9 +55,7 @@ export class MyApp implements OnInit {
       this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'salome');
   }
 
-  pushhome() {
-    this.nav.push(HomePage);
-  }
+
 
   pushbloqueadores() {
     this.nav.push(BloqueadoresPage);
@@ -61,7 +63,7 @@ export class MyApp implements OnInit {
   pushtestimonio() {
     this.nav.push(TestimonioPage);
   }
-  pushconfirguracion() {
+  openPage() {
     this.nav.push(ConfiguracionesPage);
   }
   pushsoporte() {
@@ -75,6 +77,10 @@ export class MyApp implements OnInit {
   inicio() {
     this.user = {};
   }
+  pushhome(){
+    this.nav.push(HomePage);
+
+  }
 
   login() {
     this.googlePlus.login({
@@ -85,37 +91,8 @@ export class MyApp implements OnInit {
 
   }
 
-
   logout() {
     this.googlePlus.logout().then(() => this.user = null);
   }
 
 }
-// import { Component,OnInit } from '@angular/core';
-//
-//
-// @Component({
-//
-//   selector: 'page-registrarse',
-//    templateUrl: 'registrarse.html'
-//
-// })
-// export class RegistrarsePage implements OnInit {
-//
-//     preguntas: Array<any> = [];
-//
-//    constructor(public preguntasService:PreguntasService) {
-//
-//    }
-//    ngOnInit() {
-//       this.preguntasService.getPreguntas().subscribe(preguntas => {
-//       this.preguntas = preguntas;
-//        console.log(this.preguntas);
-//    })
-//
-//    }
-//    test(preguntaKey:string, respuesta: string) {
-//        this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'salome');
-//    }
-//
-// }

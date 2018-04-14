@@ -7,7 +7,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
-// import { RegistrarsePage } from '../pages/registrarse/registrarse';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
 import { TestimonioPage } from '../pages/testimonio/testimonio';
 import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
@@ -36,7 +35,6 @@ import { Geolocation } from '@ionic-native/geolocation';
     TabsPage,
     HomePage,
     SaludPage,
-    // RegistrarsePage,
     BloqueadoresPage,
     TestimonioPage,
     ConfiguracionesPage,
@@ -63,7 +61,6 @@ import { Geolocation } from '@ionic-native/geolocation';
     TabsPage,
     HomePage,
     SaludPage,
-    // RegistrarsePage,
     BloqueadoresPage,
     TestimonioPage,
     ConfiguracionesPage,

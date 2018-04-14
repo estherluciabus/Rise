@@ -12,6 +12,7 @@ import {
 import { Geolocation } from '@ionic-native/geolocation';
 import { ClimaService } from '../../shared/clima.service';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -25,7 +26,7 @@ export class HomePage {
     imagenes:[
       'assets/img/lente.png'
     ],
-    backgroundColor:'rgba(10, 176, 83, 0.82)',
+    backgroundColor:'rgba(17, 128, 66, 0.93)',
     riesgo:'Bajo',
     Limitedeexposicion:'60',
     radiacionmaxima:2,
@@ -129,6 +130,7 @@ export class HomePage {
           target: {
             lat: position.coords.latitude,
             lng: position.coords.longitude
+
           },
 
           zoom: 18,
@@ -180,8 +182,8 @@ export class HomePage {
     toast.present();
 
   }
-// play(){
-//   this.navCtrl.push(BloqueadoresPage);
-// }
+  play(){
+    this.navCtrl.push(BloqueadoresPage);
+  }
 
 }

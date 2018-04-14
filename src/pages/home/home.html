@@ -1,47 +1,58 @@
+<ion-header>
+  <ion-navbar>
+  <button ion-button icon-only clear menuToggle>
+  <ion-icon name="ios-menu"></ion-icon>
+</button>
+</ion-navbar>
+</ion-header>
+
 <ion-content class="eventos-container">
   <div class="padre-container">
     <div class="centro-container">
       <div class="imagen-container">
 
         <ion-fab *ngFor="let fab of fabs" [ngClass]="fab.fabclass">
-          <button ion-fab mini [ngClass]="fab.miniClass" [disabled]="!fab.active">
+          <button ion-fab mini [ngClass]="fab.miniClass" [disabled]="fab.active">
             <ion-icon name="arrow-dropring"></ion-icon>
           </button>
           <ion-fab-list side="right">
             <ion-item [ngStyle]="{'background-color':fab.backgroundColor}">
-              <ion-note>
-                <h1>Riesgo</h1>
-              </ion-note>
-              <div>
-              <strong><h1>{{fab.riesgo}}</h1></strong>
-              </div>
-              <ion-note>
-                <h1>Limite de exposicion</h1>
-              </ion-note>
-              <strong><h1>{{fab.Limitedeexposicion}} minutos<br/>
-                sin proteccion
-              </h1></strong>
-              <ion-note>
-                <h1>Proteccion</h1>
-              </ion-note>
-
-              <div *ngFor="let img of fab.imagenes">
-                 <img [src]="img" />
-              </div>
-
-              <ion-note>
-                <h1>Indice UV</h1>
-              </ion-note>
-              <ion-note>
-                <h2>Radiacion maxima</h2>
-              </ion-note>
-              <div>
-              <strong><h1>{{fab.radiacionmaxima}}</h1></strong>
-            </div>
-            <ion-note>
-              <h2>Radiacion minima</h2>
-            </ion-note>
-            <strong><h1>{{fab.radiacionminima}}</h1></strong>
+                  <ion-note>
+                    <h1>Riesgo</h1>
+                  </ion-note>
+                  <div>
+                  <strong><h1>{{fab.riesgo}}</h1></strong>
+                  </div>
+                  <ion-note>
+                    <h1>Limite de exposicion</h1>
+                  </ion-note>
+                  <strong><h1>{{fab.Limitedeexposicion}} minutos<br/>
+                    sin proteccion
+                  </h1></strong>
+                  <ion-note>
+                    <h1>Proteccion</h1>
+                  </ion-note>
+                  <div *ngFor="let img of fab.imagenes">
+                     <img [src]="img" />
+                  </div>
+                  <div>
+                    <button ion-fab mini style="background-color:#f3b206" (click)="play()">
+                      <ion-icon name="play"></ion-icon>
+                    </button>
+                  </div>
+                  <ion-note>
+                    <h1>Indice UV</h1>
+                  </ion-note>
+                  <ion-note>
+                    <h2>Radiacion maxima</h2>
+                  </ion-note>
+                  <div>
+                  <strong><h1>{{fab.radiacionmaxima}}</h1></strong>
+                </div>
+                <ion-note>
+                  <h2>Radiacion minima</h2>
+                </ion-note>
+                <strong><h1>{{fab.radiacionminima}}</h1></strong>
             </ion-item>
           </ion-fab-list>
         </ion-fab>
@@ -49,11 +60,20 @@
         <div class="derecha-container">
           <!-- <div class="inputWithIcon">
             <label class="item item-input">
-              <input type="search" placeholder="CUANTA INTESIDAD DE CALOR HAY EN EL LUGAR QUE ESTAS" ng-model="search">
+              <input type="search" placeholder=ng-model="search">
            </label>
             <button class="search">buscar</button>
           </div> -->
           <div class="map-container" id="map_canvas">
+            <ion-list>
+              <ion-item (click)="loadMap()">
+                  <ion-label>CUANTA INTESIDAD DE CALOR <br/>HAY EN EL LUGAR QUE ESTAS</ion-label>
+                    <ion-select [(ngModel)]="departamentos">
+                      <ion-option value="capital">lima</ion-option>
+                    <ion-option value="are">Arequipa</ion-option>
+                  </ion-select>
+              </ion-item>
+            </ion-list>
           </div>
           <div class="aviso-container">
             <ion-chip #chip2 (click)="loadMap()">
@@ -69,8 +89,6 @@
         <ion-icon name="alarm"></ion-icon>ALARMA
       </button>
     </div>
-    <div >
-       <a href="https://ionicframework.com/framework">here</a>
-    </div>
+
   </div>
 </ion-content>
