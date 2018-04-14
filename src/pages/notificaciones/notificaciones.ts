@@ -15,6 +15,40 @@ export class NotificacionesPage {
     }
     items = [
       {
+          img:'assets/img/niños.png',
+          titulo:'ANTHELOS XL GEL CREMA TOQUE SECO',
+          descripcion:'Muy alta protección. Acabado seco. Sin perfume'
+      },
+      {
+          img:'assets/img/umbrella.png esto es una ruta de la img',
+          titulo:'lle pones la info ',
+          descripcion:'poner info'
+      },
+      {
+          img:'assets/img/umbrella.png',
+          titulo:'ANTHELOS XL GEL CREMA TOQUE SECO',
+          descripcion:'Muy alta protección. Acabado seco. Sin perfume'
+      },
+      {
+          img:'assets/img/umbrella.png',
+          titulo:'ANTHELOS XL GEL CREMA TOQUE SECO',
+          descripcion:'Muy alta protección. Acabado seco. Sin perfume'
+      },
+      {
+          img:'assets/img/umbrella.png',
+          titulo:'ANTHELOS XL GEL CREMA TOQUE SECO',
+          descripcion:'Muy alta protección. Acabado seco. Sin perfume'
+      },
+      {
+          img:'assets/img/umbrella.png esto es una ruta de la img',
+          titulo:'lle pones la info ',
+          descripcion:'poner info'
+      }
+
+    ];
+
+    itemss = [
+      {
           img:'assets/img/umbrella.png',
           titulo:'ANTHELOS XL GEL CREMA TOQUE SECO',
           descripcion:'Muy alta protección. Acabado seco. Sin perfume'
@@ -25,8 +59,12 @@ export class NotificacionesPage {
           descripcion:'poner info'
       }
     ];
-
-    itemss = [
+    itemsss = [
+      {
+          img:'assets/img/umbrella.png',
+          titulo:'ANTHELOS XL GEL CREMA TOQUE SECO',
+          descripcion:'Muy alta protección. Acabado seco. Sin perfume'
+      },
       {
           img:'assets/img/umbrella.png',
           titulo:'ANTHELOS XL GEL CREMA TOQUE SECO',

@@ -14,6 +14,4 @@ export class SaludPage {
      this.navCtrl.push(HomePage)
  }
 
-
-
- }
+}

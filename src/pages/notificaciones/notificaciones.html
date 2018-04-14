@@ -5,7 +5,7 @@
   <ion-card>
     <ion-list>
       <ion-list-header>
-         adultos
+         ADULTOS
        </ion-list-header>
         <ion-item *ngFor="let item of items">
           <ion-thumbnail item-start>
@@ -14,7 +14,7 @@
             <h2>{{item.titulo}}</h2>
             <p>{{item.descripcion}}</p>
            <button ion-button clear item-end>
-            <a href="https://ionicframework.com/framework">ir</a>
+            <a href="http://www.laroche-posay.pe/productos-tratamientos/Agua-Termal/Agua-Termal-de-La-Roche-Posay-p11545.aspx">aaa</a>
           </button>
         </ion-item>
       </ion-list>
@@ -22,7 +22,7 @@
   <ion-card>
     <ion-list>
       <ion-list-header>
-         jovenes
+         NIÑOS
        </ion-list-header>
         <ion-item *ngFor="let item of itemss">
           <ion-thumbnail item-start>
@@ -31,7 +31,24 @@
             <h2>{{item.titulo}}</h2>
             <p>{{item.descripcion}}</p>
            <button ion-button clear item-end>
-            <a href="https://ionicframework.com/framework">ir</a>
+            <a href="http://www.laroche-posay.pe/productos-tratamientos/Anthelios/La-piel-de-los-ni%C3%B1os-y-el-sol-r1181.aspx">ir</a>
+          </button>
+         </ion-item>
+      </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-list-header>
+         BEBÉS
+       </ion-list-header>
+        <ion-item *ngFor="let item of itemsss">
+          <ion-thumbnail item-start>
+          <img [src]="item.img" />
+          </ion-thumbnail>
+            <h2>{{item.titulo}}</h2>
+            <p>{{item.descripcion}}</p>
+           <button ion-button clear item-end>
+            <a href="http://www.laroche-posay.pe/productos-tratamientos/Anthelios/La-piel-de-los-ni%C3%B1os-y-el-sol-r1181.aspx">ir</a>
           </button>
          </ion-item>
       </ion-list>
