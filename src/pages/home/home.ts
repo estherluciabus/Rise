@@ -61,6 +61,7 @@ export class HomePage {
     Limitedeexposicion:'30',
     radiacionmaxima:7,
     radiacionminima:6,
+    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
     active:false
   },
   {
@@ -75,6 +76,7 @@ export class HomePage {
     Limitedeexposicion:'25',
     radiacionmaxima:10,
     radiacionminima:8,
+    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
     active:false
   },
   {
@@ -92,6 +94,7 @@ export class HomePage {
     Limitedeexposicion:'60',
     radiacionmaxima:20,
     radiacionminima:11,
+    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
     active:false
   }
   ];

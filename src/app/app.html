@@ -17,7 +17,6 @@
         <p>No te asustes, solo queremos conocerte más <br/> tu informacion esta protegida.</p>
           <ion-card-content class="test-container">
             <ion-list>
-
               <ion-item class="subtest" *ngFor="let pregunta of preguntas">
               {{pregunta.pregunta}}
               <select class="alternativas"(change)="test (pregunta.key, $event.target.value)">
@@ -28,9 +27,7 @@
                   </option>
               </select>
             </ion-item>
-
-
-            </ion-list>
+          </ion-list>
             <ion-item>
             <button ion-button block outline color="primary">Finalizar</button>
              </ion-item>

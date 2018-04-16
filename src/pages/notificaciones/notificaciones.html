@@ -1,24 +1,28 @@
 <ion-navbar>
   notificaciones
 </ion-navbar>
-<ion-content>
-  <ion-card>
-    <ion-list>
-      <ion-list-header>
-         ADULTOS
-       </ion-list-header>
-        <ion-item *ngFor="let item of items">
-          <ion-thumbnail item-start>
-          <img [src]="item.img" />
-          </ion-thumbnail>
-            <h2>{{item.titulo}}</h2>
-            <p>{{item.descripcion}}</p>
-           <button ion-button clear item-end>
-            <a href="http://www.laroche-posay.pe/productos-tratamientos/Agua-Termal/Agua-Termal-de-La-Roche-Posay-p11545.aspx">aaa</a>
-          </button>
-        </ion-item>
-      </ion-list>
-  </ion-card>
+  <ion-content>
+      <ion-label>BLOQUEADORES</ion-label>
+        <ion-toggle [(ngModel)]="item"></ion-toggle>
+            <ion-card-content *ngIf="item">
+              <ion-card >
+                <ion-list>
+                  <ion-list-header>
+                    La Roche-Posay
+                  </ion-list-header>
+                  <ion-item *ngFor="let item of items">
+                    <ion-thumbnail item-start>
+                      <img [src]="item.img" />
+                    </ion-thumbnail>
+                      <h2>{{item.titulo}}</h2>
+                      <button ion-button clear item-end>
+                        <a href="http://www.laroche-posay.pe/productos-tratamientos/Anthelios/La-piel-de-los-ni%C3%B1os-y-el-sol-r1181.aspx">MAS</a>
+                      </button>
+                  </ion-item>
+                </ion-list>
+              </ion-card>
+            </ion-card-content>
+
   <ion-card>
     <ion-list>
       <ion-list-header>
@@ -29,7 +33,6 @@
           <img [src]="item.img" />
           </ion-thumbnail>
             <h2>{{item.titulo}}</h2>
-            <p>{{item.descripcion}}</p>
            <button ion-button clear item-end>
             <a href="http://www.laroche-posay.pe/productos-tratamientos/Anthelios/La-piel-de-los-ni%C3%B1os-y-el-sol-r1181.aspx">ir</a>
           </button>
@@ -38,8 +41,8 @@
   </ion-card>
   <ion-card>
     <ion-list>
-      <ion-list-header>
-         BEBÉS
+      <ion-list-header >
+        MARCA
        </ion-list-header>
         <ion-item *ngFor="let item of itemsss">
           <ion-thumbnail item-start>
