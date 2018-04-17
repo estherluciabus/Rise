@@ -2,19 +2,19 @@
   notificaciones
 </ion-navbar>
   <ion-content>
+    <ion-card>
       <ion-label>BLOQUEADORES</ion-label>
-        <ion-toggle [(ngModel)]="item"></ion-toggle>
-            <ion-card-content *ngIf="item">
-              <ion-card >
+      <ion-toggle ion-toggle [(ngModel)]="publicidad"></ion-toggle>
+    </ion-card>
+            <ion-card-content *ngIf="publicidad">
+              <ion-card>
                 <ion-list>
-                  <ion-list-header>
-                    La Roche-Posay
-                  </ion-list-header>
-                  <ion-item *ngFor="let item of items">
+                  <h1>La Roche-Posay</h1>
+                  <ion-item>
                     <ion-thumbnail item-start>
-                      <img [src]="item.img" />
+                      <img src="assets/img/La_Roche-Posay.png" />
                     </ion-thumbnail>
-                      <h2>{{item.titulo}}</h2>
+                      <h2>NIÑOS,BEBÉS,ADULTOS,..</h2>
                       <button ion-button clear item-end>
                         <a href="http://www.laroche-posay.pe/productos-tratamientos/Anthelios/La-piel-de-los-ni%C3%B1os-y-el-sol-r1181.aspx">MAS</a>
                       </button>
