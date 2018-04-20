@@ -1,6 +1,7 @@
-import { ToastController } from 'ionic-angular';
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ToastController} from 'ionic-angular';
+import { FormControl} from "@angular/forms";
+import { NavController,ModalController } from 'ionic-angular';
+import {  Component, NgZone, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { BloqueadoresPage } from '../../pages/bloqueadores/bloqueadores';
 import {
   GoogleMaps,
@@ -11,14 +12,17 @@ import {
 } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { ClimaService } from '../../shared/clima.service';
-
-
+import { MapsAPILoader } from '@agm/core';
+// import {AutocompletePage} from './autocomplete';
+import { } from 'googlemaps';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 
 })
 export class HomePage {
+
+
   fabs = [
   {
     fabclass:'uno',
@@ -100,18 +104,103 @@ export class HomePage {
   }
   ];
 
+
   map: GoogleMap;
   temperatura: number;
+  searchControl: FormControl;
+  // address;
+  public latitude: number;
+  public longitude: number;
+  public zoom: number;
 
-  constructor(public navCtrl: NavController,
+  @ViewChild("search")
+  public searchElementRef;
+
+    constructor(public navCtrl: NavController,
     public toastCtrl: ToastController,
     private geolocation: Geolocation,
-    private climaService: ClimaService) {
+    private climaService: ClimaService,
+     private mapsAPILoader: MapsAPILoader,
+    private ngZone: NgZone,
+    private modalCtrl:ModalController
+  ) {
+   //  this.address = {
+   //   place: ''
+   // };
+    this.zoom = 4;
+    this.latitude = 39.8282;
+    this.longitude = -98.5795;
+
+    //create search FormControl
+    this.searchControl = new FormControl();
+
+    //set current position
+    this.setCurrentPosition();
   }
+// showAddressModal () {
+//   let modal = this.modalCtrl.create(AutocompletePage);
+//   let me = this;
+//   modal.onDidDismiss(data => {
+//     this.address.place = data;
+//   });
+//   modal.present();
+// }
+  ionViewDidLoad() {
+       //set google maps defaults
+       this.zoom = 4;
+       this.latitude = 39.8282;
+       this.longitude = -98.5795;
+
+       //create search FormControl
+       this.searchControl = new FormControl();
+
+       //set current position
+       this.setCurrentPosition();
+
+
+       //load Places Autocomplete
+       this.mapsAPILoader.load().then(() => {
+           let nativeHomeInputBox = document.getElementById('txtHome').getElementsByTagName('input')[0];
+           let autocomplete = new google.maps.places.Autocomplete(nativeHomeInputBox, {
+               types: ["address"]
+           });
+           autocomplete.addListener("place_changed", () => {
+               this.ngZone.run(() => {
+                   //get the place result
+                   let place: google.maps.places.PlaceResult = autocomplete.getPlace();
+
+                   //verify result
+                   if (place.geometry === undefined || place.geometry === null) {
+                       return;
+                   }
+
+                   //set latitude, longitude and zoom
+                   this.latitude = place.geometry.location.lat();
+                   this.longitude = place.geometry.location.lng();
+                   this.zoom = 12;
+               });
+           });
+       });
+   }
+
+     private setCurrentPosition() {
+         if ("geolocation" in navigator) {
+             navigator.geolocation.getCurrentPosition((position) => {
+                 this.latitude = position.coords.latitude;
+                 this.longitude = position.coords.longitude;
+                 this.zoom = 12;
+                 this.climaService.getData(
+                     position.coords.latitude,
+                     position.coords.longitude
+                   );
+             });
+
+         }
+     }
+
 
 
   loadMap(): void {
-
     this.geolocation.getCurrentPosition().then(position => {
       this.climaService.getData(
           position.coords.latitude,
@@ -133,24 +222,42 @@ export class HomePage {
         camera: {
           target: {
             lat: position.coords.latitude,
-            lng: position.coords.longitude
+            lng: position.coords.longitude,
+
 
           },
 
           zoom: 18,
           tilt: 0
+
         },
         gestures: {
           scroll: true
         }
       };
 
+
       this.map = GoogleMaps.create('map_canvas', mapOptions);
+
+
+      // let modal = this.modalCtrl.create('map_canvas', mapOptions);
+      // let me = this;
+      // this.map.onDidDismiss(data => {
+      //   this.address.place = data;
+      // });
+      // this.map.present();
 
       console.log (position.coords.latitude,
       position.coords.longitude)
 
+
+      // this.searchControl = new FormControl();
+
       this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
+
+        // let autocomplete = new GoogleMap.places.Autocomplete(this.searchElementRef.nativeElement, {
+        //   types: ["address"]
+        // });
 
         this.presentToast('La radiación está muy fuerte');
 
@@ -158,6 +265,11 @@ export class HomePage {
           .subscribe((latLng: LatLng) => {
 
             const position = JSON.parse(latLng.toString());
+
+           //  let place: GoogleMap.places.PlaceResult = autocomplete.getPlace();
+           //
+           //  if (place.geometry === undefined || place.geometry === null) {
+           // return;}
 
             this.map.addMarker(
               {
@@ -189,5 +301,6 @@ export class HomePage {
   play(){
     this.navCtrl.push(BloqueadoresPage);
   }
+
 
 }

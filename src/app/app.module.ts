@@ -14,6 +14,7 @@ import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeprobl
 import { AyudaPage } from '../pages/ayuda/ayuda';
 import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
 import { MitosPage } from '../pages/mitos/mitos';
+// import { BuscadorPage } from '../pages/buscador/buscador';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -21,6 +22,7 @@ import { PreguntasService} from '../shared/preguntas.service';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { ClimaService } from '../shared/clima.service';
+import { AgmCoreModule } from '@agm/core';
 
 
 import{ config} from '../firebaseConfig';
@@ -50,8 +52,11 @@ import { Geolocation } from '@ionic-native/geolocation';
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
     HttpClientModule,
-    HttpClientJsonpModule
-
+    HttpClientJsonpModule,
+    AgmCoreModule.forRoot({
+       apiKey: "AIzaSyDFbv6UQi4rZ3dD0evELJOfb-tfTonWpWU",
+       libraries: ["places"]
+   })
 
 
   ],
