@@ -1,17 +1,3 @@
-<<<<<<< HEAD
- export class HomePage {
-     Limitedeexposicion:'30',
-     radiacionmaxima:7,
-     radiacionminima:6,
-    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
-     active:false
-   },
-   {
-     fabclass:'cuatro',
-     miniClass:'cuatro4',
-     imagenes:[
-      'assets/img/lente.png'
-=======
 import { ToastController} from 'ionic-angular';
 import { FormControl} from "@angular/forms";
 import { NavController } from 'ionic-angular';
@@ -26,8 +12,9 @@ import {
 } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { ClimaService } from '../../shared/clima.service';
-import { MapsAPILoader } from '@agm/core';
 import { } from 'googlemaps';
+import { MapsAPILoader } from '@agm/core';
+
 // import {ViewController} from 'ionic-angular';
 // import {AutocompletePage} from './autocomplete';
 
@@ -88,33 +75,11 @@ export class HomePage {
     fabclass:'cuatro',
     miniClass:'cuatro4',
     imagenes:[
->>>>>>> 93f4c61167595b1f067a09e479bbda60411d3fcf
       'assets/img/lente.png',
       'assets/img/sombrero mujer.png',
       'assets/img/icono.png',
       'assets/img/umbrella.png',
       'assets/img/ropa.png'
-<<<<<<< HEAD
-     ],
-
-     backgroundColor:'rgba(177, 55, 35, 0.9)',
-     riesgo:'Muy alto',
-     Limitedeexposicion:'25',
-     radiacionmaxima:10,
-     radiacionminima:8,
-    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
-     active:false
-   },
-   {
- export class HomePage {
-     Limitedeexposicion:'60',
-     radiacionmaxima:20,
-     radiacionminima:11,
-    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
-     active:false
-   }
-   ];
-=======
     ],
 
     backgroundColor:'rgba(177, 55, 35, 0.9)',
@@ -335,5 +300,5 @@ export class HomePage {
   }
 
 
+
 }
->>>>>>> 93f4c61167595b1f067a09e479bbda60411d3fcf

@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<ion-icon name="play"></ion-icon>
-                     </button>
-                   </div>
-                  <strong><h1>{{fab.sombra}}<br/>
-                  </h1></strong>
-                   <ion-note>
-                     <h1>Indice UV</h1>
-                   </ion-note>
 
-               <ion-icon name="pin" color="primary"></ion-icon>
-               <ion-label>Conectar con GPS </ion-label>
-             </ion-chip>
-            <ion-icon ios=ios-alert-outline ></ion-icon>
-           </div>
-         </div>
-=======
 <ion-header>
   <ion-navbar>
   <button ion-button icon-only clear menuToggle>
@@ -87,15 +71,17 @@
              </ion-input>
             </ion-item>
         </ion-list> -->
+<ion-list>
+  <ion-item>
+      <ion-label floating>Enter Address</ion-label>
+      <ion-input id="txtHome" type="text"></ion-input>
+  </ion-item>
 
-    <ion-item>
-        <ion-label floating>Enter Address</ion-label>
-        <ion-input id="txtHome" type="text"></ion-input>
-    </ion-item>
+<agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+  <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+ </agm-map>
+</ion-list>
 
-  <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
-   </agm-map>
 
 
           <div class="map-container" id="map_canvas">
@@ -140,4 +126,3 @@
   </div>
   </div>
 </ion-content>
->>>>>>> 93f4c61167595b1f067a09e479bbda60411d3fcf
