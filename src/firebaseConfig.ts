@@ -6,4 +6,5 @@ export const config = {
     storageBucket: "rise-58db7.appspot.com",
     messagingSenderId: "881177989537"
 
+
 }

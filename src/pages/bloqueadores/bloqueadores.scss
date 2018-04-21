@@ -1,0 +1,104 @@
+page-bloqueadores {
+  .color-container{
+    background-color:#FFB871;
+  }
+  .inicio{
+    display : flex;
+    flex-direction:column;
+    height: 50%;
+    border:5px solid 0;
+    position: relative;
+
+  }
+
+    .titulo-container{
+      align-content: center;
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      text-align: center;
+
+    }
+
+    .bloqueador{
+      background-color:#EE9F8C66;
+      height: 83%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        height: 100%;
+        max-width: 100%;
+      }
+
+    }
+      .derecha{
+      background-color:#83B8CE;
+      position:absolute;
+      top: 48%;
+      left: 8%;
+      width: 0%;
+      height: 0%;
+    }
+
+    .derecha2{
+      position: absolute;
+      background-color:#83B8CE;
+      top: 48%;
+      left: 58%;
+      width: 0%;
+      height: 0%;
+    }
+  .izquierda{
+    background-color:#83B8CE;
+    position: absolute;
+    width: 0%;
+    height:0%;
+    left:60%;
+    width: 0%;
+    height:0%;
+    top: 30%;
+    button {
+    	border-radius: 2px;
+    	overflow: hidden;
+    	height: 5.6rem;
+    	font-size: 2.4rem;
+    	font-weight: 500;
+    }
+  }
+
+  .izquierda2{
+    position: absolute;
+    background-color:#83B8CE;
+    top: 30%;
+    left: 10%;
+    width: 0%;
+    height: 0%;
+    button {
+      border-radius: 2px;
+      overflow: hidden;
+      height: 5.6rem;
+      font-size: 2.4rem;
+      font-weight: 500;
+      background-color: #000000;
+    }
+
+  }
+  .botoncaracterisstica{
+    left: 0;
+    top:2px;
+    height:10%;
+    position: relative;
+
+    p{
+      margin: 0 0 2px;
+      overflow: inherit;
+      font-size: 1.4rem;
+      line-height: normal;
+      text-overflow: inherit;
+      color: #8d5c5c;
+    }
+}
+
+}

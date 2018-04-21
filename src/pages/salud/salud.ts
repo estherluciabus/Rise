@@ -1,25 +1,19 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { AlimentacionPage } from '../alimentacion/alimentacion';
+public alertCtrl: AlertController){}
+  cocinaAlert(){
+    let alert = this.alertCtrl.create({
+    title: 'ATENCION',
+    title: 'TE RECOMENDAMOS',
+     subTitle: 'una vez cocinadas, escurrirlas, meter a la nevera <b> y evita recalentarlas de forma repetida, si no se convertira en sustancias potencialmente cancerígenas</b>',
+    buttons: ['Dismiss']
+    buttons: ['OK']
+  });
+  alert.present();
 
-class SaludComponent {
-  constructor(public navCtrl: NavController) {
-
-  }
-otraPagina(){
-  this.navCtrl.push(AlimentacionPage);
-}
-
-}
-
-@Component({
-
-  selector: 'page-salud',
-   templateUrl: 'salud.html'
-
-})
-export class SaludPage {
-  salud: string = "puppies";
-  isAndroid: boolean = false;
-
-  }
+ }
+ CHATARRAAlert(){
+   let alert = this.alertCtrl.create({
+    title: 'TEN EN CEUNTA QUE:',
+    subTitle: 'TE HACE MAS PROPENSO A TENER CANCER',
+    buttons: ['LO LOGRARE']
+   });
+   alert.present();

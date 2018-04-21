@@ -1,0 +1,43 @@
+page-configuracion {
+  input[type="range"] {
+      width: 100%;
+      height: 28px;
+      -webkit-appearance: none;
+      outline: none;
+
+      border: 0;
+      padding: 0 8px;
+      margin: 8px 0;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+      background: #ccc;
+      height: 4px;
+      border-radius: 4px;
+      transition: 0.3s;
+  }
+
+  input[type="range"]:hover::-webkit-slider-runnable-track,
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+      background: #777; /*activeTrackColor*/
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: red; /*thumbColor*/
+      width: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
+      height: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
+      border-radius: 50%;
+      margin-top: -12px; /* -[thumbHeight + (2 x thumbBorderWidth) - trackHeight]/2*/
+      cursor: pointer;
+      border: 4px solid #fff; /*border-width should be equal to thumbBorderWidth if you want same border width across all browsers and border-color should match the background*/
+      transition: 0.3s;
+  }
+
+  input[type="range"]:hover::-webkit-slider-thumb,
+  input[type="range"]:focus::-webkit-slider-thumb {
+      background: darkOrange; /*activeThumbColor*/
+  }
+
+
+}

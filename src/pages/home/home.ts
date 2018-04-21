@@ -1,28 +1,36 @@
-import { Component } from '@angular/core';
-import { ToastController } from 'ionic-angular';
+ export class HomePage {
+     Limitedeexposicion:'30',
+     radiacionmaxima:7,
+     radiacionminima:6,
+    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
+     active:false
+   },
+   {
+     fabclass:'cuatro',
+     miniClass:'cuatro4',
+     imagenes:[
+      'assets/img/lente.png'
+      'assets/img/lente.png',
+      'assets/img/sombrero mujer.png',
+      'assets/img/icono.png',
+      'assets/img/umbrella.png',
+      'assets/img/ropa.png'
+     ],
 
-@Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
-})
-export class HomePage {
-
-  constructor(private toastCtrl: ToastController) {
-  }
-
-  presentToast() {
-    let toast = this.toastCtrl.create({
-      message: 'esta es una alarma',
-      duration: 3000,
-      position: 'bottom'
-    });
-
-    toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
-    });
-
-    toast.present();
-
-
-  }
-}
+     backgroundColor:'rgba(177, 55, 35, 0.9)',
+     riesgo:'Muy alto',
+     Limitedeexposicion:'25',
+     radiacionmaxima:10,
+     radiacionminima:8,
+    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
+     active:false
+   },
+   {
+ export class HomePage {
+     Limitedeexposicion:'60',
+     radiacionmaxima:20,
+     radiacionminima:11,
+    sombra:'buscasombra especialmente<b/> entre las 10AM y 4PM',
+     active:false
+   }
+   ];
