@@ -1,1 +1,97 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-content *ngIf="!user" class="inicio-page">
+  <ion-slides pager>
+    <ion-slide >
+      <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+      <h2 class="Bienvenida">Bienvenida(o) a <br/>SUNRISE</h2>
+      <div class="logosline">
+        <img src="assets/img/uno.png" />
+      </div>
+      <p class="slide">En SUNRISE alimentaras <br/>tu cultura preventiva sobre<br/>el cancer de piel<br/> ¡Aprenderas a como cuidar tu piel!:)</p>
+      <button ion-button style="background-color: #FFBD41" (click)="login()">
+        <ion-icon name="logo-google"> Entrar con tu Gmail</ion-icon>
+      </button>
+    </ion-slide>
+
+    <ion-slide class="MiniFormulario">
+        <h2 >Test Previo</h2>
+        <p>No te asustes, solo queremos conocerte más <br/> tu informacion esta protegida.</p>
+          <ion-card-content class="test-container">
+            <ion-list>
+              <ion-item class="subtest" *ngFor="let pregunta of preguntas">
+              {{pregunta.pregunta}}
+              <select class="alternativas"(change)="test (pregunta.key, $event.target.value)">
+                <option
+                   *ngFor="let alternativa of pregunta.alternativas"
+                    [value]="pregunta.alternativas.indexOf(alternativa)">
+                    {{alternativa.texto}}
+                  </option>
+              </select>
+            </ion-item>
+          </ion-list>
+            <ion-item>
+            <button ion-button block outline color="primary">Finalizar</button>
+             </ion-item>
+          </ion-card-content>
+      </ion-slide>
+
+    <ion-slide>
+        <h2 class="slide-title">FRASE</h2>
+        <div class="cargando">
+          <img src="assets/img/uno.png" />
+        </div>
+          <button class="Entrar"ion-button large clear icon-end color="primary" (click)="inicio()">
+            Entrar
+            <ion-icon name="arrow-forward"></ion-icon>
+         </button>
+    </ion-slide>
+
+
+  </ion-slides>
+</ion-content>
+
+<ion-content *ngIf="user">
+  <ion-menu [content]="content">
+    <ion-header>
+      <ion-title class="titulo">
+        <h2>SUNRISE</h2>
+      </ion-title>
+    </ion-header>
+
+    <ion-content>
+      <div class="logo">
+        <img src="assets/img/uno.png" />
+      </div>
+      <ion-list no-line>
+        <button class="boton1" ion-item (click)="pushhome()">
+            <ion-icon item-left class= "home" ios="ios-home" md="md-home"></ion-icon>
+              Home
+          </button>
+
+        <button class="boton2" ion-item (click)="pushbloqueadores()">
+          <ion-icon item-left name="ios-happy"></ion-icon>
+              Bloquead..
+          </button>
+        <button class="boton3" ion-item (click)="pushtestimonio()">
+            <ion-icon item-left class="testimonio" item-left name="ios-people"></ion-icon>
+            Testimonio
+         </button>
+        <button class="boton4" ion-item (click)="openPage(ConfiguracionesPage)">
+              <ion-icon item-left name="ios-cog"></ion-icon>
+            Configuraciones
+        </button>
+
+        <button ion-item (click)="pushsoporte()">
+              <ion-icon item-left name="construct"></ion-icon>
+            Soporte de problemas
+        </button>
+
+        <button ion-item (click)="logout()">
+          <ion-icon item-left ios="ios-log-out" md="md-log-out"></ion-icon>
+              Salir
+        </button>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-nav #content [root]="rootPage"></ion-nav>
+</ion-content>

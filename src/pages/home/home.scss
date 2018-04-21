@@ -1,61 +1,176 @@
 page-home {
-
   .scroll-content {
- display: flex;
- flex-direction:column;
-  }
-
- .padre-container {
-  display : flex;
-  flex-direction:column;
-  height: 100%
- }
- .tab-container{
    display: flex;
-   flex-direction:row;
-    width: 100%;
-
- }
- .fecha-container{
-   display : flex;
    flex-direction:column;
-   height: 10%;
-   width: 100%;
+   background: #a8ecf5;
+  }
+  .logo{
+    width: 5%;
+    background-color:#232323;
+    left:0;
+    border: 0px solid 0;
+    border:none;
+    border-radius: 9px;
+    position: relative;
+  }
+
+   .padre-container {
+    display : flex;
+    flex-direction:column;
+    height: 100%;
+    border:5px solid 0;
+   }
+
+
+   .centro-container{
+       display: flex;
+       flex-direction:row;
+       height:70%;
+       width: 100%;
+       border:5px solid 0;
+       align-content: center;
+       justify-content: center;
+
 
   }
-  .semaforo-container{
-    width: 40%;
+
+  .imagen-container {
+    width: 30%;
+    height: 95%;
+    background-color:#232323;
+    left:0;
+    border: 0px solid 0;
+    border:none;
+    border-radius: 9px;
+    top: 3%;
+    position: relative;
+
 
   }
+
+
+  .uno{
+
+    left: 20%;
+    width: 45%;
+    height: 30%;
+    bottom: 67%;
+    position: absolute;
+
+  }
+  .uno1{
+      background-color: #3A792D;
+  }
+
+  .uno1:hover{
+    background-color:#64FF00;
+    border: #FFFFFF solid 2px;
+  }
+    .dos{
+      position:absolute;
+      top: 20%;
+      left: 20%;
+      width: 120px;
+      height: 120px;
+
+    }
+    .dos2{
+        background-color:#BCB604;
+    }
+
+    .dos2:hover{
+      background-color:#FFF81C;
+      border: #FFFFFF solid 2px;
+    }
+        .tres{
+          position:absolute;
+          top: 38%;
+          left: 20%;
+          width: 120px;
+          height: 120px;
+    }
+    .tres3{
+        background-color:#C7860B ;
+    }
+    .tres3:hover{
+      background-color:#FF6F17;
+      border: #FFFFFF solid 2px;
+    }
+
+        .cuatro{
+          position:absolute;
+          top: 56%;
+          left: 20%;
+          width: 120px;
+          height: 120px;
+        }
+    .cuatro4{
+        background-color:#BF3F0B ;
+
+    }
+
+    .cuatro4:hover{
+      background-color:#FF3F3F ;
+      border: #FFFFFF solid 2px;
+    }
+      .cinco{
+      position:absolute;
+      top: 74%;
+      left: 20%;
+      width: 120px;
+      height: 120px;
+
+    }
+    .cinco5{
+        background-color:#A500A5 ;
+    }
+    .cinco5:hover{
+      background-color: #E45CEA ;
+      border: #FFFFFF solid 2px;
+    }
+
   .derecha-container{
     display: flex;
     flex-direction:column;
-    width:60%;
-    border:5px solid black;
+    width:65%;
+    border:5px solid 0;
+
+
   }
     .map-container {
       display: flex;
       flex-direction:column;
       width:100%;
-      height:80%;
-      border:5px solid black;
+      height:90%;
+      border:5px solid 0;
+      position: static;
+
     }
 
     .aviso-container{
       display: flex;
-      flex-direction:column;
+      flex-direction:row-reverse;
       width:100%;
-      height:20%;
-      border:5px solid black;
+      height:10%;
+      top:60%;
+      border:5px solid 0;
 
       }
+
         .alarma-container{
           display: flex;
-          flex-direction:column;
-          width:100%;
+          flex-direction:row-reverse ;
+          width:40%;
           height:10%;
-          border:5px solid black;
+          right: 10%;
+          top: 8%;
+          left: 50%;
+          border:5px solid 0;
+          align-content: center;
+          justify-content: center;
+          text-align: center;
 
-        }
+      }
+
 
     }

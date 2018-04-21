@@ -1,12 +1,12 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "SUNRISE",
+  "short_name": "SUNRISE",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "assets/imgs/logo.png",
+    "src": "assets/img/logo.jpg",
     "sizes": "512x512",
-    "type": "image/png"
+    "type": "image/jpg"
   }],
   "background_color": "#4e8ef7",
   "theme_color": "#4e8ef7"

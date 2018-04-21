@@ -4,24 +4,29 @@ import { HomePage } from '../home/home';
 
 import { SaludPage } from '../salud/salud';
 
-import { MenuPage } from '../menu/menu';
+import { NavController } from 'ionic-angular';
+
+import { NotificacionesPage } from '../notificaciones/notificaciones';
+
+
 
 @Component({
   templateUrl: 'tabs.html',
-
 
 })
 export class TabsPage {
 
   HomeRoote = HomePage;
-SaludRoote =  SaludPage;
-  MenuRoote = MenuPage;
 
+  SaludRoote =  SaludPage;
 
+  NotificacionesRoote = NotificacionesPage;
 
+  constructor(public navCtrl: NavController) {
 
-  constructor() {
-
+  }
+  hom(){
+      this.navCtrl.popToRoot();
   }
 
 }

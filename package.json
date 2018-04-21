@@ -12,6 +12,7 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.2",
     "@angular/common": "5.0.0",
     "@angular/compiler": "5.0.0",
     "@angular/compiler-cli": "5.0.0",
@@ -49,6 +50,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.0",
+    "@types/googlemaps": "^3.30.8",
     "typescript": "2.4.2"
   },
   "description": "An Ionic project",
@@ -76,4 +78,8 @@
       "android"
     ]
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 93f4c61167595b1f067a09e479bbda60411d3fcf
