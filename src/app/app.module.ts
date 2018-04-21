@@ -24,7 +24,6 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { ClimaService } from '../shared/clima.service';
 import { AgmCoreModule } from '@agm/core';
 
-
 import{ config} from '../firebaseConfig';
 import{ AngularFireDatabaseModule } from 'angularfire2/database';
 import{ AngularFireModule } from 'angularfire2';
@@ -56,9 +55,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     AgmCoreModule.forRoot({
        apiKey: "AIzaSyDFbv6UQi4rZ3dD0evELJOfb-tfTonWpWU",
        libraries: ["places"]
-   })
-
-
+     })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

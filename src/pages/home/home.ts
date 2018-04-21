@@ -1,7 +1,7 @@
 import { ToastController} from 'ionic-angular';
 import { FormControl} from "@angular/forms";
-import { NavController,ModalController } from 'ionic-angular';
-import {  Component, NgZone, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { Component, NgZone, ElementRef, ViewChild} from '@angular/core';
 import { BloqueadoresPage } from '../../pages/bloqueadores/bloqueadores';
 import {
   GoogleMaps,
@@ -13,8 +13,11 @@ import {
 import { Geolocation } from '@ionic-native/geolocation';
 import { ClimaService } from '../../shared/clima.service';
 import { MapsAPILoader } from '@agm/core';
-// import {AutocompletePage} from './autocomplete';
 import { } from 'googlemaps';
+// import {ViewController} from 'ionic-angular';
+// import {AutocompletePage} from './autocomplete';
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -121,8 +124,8 @@ export class HomePage {
     private geolocation: Geolocation,
     private climaService: ClimaService,
      private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone,
-    private modalCtrl:ModalController
+    private ngZone: NgZone
+    // private modalCtrl:ModalController
   ) {
    //  this.address = {
    //   place: ''
@@ -136,14 +139,11 @@ export class HomePage {
 
     //set current position
     this.setCurrentPosition();
+
   }
 // showAddressModal () {
-//   let modal = this.modalCtrl.create(AutocompletePage);
-//   let me = this;
-//   modal.onDidDismiss(data => {
-//     this.address.place = data;
-//   });
-//   modal.present();
+//
+//
 // }
   ionViewDidLoad() {
        //set google maps defaults
@@ -156,7 +156,6 @@ export class HomePage {
 
        //set current position
        this.setCurrentPosition();
-
 
        //load Places Autocomplete
        this.mapsAPILoader.load().then(() => {
@@ -189,18 +188,15 @@ export class HomePage {
                  this.latitude = position.coords.latitude;
                  this.longitude = position.coords.longitude;
                  this.zoom = 12;
-                 this.climaService.getData(
-                     position.coords.latitude,
-                     position.coords.longitude
-                   );
              });
-
          }
      }
 
 
 
   loadMap(): void {
+
+
     this.geolocation.getCurrentPosition().then(position => {
       this.climaService.getData(
           position.coords.latitude,
