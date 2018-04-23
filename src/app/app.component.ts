@@ -64,8 +64,8 @@ export class  MyApp implements OnInit {
   })
 
   }
-  test(preguntaKey:string, respuesta: string, user:string) {
-      this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,user);
+  test(preguntaKey:string, respuesta: string) {
+      this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'user');
   }
 
 

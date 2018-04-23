@@ -25,11 +25,10 @@ export class PreguntasService {
     return this.preguntasObservable;
   }
 
-    agregarRespuestaTest( pregunta: string,alternative: string, user: string) {
-      this.db.list('users/' + user + '/test').push({
+    agregarRespuestaTest( pregunta: string,alternative: string, userId: string) {
+      this.db.list('users/' + userId + '/test').push({
       pregunta: pregunta,
-      respuesta: alternative,
-      user:user
+      respuesta: alternative
 
     });
   }
