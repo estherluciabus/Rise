@@ -3,14 +3,15 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { PreguntasService} from '../shared/preguntas.service';
+import { LoginService } from '../shared/login.service';
+
 import { SplashScreen } from '@ionic-native/splash-screen';
 // import { App, ViewController } from 'ionic-angular';
-
-import { HomePage } from '../pages/home/home';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
 import { TestimonioPage } from '../pages/testimonio/testimonio';
 import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
 import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
+// import { UsersService} from '../shared/users.service';
 
 import { AyudaPage } from '../pages/ayuda/ayuda';
 
@@ -30,6 +31,7 @@ export class  MyApp implements OnInit {
     platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
+    public loginService:LoginService,
     private googlePlus: GooglePlus
     // public viewCtrl: ViewController,
     // public appCtrl: App
@@ -42,7 +44,18 @@ export class  MyApp implements OnInit {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-  }
+    }
+
+  logins() {
+      this.loginService.logins().then(user => {
+        this.user = user;
+      });
+    }
+
+    logout() {
+      this.loginService.logout()
+        .then(() => this.user = null);
+    }
 
   ngOnInit() {
      this.preguntasService.getPreguntas().subscribe(preguntas => {
@@ -51,8 +64,8 @@ export class  MyApp implements OnInit {
   })
 
   }
-  test(preguntaKey:string, respuesta: string) {
-      this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'salome');
+  test(preguntaKey:string, respuesta: string, user:string) {
+      this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,user);
   }
 
 
@@ -73,26 +86,10 @@ export class  MyApp implements OnInit {
   pushayuda() {
     this.nav.push(AyudaPage);
   }
-
+//aqui
   inicio() {
     this.user = {};
   }
-  pushhome(){
-    this.nav.push(HomePage);
 
-  }
-
-  login() {
-    this.googlePlus.login({
-      'offline': true
-    }).then(res => {
-      this.user =res;
-    }, err => alert('error'));
-
-  }
-
-  logout() {
-    this.googlePlus.logout().then(() => this.user = null);
-  }
 
 }

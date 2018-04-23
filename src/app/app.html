@@ -6,16 +6,16 @@
       <div class="logosline">
         <img src="assets/img/uno.png" />
       </div>
-      <p class="slide">En SUNRISE alimentaras <br/>tu cultura preventiva sobre<br/>el cancer de piel<br/> ¡Aprenderas a como cuidar tu piel!:)</p>
-      <button ion-button style="background-color: #FFBD41" (click)="login()">
+      <p class="slide">En SUNRISE alimentaras <br/>tu cultura preventiva sobre<br/>el cancer de piel<br/> ¡Y mucho mas! porque la SALUD ES LO PRIMERO</p>
+      <button ion-button style="background-color:#2ec95c" (click)="logins()">
         <ion-icon name="logo-google"> Entrar con tu Gmail</ion-icon>
       </button>
-    </ion-slide>
 
+    </ion-slide>
     <ion-slide class="MiniFormulario">
-        <h2 >Test Previo</h2>
-        <p>No te asustes, solo queremos conocerte más <br/> tu informacion esta protegida.</p>
-          <ion-card-content class="test-container">
+        <h2 >	"Una mancha que cambia, puede cambiar tu vida"</h2>
+        <p>Solo queremos conocerte más <br/> tu informacion esta protegida.</p>
+          <ion-card-content class="test-container" style="background-color:#e2afaf00">
             <ion-list>
               <ion-item class="subtest" *ngFor="let pregunta of preguntas">
               {{pregunta.pregunta}}
@@ -29,16 +29,25 @@
             </ion-item>
           </ion-list>
             <ion-item>
-            <button ion-button block outline color="primary">Finalizar</button>
+            <button ion-button block outline style="background-color:#f4f4f4">Finalizar</button>
              </ion-item>
           </ion-card-content>
       </ion-slide>
 
     <ion-slide>
-        <h2 class="slide-title">FRASE</h2>
-        <div class="cargando">
-          <img src="assets/img/uno.png" />
-        </div>
+        <h2 class="slide-title">SABIAS QUE</h2>
+        <br/>
+        <ion-item  style="background-color:#5d636724" >
+            <ion-thumbnail item-start>
+              <img src="assets/img/cara.png">
+            </ion-thumbnail>
+            <h2>Antes de los 21 años recibes<br/> entre 50% y 80% de radiacion</h2>
+            <h2>En la infancia el sol daña <br/>TRES VECES MAS QUE EN LA ADULTEZ</h2>
+          </ion-item>
+        <button class="frase" ion-button clear color="primary">Nuestra piel tiene memoria</button>
+        <img scr="assets/img/gif5.gif"/>
+        <br/>
+        <br/>
           <button class="Entrar"ion-button large clear icon-end color="primary" (click)="inicio()">
             Entrar
             <ion-icon name="arrow-forward"></ion-icon>
@@ -62,10 +71,6 @@
         <img src="assets/img/uno.png" />
       </div>
       <ion-list no-line>
-        <button class="boton1" ion-item (click)="pushhome()">
-            <ion-icon item-left class= "home" ios="ios-home" md="md-home"></ion-icon>
-              Home
-          </button>
 
         <button class="boton2" ion-item (click)="pushbloqueadores()">
           <ion-icon item-left name="ios-happy"></ion-icon>

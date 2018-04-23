@@ -1,5 +1,13 @@
-
-  <ion-toolbar color="danger">
+<ion-header>
+<ion-navbar>
+  <button ion-button icon-only clear menuToggle>
+      <ion-icon name="ios-menu"></ion-icon>
+    </button> Salud
+</ion-navbar>
+</ion-header>
+<ion-navbar>
+</ion-navbar>
+  <ion-toolbar style="background-color:#8A4B38">
       <ion-segment [(ngModel)]="salud" color="dark" >
       <ion-segment-button value="C">
         C
@@ -21,12 +29,10 @@
     <ion-content>
       <div [ngSwitch]="salud">
         <ion-list *ngSwitchCase="'C'">
+            <ion-card-content style="background-color:#FF8333">
           <ion-navbar>
           </ion-navbar>
-            <ion-card-title>
-              Cáncer de Piel
-            </ion-card-title>
-            <ion-card-content>
+          <ion-card>
               <h2>¿Qué es el Cáncer de piel?</h2>
               <p>Crecimiento excesivo,
                 desorganizado e <br/>invasivo de las células propias.</p>
@@ -35,26 +41,26 @@
                 </button>
                  <ion-item>
                    <ion-thumbnail item-start>
-                     <img src="assets/img/thumbnail-duckling-1.jpg">
+                     <img src="assets/img/basales.png">
                    </ion-thumbnail>
                  <h2>Carcinomas de Células basales</h2>
                </ion-item>
                <ion-item>
                  <ion-thumbnail item-start>
-                   <img src="assets/img/thumbnail-duckling-1.jpg">
+                   <img src="assets/img/escamosas.png">
                  </ion-thumbnail>
                  <h2>Carcinoma de las células escamosas(CCE)</h2>
                </ion-item>
                 <ion-item>
                   <ion-thumbnail item-start>
-                    <img src="assets/img/thumbnail-duckling-1.jpg">
+                    <img src="assets/img/persona mostrando su problema.png">
                   </ion-thumbnail>
                   <h2>Melanoma maligno</h2>
                </ion-item>
                  <button ion-button style="background-color:#8A4B38">
                   CAUSA/CONSECUENCIAS
                 </button>
-                  <div class ="cancerdepiel">
+                  <div class ="assets/img/cancerdepiel">
                     <img src="assets/img/rayos.jpg"/>
                   </div>
                <ion-item style="background-color: #EE9F8C66">
@@ -65,14 +71,16 @@
                    <h2>*2Malformaciones cutáneas del ser vivo</h2>
                </ion-item>
                  <div class ="cancerdepiel">
-                   <img src="assets/imgs/bloqueador.png"/>
+                   <img src="assets/imgs/gif1-.gif"/>
                  </div>
+               </ion-card>
             </ion-card-content>
           </ion-list>
-
         <ion-list *ngSwitchCase="'A'">
+          <ion-card-content style="background-color:#FF8333">
           <ion-navbar>
           </ion-navbar>
+          <ion-card>
            <button ion-item>
              <ion-icon item-left name="happy">
                <p>Es un determinante fundamental del estado<br/>
@@ -80,7 +88,7 @@
                   y si viene sin refunfuñar, absorbe mejor los nutrientes ✌.<br/></p>
              </ion-icon>
            </button>
-           <ion-card>
+
              <button ion-button full block style="background-color:#8a4b38">
                MI PLATO
              </button>
@@ -90,7 +98,7 @@
                 protegen y nutren nuestra piel a diferecia de otros.
                </p>
                <div class="plato">
-                <img src="assets/img/niños.png" title="dieta mediterranea">
+                <img src="assets/img/dieta mediterranea .png" title="dieta mediterranea">
                </div>
                <p>
                  RECOMENDACIONES DE LA OMS <br/>
@@ -99,13 +107,13 @@
                </p>
                <ion-item style="background-color: #EE9F8C66">
                  <ion-thumbnail item-start>
-                   <img src="assets/img/thumbnail-duckling-1.jpg">
+                   <img src="assets/img/comida chatarra.png">
                  </ion-thumbnail>
                  <ion-thumbnail item-start>
-                   <img src="assets/img/thumbnail-duckling-1.jpg">
+                   <img src="assets/img/bebidas alcoholicas.png">
                  </ion-thumbnail>
                  <ion-thumbnail item-start>
-                   <img src="assets/img/thumbnail-duckling-1.jpg">
+                   <img src="assets/img/embutidos.png">
                  </ion-thumbnail>
                </ion-item>
                <button (click)="CHATARRAAlert()">
@@ -114,10 +122,10 @@
                <h1>!HAY SOLUCION¡</h1><h2>sostituyendo por:</h2>
                <ion-item style="background-color: #EE9F8C66">
                  <ion-thumbnail item-start>
-                   <img src="assets/img/thumbnail-duckling-1.jpg">
+                   <img src="assets/img/pollo sin piel.png">
                  </ion-thumbnail>
                  <ion-thumbnail item-start>
-                   <img src="assets/img/thumbnail-duckling-1.jpg">
+                   <img src="assets/img/pescado.png">
                  </ion-thumbnail>
                  <ion-thumbnail item-start>
                    <img src="assets/img/thumbnail-duckling-1.jpg">
@@ -128,105 +136,103 @@
                 FORMAS DE COCINAR SANO
                </button>
                <div class="comidas">
-                <img src="assets/img/niños.png" title="dieta mediterranea" height="5px">
+                <img src="assets/img/alimentos.png" title="dieta mediterranea">
                </div>
                <button (click)="cocinaAlert()">
                   <ion-icon ios="ios-alert" md="md-alert"></ion-icon>
                </button>
                <div class="gif">
-                <img src="assets/img/niños.png" title="dieta mediterranea" height="5px">
+                <img src="assets/img/gif4-.gif"  height="5px">
                </div>
            </ion-card>
+          </ion-card-content>
          </ion-list>
 
-          <ion-list *ngSwitchCase="'P'">
+        <ion-list *ngSwitchCase="'P'">
+         <ion-card-content style="background-color:#FF8333">
           <ion-navbar>
           </ion-navbar>
-          <ion-card-title>
-            PROTECCION
-          </ion-card-title>
-          <ion-card-content>
+          <ion-card>
+           <ion-card>
              <button ion-button mini style="background-color:#8A4B38">
                Metodo del A B C D E del Melonoma
              </button>
              <div class="lunares">
-               <img src="metodoabcdejpg"/>
+               <img src="assets/img/lunares.png"/>
              </div>
             <p>
               Otros síntomas pueden ser picazón, sangrado , no cicatriza , inflamación fuera de los bordes del lunar. Si tienes estos síntomas acude a un dermatólogo.
             </p>
-          </ion-card-content>
-          <ion-card-content>
+          </ion-card>
+          <ion-card>
             <button ion-button full block style="background-color:#8a4b38">
               AUTOEXAMINATE
             </button>
               <div style="background-color:#EE9F8C66">
                 <div class="AUTOEXAMINATE">
-                  <img src="assets/img/autoexaminate.jpg">
+                  <img src="assets/img/autoexaminate.png">
                 </div>
             </div>
-          </ion-card-content>
-          <ion-card-content>
+          </ion-card>
+          <ion-card>
             <ion-item>
                 <button ion-button full block style="background-color:#8a4b38">TIPS DE ROPA</button>
               <ion-icon item-right name="home"><ion-icon item-top name="star"></ion-icon></ion-icon>
             </ion-item>
               <ion-item>
                 <ion-thumbnail item-start>
-                  <img src="assets/img/thumbnail-duckling-1.jpg">
+                  <img src="assets/img/mojado.png">
                 </ion-thumbnail>
-                <h2>Encontraras</h2>
                 <p>Mojada o húmeda absorbe mayor radiación</p>
               </ion-item>
                 <ion-item>
                 <ion-thumbnail item-start>
-                  <img src="assets/img/thumbnail-duckling-1.jpg">
+                  <img src="assets/img/blusas.png">
                 </ion-thumbnail>
                 <p>UPF indica cuantos rayos UV bloquea la tela </p>
               </ion-item>
               <ion-item>
                 <ion-thumbnail item-start>
-                  <img src="assets/img/thumbnail-duckling-1.jpg">
+                  <img src="assets/img/jeans.png">
                 </ion-thumbnail>
                 <p>Algodón,Pana, Jean,Poliester de colores intermedios
                    protege mas</p>
-                  <button mini ion-button clear item-end style="background-color:#8a4b38">
-                  <a href="http://www.laroche-posay.pe/productos-tratamientos/Anthelios/La-piel-de-los-ni%C3%B1os-y-el-sol-r1181.aspx">
-                    clicqueame</a>
-                  </button>
               </ion-item>
               <ion-item>
                 <ion-thumbnail item-start>
-                  <img src="assets/img/thumbnail-duckling-1.jpg">
+                  <img src="assets/img/tela.png">
                 </ion-thumbnail>
                 <p>Tela como la seda (delgada liviana) pasa más rayos UV</p>
             </ion-item>
+          </ion-card>
             <div>
-              <img src="assets/img/thumbnail-puppy-3.jpg">
+              <img src="assets/img/gif2-.gif">
             </div>
-          </ion-card-content>
+          </ion-card>
+        </ion-card-content>
       </ion-list>
 
         <ion-list *ngSwitchCase="'I'">
+        <ion-card-content style="background-color:#FF8333">
           <ion-navbar>
           </ion-navbar>
 
           <ion-card>
-           <ion-list>
-              <ion-card-title>
-                Centros estatales
-              </ion-card-title>
-            <ion-item>
-              <ion-thumbnail item-start>
-                <img src="assets/img/thumbnail-duckling-1.jpg">
-              </ion-thumbnail>
-                  <h2>Entre los mas conocidos estan</h2>
-                  <p>INEN - Instituto de Enfermedades Neoplásicas</p>
-              <button ion-button clear item-end>
-               <a href="http://www.minsa.gob.pe/?op=53">clickqueame</a>
-             </button>
-            </ion-item>
-         </ion-list>
+             <ion-list>
+                <ion-card-title>
+                  Centros estatales
+                </ion-card-title>
+              <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="assets/img/thumbnail-duckling-1.jpg">
+                </ion-thumbnail>
+                    <h2>Entre los mas conocidos estan</h2>
+                    <p>INEN - Instituto de Enfermedades Neoplásicas</p>
+                <button ion-button  outline item-end>
+                 <a href="http://www.minsa.gob.pe/?op=53">clickqueame</a>
+               </button>
+              </ion-item>
+           </ion-list>
         </ion-card>
 
              <ion-card>
@@ -240,7 +246,7 @@
                     </ion-thumbnail>
                       <h2>Organización no gubernamental</h2>
                       <p>Brindan ayuda para los sectores con mas bajos recursos</p>
-                     <button ion-button clear item-end>
+                     <button ion-button outline item-end>
                       <a href="http://hablemosdepsicooncologia.com/asociaciones/hablemos-de-asociacionesgrupos-contra-el-cancer-en-peru">clickqueame</a>
                     </button>
                    </ion-item>
@@ -249,7 +255,7 @@
 
             <ion-card>
              <ion-list>
-              <ion-card-title>
+              <!-- <ion-card-title>
                 PRIVADAS
               </ion-card-title>
             <ion-item>
@@ -260,12 +266,13 @@
                 <p>Hospital Solidaridad,Policlínico Peruano Japonés,
                 Clínica de la piel,Clínica Anglo Americana,Clínica Alemana
                 del Perú,Dermik - Clínica Dermatológica </p>
-                <button ion-button clear item-end>
+                <button ion-button  outline item-end>
                  <a href="http://www.laroche-posay.pe/productos-tratamientos/Anthelios/La-piel-de-los-ni%C3%B1os-y-el-sol-r1181.aspx">clickqueame</a>
                </button>
-            </ion-item>
+            </ion-item> -->
          </ion-list>
        </ion-card>
+     </ion-card-content>
      </ion-list>
     </div>
     <ion-navbar></ion-navbar>

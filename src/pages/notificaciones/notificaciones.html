@@ -1,12 +1,17 @@
+<ion-header>
 <ion-navbar>
-  notificaciones
+  <button ion-button icon-only clear menuToggle>
+      <ion-icon name="ios-menu"></ion-icon>
+    </button> Notificaciones
 </ion-navbar>
+</ion-header>
   <ion-content>
     <ion-card>
       <ion-label>BLOQUEADORES</ion-label>
-      <ion-toggle ion-toggle [(ngModel)]="publicidad"></ion-toggle>
+      <!-- <ion-toggle ion-toggle [(ngModel)]="publicidad"></ion-toggle> -->
     </ion-card>
-            <ion-card-content *ngIf="publicidad">
+     <!-- *ngIf="publicidad" -->
+            <ion-card-content>
               <ion-card>
                 <ion-list>
                   <h1>La Roche-Posay</h1>
@@ -19,7 +24,7 @@
                         alergia al exponerte al sol, piel sensible,cualquier<br/>
                         tipo de cutis y en varias presentaciones como texturas<br/>
                    </p>
-                      <button ion-button clear item-end>
+                      <button ion-button  outline item-end>
                         <a href="http://www.laroche-posay.pe/productos-tratamientos/Anthelios/La-piel-de-los-ni%C3%B1os-y-el-sol-r1181.aspx">clickqueame</a>
                       </button>
                   </ion-item>

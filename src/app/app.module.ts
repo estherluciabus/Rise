@@ -23,10 +23,11 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { ClimaService } from '../shared/clima.service';
 import { AgmCoreModule } from '@agm/core';
+import { LoginService } from '../shared/login.service';
 
-import{ config} from '../firebaseConfig';
-import{ AngularFireDatabaseModule } from 'angularfire2/database';
-import{ AngularFireModule } from 'angularfire2';
+import { config} from '../firebaseConfig';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Geolocation } from '@ionic-native/geolocation';
 
@@ -53,8 +54,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     HttpClientModule,
     HttpClientJsonpModule,
     AgmCoreModule.forRoot({
-       apiKey: "AIzaSyDFbv6UQi4rZ3dD0evELJOfb-tfTonWpWU",
-       libraries: ["places"]
+       apiKey: "AIzaSyCNmgXY1Nzolo6EjqBtw1zdbl5odhO3MNM"
      })
   ],
   bootstrap: [IonicApp],
@@ -77,6 +77,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     StatusBar,
     SplashScreen,
     PreguntasService,
+    LoginService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
     GoogleMaps,
@@ -84,7 +85,6 @@ import { Geolocation } from '@ionic-native/geolocation';
     ClimaService
 
   ]
-
 
 
 })

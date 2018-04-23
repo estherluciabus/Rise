@@ -6,5 +6,12 @@ export const config = {
     storageBucket: "rise-58db7.appspot.com",
     messagingSenderId: "881177989537"
 
+   //  apiKey: "AIzaSyCTzgX714UM4M-r-C7z4kM9mhIDSUtIAXQ",
+   // authDomain: "users-7bcc7.firebaseapp.com",
+   // databaseURL: "https://users-7bcc7.firebaseio.com",
+   // projectId: "users-7bcc7",
+   // storageBucket: "users-7bcc7.appspot.com",
+   // messagingSenderId: "521427677514"
+
 
 }

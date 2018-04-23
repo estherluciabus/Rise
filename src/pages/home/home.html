@@ -1,9 +1,8 @@
-
 <ion-header>
-  <ion-navbar>
+<ion-navbar>
   <button ion-button icon-only clear menuToggle>
-  <ion-icon name="ios-menu"></ion-icon>
-</button>
+      <ion-icon name="ios-menu"></ion-icon>
+    </button> Sol semaforo
 </ion-navbar>
 </ion-header>
 
@@ -13,79 +12,115 @@
       <div class="imagen-container">
 
         <ion-fab *ngFor="let fab of fabs" [ngClass]="fab.fabclass">
-          <button ion-fab mini [ngClass]="fab.miniClass" [disabled]="!fab.active">
+          <button ion-fab mini [ngClass]="fab.miniClass" [disabled]="!fab.active" >
             <ion-icon name="arrow-dropring"></ion-icon>
           </button>
           <ion-fab-list side="right">
-            <ion-item [ngStyle]="{'background-color':fab.backgroundColor}">
-                  <ion-note>
-                    <h1>Riesgo</h1>
-                  </ion-note>
-                  <div>
-                  <strong><h1>{{fab.riesgo}}</h1></strong>
-                  </div>
-                  <ion-note>
-                    <h1>Limite de exposicion</h1>
-                  </ion-note>
-                  <strong><h1>{{fab.Limitedeexposicion}} minutos<br/>
+            <ion-item [ngStyle]="{'background-color':fab.backgroundColor}" >
+              <ion-note>
+                <h1>Riesgo</h1>
+              </ion-note>
+              <div>
+                <strong><h1>{{fab.riesgo}}</h1></strong>
+              </div>
+              <ion-note>
+                <h1>Limite de exposicion</h1>
+              </ion-note>
+              <strong><h1>{{fab.Limitedeexposicion}} minutos<br/>
                     sin proteccion
                   </h1></strong>
-                  <ion-note>
-                    <h1>Proteccion</h1>
-                  </ion-note>
-                  <div *ngFor="let img of fab.imagenes">
-                     <img [src]="img" />
-                  </div>
-                  <div>
-                    <button ion-fab mini style="background-color:#f3b206" (click)="play()">
+              <ion-note>
+                <h1>Proteccion</h1>
+              </ion-note>
+              <div *ngFor="let img of fab.imagenes">
+                <img [src]="img" />
+              </div>
+              <div>
+                <button ion-fab mini style="background-color:#f3b206" (click)="play()">
                       <ion-icon name="play"></ion-icon>
                     </button>
-                  </div>
-                  <ion-note>
-                    <h1>Indice UV</h1>
-                  </ion-note>
-                  <ion-note>
-                    <h2>Radiacion maxima</h2>
-                  </ion-note>
-                  <div>
-                  <strong><h1>{{fab.radiacionmaxima}}</h1></strong>
-                </div>
-                <ion-note>
-                  <h2>Radiacion minima</h2>
-                </ion-note>
-                <strong><h1>{{fab.radiacionminima}}</h1></strong>
+              </div>
+              <ion-note>
+                <h1>Indice UV</h1>
+              </ion-note>
+              <ion-note>
+                <h2>Radiacion maxima</h2>
+              </ion-note>
+              <div>
+                <strong><h1>{{fab.radiacionmaxima}}</h1></strong>
+              </div>
+              <ion-note>
+                <h2>Radiacion minima</h2>
+              </ion-note>
+              <strong><h1>{{fab.radiacionminima}}</h1></strong>
             </ion-item>
           </ion-fab-list>
         </ion-fab>
       </div>
-        <div class="derecha-container">
-          <!-- <div class="inputWithIcon">
+
+    <div class="derecha-container">
+      <!-- <div class="inputWithIcon">
             <label class="item item-input">
               <input type="search" placeholder=ng-model="search">
            </label>
             <button class="search">buscar</button>
           </div> -->
-          <!-- <ion-list>
+      <!-- <ion-list>
             <ion-item>
               <ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Pick an address">
              </ion-input>
             </ion-item>
         </ion-list> -->
-<ion-list>
-  <ion-item>
-      <ion-label floating>Enter Address</ion-label>
-      <ion-input id="txtHome" type="text"></ion-input>
-  </ion-item>
+      <!-- <ion-list>
+        <ion-item>
+          <ion-label floating>Enter Address</ion-label>
+          <ion-input type="text" #busqueda></ion-input>
+          <button ion-button color="danger" (click)="buscarLugar(busqueda.value)"></button>
+        </ion-item>
 
-<agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-  <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
- </agm-map>
-</ion-list>
+        <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+          <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+        </agm-map>
+      </ion-list> -->
 
 
 
-          <div class="map-container" id="map_canvas">
-           <!-- <ion-list>
+      <div class="map-container" id="map_canvas"></div>
+
+    <div id="floating-panel">
+      <b>Start: </b>
+      <select [(ngModel)]="start" id="start" (change)="loadMap()">
+        <option value="chicago, il">Chicago</option>
+        <option value="st louis, mo">St Louis</option>
+        <option value="joplin, mo">Joplin, MO</option>
+        <option value="oklahoma city, ok">Oklahoma City</option>
+        <option value="amarillo, tx">Amarillo</option>
+        <option value="gallup, nm">Gallup, NM</option>
+        <option value="flagstaff, az">Flagstaff, AZ</option>
+        <option value="winona, az">Winona</option>
+        <option value="kingman, az">Kingman</option>
+        <option value="barstow, ca">Barstow</option>
+        <option value="san bernardino, ca">San Bernardino</option>
+        <option value="los angeles, ca">Los Angeles</option>
+      </select><br>
+      <b>End: </b>
+      <select [(ngModel)]="end" id="end" (change)="loadMap()">
+        <option value="chicago, il">Chicago</option>
+        <option value="st louis, mo">St Louis</option>
+        <option value="joplin, mo">Joplin, MO</option>
+        <option value="oklahoma city, ok">Oklahoma City</option>
+        <option value="amarillo, tx">Amarillo</option>
+        <option value="gallup, nm">Gallup, NM</option>
+        <option value="flagstaff, az">Flagstaff, AZ</option>
+        <option value="winona, az">Winona</option>
+        <option value="kingman, az">Kingman</option>
+        <option value="barstow, ca">Barstow</option>
+        <option value="san bernardino, ca">San Bernardino</option>
+        <option value="los angeles, ca">Los Angeles</option>
+      </select>
+      </div>
+
+        <!-- <ion-list>
               <ion-item>
                   <ion-label>CUANTA INTESIDAD DE CALOR <br/>HAY EN EL LUGAR QUE ESTAS</ion-label>
                     <ion-select [(ngModel)]="departamentos">
@@ -95,17 +130,19 @@
               </ion-item>
             </ion-list> -->
 
-          </div>
-          <div class="aviso-container">
-            <ion-chip #chip2 (click)="loadMap()">
-              <ion-icon name="pin" color="primary"></ion-icon>
-              <ion-label>Conectar con GPS </ion-label>
-            </ion-chip>
 
 
+      <div class="aviso-container">
+        <ion-chip #chip2 (click)="loadMap()">
+          <ion-icon name="pin" color="primary"></ion-icon>
+          <ion-label>Conectar con GPS </ion-label>
+        </ion-chip>
+      </div>
+ </div>
 
-            <!-- <ion-icon ios=ios-alert-outline (clik)="loginMap()"></ion-icon> -->
-            <!-- <item-input *ngFor="let input of inputs">
+
+        <!-- <ion-icon ios=ios-alert-outline (clik)="loginMap()"></ion-icon> -->
+        <!-- <item-input *ngFor="let input of inputs">
               <item-input-list>
                 <h1>{{input.name}}</h1>
                 <h1>{{input.placeholder}}</h1>
@@ -116,13 +153,12 @@
                 </div>
               </item-input-list>
            </item-input>           -->
-        </div>
+
     </div>
-   </div>
-   <div class="alarma-container">
-     <button ion-button color="danger" (click)="presentToast()">
+    <div class="alarma-container">
+      <button ion-button color="danger" (click)="presentToast()">
        <ion-icon name="alarm"></ion-icon>ALARMA
     </button>
-  </div>
+    </div>
   </div>
 </ion-content>

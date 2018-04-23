@@ -7,7 +7,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'notificaciones.html'
 })
 export class NotificacionesPage {
-  publicidad: boolean = null;
+  // publicidad: boolean = true;
 
   constructor(public navCtrl: NavController) {
   }
