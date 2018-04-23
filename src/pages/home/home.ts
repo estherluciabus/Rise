@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  import { ToastController } from 'ionic-angular';
  import { Component } from '@angular/core';
  import { NavController } from 'ionic-angular';
@@ -6,6 +7,14 @@
  import { NavController,ModalController } from 'ionic-angular';
  import {  Component, NgZone, ElementRef, OnInit, ViewChild} from '@angular/core';
  import {
+=======
+import { ToastController} from 'ionic-angular';
+import { FormControl} from "@angular/forms";
+import { NavController } from 'ionic-angular';
+import { Component, NgZone, ElementRef, ViewChild} from '@angular/core';
+import { BloqueadoresPage } from '../../pages/bloqueadores/bloqueadores';
+import {
+>>>>>>> e48c753071cd6573d82d989912bb10c2128cfbb0
   GoogleMaps,
   GoogleMap,
   GoogleMapsEvent,
@@ -14,6 +23,11 @@
 } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { ClimaService } from '../../shared/clima.service';
+import { } from 'googlemaps';
+import { MapsAPILoader } from '@agm/core';
+
+// import {ViewController} from 'ionic-angular';
+// import {AutocompletePage} from './autocomplete';
 
 
 import { MapsAPILoader } from '@agm/core';
@@ -116,6 +130,7 @@ export class HomePage {
   public latitude: number;
   public longitude: number;
   public zoom: number;
+<<<<<<< HEAD
 
   @ViewChild("search")
    public searchElementRef;
@@ -129,6 +144,19 @@ export class HomePage {
      private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone,
     private modalCtrl:ModalController
+=======
+
+  @ViewChild("search")
+  public searchElementRef;
+
+    constructor(public navCtrl: NavController,
+    public toastCtrl: ToastController,
+    private geolocation: Geolocation,
+    private climaService: ClimaService,
+     private mapsAPILoader: MapsAPILoader,
+    private ngZone: NgZone
+    // private modalCtrl:ModalController
+>>>>>>> e48c753071cd6573d82d989912bb10c2128cfbb0
   ) {
    //  this.address = {
    //   place: ''
@@ -142,6 +170,7 @@ export class HomePage {
 
     //set current position
     this.setCurrentPosition();
+<<<<<<< HEAD
   }
 // showAddressModal () {
 //   let modal = this.modalCtrl.create(AutocompletePage);
@@ -150,12 +179,64 @@ export class HomePage {
 //     this.address.place = data;
 //   });
 //   modal.present();
+=======
+
+  }
+// showAddressModal () {
+//
+//
+>>>>>>> e48c753071cd6573d82d989912bb10c2128cfbb0
 // }
   ionViewDidLoad() {
        //set google maps defaults
        this.zoom = 4;
        this.latitude = 39.8282;
        this.longitude = -98.5795;
+<<<<<<< HEAD
+=======
+
+       //create search FormControl
+       this.searchControl = new FormControl();
+
+       //set current position
+       this.setCurrentPosition();
+
+       //load Places Autocomplete
+       this.mapsAPILoader.load().then(() => {
+           let nativeHomeInputBox = document.getElementById('txtHome').getElementsByTagName('input')[0];
+           let autocomplete = new google.maps.places.Autocomplete(nativeHomeInputBox, {
+               types: ["address"]
+           });
+           autocomplete.addListener("place_changed", () => {
+               this.ngZone.run(() => {
+                   //get the place result
+                   let place: google.maps.places.PlaceResult = autocomplete.getPlace();
+
+                   //verify result
+                   if (place.geometry === undefined || place.geometry === null) {
+                       return;
+                   }
+
+                   //set latitude, longitude and zoom
+                   this.latitude = place.geometry.location.lat();
+                   this.longitude = place.geometry.location.lng();
+                   this.zoom = 12;
+               });
+           });
+       });
+   }
+
+     private setCurrentPosition() {
+         if ("geolocation" in navigator) {
+             navigator.geolocation.getCurrentPosition((position) => {
+                 this.latitude = position.coords.latitude;
+                 this.longitude = position.coords.longitude;
+                 this.zoom = 12;
+             });
+         }
+     }
+
+>>>>>>> e48c753071cd6573d82d989912bb10c2128cfbb0
 
        //create search FormControl
        this.searchControl = new FormControl();
@@ -207,7 +288,10 @@ export class HomePage {
 
 
 
+<<<<<<< HEAD
   loadMap(): void {
+=======
+>>>>>>> e48c753071cd6573d82d989912bb10c2128cfbb0
     this.geolocation.getCurrentPosition().then(position => {
       this.climaService.getData(
           position.coords.latitude,
@@ -229,7 +313,10 @@ export class HomePage {
         camera: {
           target: {
             lat: position.coords.latitude,
+<<<<<<< HEAD
             lng: position.coords.longitude
+=======
+>>>>>>> e48c753071cd6573d82d989912bb10c2128cfbb0
             lng: position.coords.longitude,
 
 
@@ -311,4 +398,8 @@ export class HomePage {
   }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e48c753071cd6573d82d989912bb10c2128cfbb0
 }
