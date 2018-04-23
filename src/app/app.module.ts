@@ -1,89 +1,96 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+ import { ErrorHandler, NgModule } from '@angular/core';
+ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+ import { SplashScreen } from '@ionic-native/splash-screen';
+ import { StatusBar } from '@ionic-native/status-bar';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { SaludPage } from '../pages/salud/salud';
-import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
-import { TestimonioPage } from '../pages/testimonio/testimonio';
-import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
-import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
-import { AyudaPage } from '../pages/ayuda/ayuda';
-import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
-import { MitosPage } from '../pages/mitos/mitos';
+ import { MyApp } from './app.component';
+ import { HomePage } from '../pages/home/home';
+ import { SaludPage } from '../pages/salud/salud';
+ import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
+ import { TestimonioPage } from '../pages/testimonio/testimonio';
+ import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
+ import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
+ import { AyudaPage } from '../pages/ayuda/ayuda';
+ import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
+ import { MitosPage } from '../pages/mitos/mitos';
++// import { BuscadorPage } from '../pages/buscador/buscador';
 
-import { TabsPage } from '../pages/tabs/tabs';
+ import { TabsPage } from '../pages/tabs/tabs';
 
-import { PreguntasService} from '../shared/preguntas.service';
-import { GoogleMaps } from '@ionic-native/google-maps';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
-import { ClimaService } from '../shared/clima.service';
-
-
-import{ config} from '../firebaseConfig';
-import{ AngularFireDatabaseModule } from 'angularfire2/database';
-import{ AngularFireModule } from 'angularfire2';
-import { GooglePlus } from '@ionic-native/google-plus';
-import { Geolocation } from '@ionic-native/geolocation';
-
-@NgModule({
-  declarations: [
-    MyApp,
-    TabsPage,
-    HomePage,
-    SaludPage,
-    BloqueadoresPage,
-    TestimonioPage,
-    ConfiguracionesPage,
-    SoportedeproblemaPage,
-    AyudaPage,
-    NotificacionesPage,
-    MitosPage
-
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(config),
-    AngularFireDatabaseModule,
-    HttpClientModule,
-    HttpClientJsonpModule
+ import { PreguntasService} from '../shared/preguntas.service';
+ import { GoogleMaps } from '@ionic-native/google-maps';
+ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+ import { ClimaService } from '../shared/clima.service';
++import { AgmCoreModule } from '@agm/core';
 
 
+ import{ config} from '../firebaseConfig';
+ import{ AngularFireDatabaseModule } from 'angularfire2/database';
+ import{ AngularFireModule } from 'angularfire2';
+ import { GooglePlus } from '@ionic-native/google-plus';
+ import { Geolocation } from '@ionic-native/geolocation';
 
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    TabsPage,
-    HomePage,
-    SaludPage,
-    BloqueadoresPage,
-    TestimonioPage,
-    ConfiguracionesPage,
-    SoportedeproblemaPage,
-    AyudaPage,
-    NotificacionesPage,
-    MitosPage
+ @NgModule({
+   declarations: [
+     MyApp,
+     TabsPage,
+     HomePage,
+     SaludPage,
+     BloqueadoresPage,
+     TestimonioPage,
+     ConfiguracionesPage,
+     SoportedeproblemaPage,
+     AyudaPage,
+     NotificacionesPage,
+     MitosPage
+
+   ],
+   imports: [
+     BrowserModule,
+     IonicModule.forRoot(MyApp),
+     AngularFireModule.initializeApp(config),
+     AngularFireDatabaseModule,
+     HttpClientModule,
+     HttpClientJsonpModule
+
+     HttpClientJsonpModule,
+     AgmCoreModule.forRoot({
+        apiKey: "AIzaSyDFbv6UQi4rZ3dD0evELJOfb-tfTonWpWU",
+        libraries: ["places"]
+    })
 
 
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    PreguntasService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Geolocation,
-    GoogleMaps,
-    GooglePlus,
-    ClimaService
+   ],
+   bootstrap: [IonicApp],
+   entryComponents: [
+     MyApp,
+     TabsPage,
+     HomePage,
+     SaludPage,
+     BloqueadoresPage,
+     TestimonioPage,
+     ConfiguracionesPage,
+     SoportedeproblemaPage,
+     AyudaPage,
+     NotificacionesPage,
+     MitosPage
 
-  ]
+
+   ],
+   providers: [
+     StatusBar,
+     SplashScreen,
+     PreguntasService,
+     {provide: ErrorHandler, useClass: IonicErrorHandler},
+     Geolocation,
+     GoogleMaps,
+     GooglePlus,
+     ClimaService
+
+   ]
 
 
 
-})
-export class AppModule {}
+ })
+ export class AppModule {}
