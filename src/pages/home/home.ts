@@ -1,5 +1,5 @@
 import { ToastController } from 'ionic-angular';
-import { NavController } from 'ionic-angular';
+import { NavController,Platform ,AlertController } from 'ionic-angular';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,7 +14,8 @@ import {
 } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { ClimaService } from '../../shared/clima.service';
-import { } from 'googlemaps';
+// import { LocalNotifications } from '@ionic-native/local-notifications';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -121,9 +122,24 @@ export class HomePage {
   constructor(public navCtrl: NavController,
     public toastCtrl: ToastController,
     private geolocation: Geolocation,
-    private climaService: ClimaService,
+    private climaService: ClimaService
+    // private LocalNotifications:LocalNotifications,
+    // public alertCtrl: AlertController,
+    // private plt: Platform
+  ) {
 
-  ) {}
+  //   this.plt.ready().then((rdy) =>{
+  //     this.LocalNotifications.on('click',(notification,state) =>{
+  //       let json = JSON.parse ( notification.data);
+  //       let alert = this.alertCtrl.create({
+  //         title: notification.title,
+  //         subTitle :json.mydata
+  //       });
+  //       alert.present();
+  //     });
+  //   }
+  // );
+  }
 
   loadMap(): void {
 
@@ -214,6 +230,17 @@ export class HomePage {
     toast.present();
 
   }
+  // scheduleNotification(){
+  //   this.LocalNotifications.schedule({
+  //     id:1,
+  //     title:'Atencion',
+  //     text:'aplicate el bloqueador para una completa proteccion',
+  //     at: new Date(new Date().getTime() + 5 *2000),
+  //     data: {mydata:'SunRise'}
+  //   }),
+  // }
+
+
   play() {
     this.navCtrl.push(BloqueadoresPage);
   }
