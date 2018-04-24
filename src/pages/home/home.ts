@@ -1,5 +1,5 @@
 import { ToastController } from 'ionic-angular';
-import { NavController,Platform ,AlertController } from 'ionic-angular';
+import { NavController ,AlertController } from 'ionic-angular';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
