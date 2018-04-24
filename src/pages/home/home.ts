@@ -1,13 +1,9 @@
 import { ToastController } from 'ionic-angular';
-import { Component, ViewChild, ElementRef } from '@angular/core';
-// import { IonicPage } from 'ionic-angular';
-import { FormControl } from "@angular/forms";
 import { NavController } from 'ionic-angular';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
- // import { Component} from '@angular/core';
-
+import { Component} from '@angular/core';
 import { BloqueadoresPage } from '../../pages/bloqueadores/bloqueadores';
 import {
   GoogleMaps,
@@ -19,13 +15,6 @@ import {
 import { Geolocation } from '@ionic-native/geolocation';
 import { ClimaService } from '../../shared/clima.service';
 import { } from 'googlemaps';
-import { MapsAPILoader } from '@agm/core';
-
-// import {ViewController} from 'ionic-angular';
-// import {AutocompletePage} from './autocomplete';
-// declare var google;
-
-// @IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -38,6 +27,8 @@ export class HomePage {
     {
       fabclass: 'uno',
       miniClass: 'uno1',
+      fondo: '#64FF00',
+      bordes: '#FFFFFF solid 2px',
       imagenes: [
         'assets/img/lente.png'
       ],
@@ -51,6 +42,8 @@ export class HomePage {
     {
       fabclass: 'dos',
       miniClass: 'dos2',
+      fondo: '#FFF81C',
+      bordes: '#FFFFFF solid 2px',
       imagenes: [
         'assets/img/lente.png',
         'assets/img/umbrella.png'
@@ -65,11 +58,12 @@ export class HomePage {
     {
       fabclass: 'tres',
       miniClass: 'tres3',
+      fondo: '#FF6F17',
+      bordes: '#FFFFFF solid 2px',
       imagenes: [
         'assets/img/lente.png',
         'assets/img/sombrero mujer.png',
-        'assets/img/icono.png',
-        'assets/img/umbrella.png'
+        'assets/img/icono.png'
       ],
       backgroundColor: 'rgba(189, 103, 26, 0.9)',
       riesgo: 'Alto',
@@ -81,12 +75,14 @@ export class HomePage {
     {
       fabclass: 'cuatro',
       miniClass: 'cuatro4',
+      fondo: '#FF3F3F',
+      bordes: '#FFFFFF solid 2px',
       imagenes: [
         'assets/img/lente.png',
         'assets/img/sombrero mujer.png',
         'assets/img/icono.png',
-        'assets/img/umbrella.png',
-        'assets/img/ropa.png'
+        'assets/img/ropa.png',
+        'assets/img/sombra.jpg'
       ],
 
       backgroundColor: 'rgba(177, 55, 35, 0.9)',
@@ -99,145 +95,35 @@ export class HomePage {
     {
       fabclass: 'cinco',
       miniClass: 'cinco5',
+      fondo: ':#A500A5',
+      bordes: '#FFFFFF solid 2px',
       imagenes: [
         'assets/img/lente.png',
         'assets/img/sombrero mujer.png',
         'assets/img/icono.png',
         'assets/img/umbrella.png',
-        'assets/img/ropa.png'
+        'assets/img/ropa.png',
+        'assets/img/sombra.jpg'
       ],
       backgroundColor: 'rgba(194, 43, 224, 0.9)',
       riesgo: 'Extremadamente alto',
-      Limitedeexposicion: '60',
+      Limitedeexposicion: '20',
       radiacionmaxima: 20,
       radiacionminima: 11,
       active: false
     }
   ];
-//ayer
-    // @ViewChild('map') mapElement: ElementRef;
-    // start = 'chicago, il';
-    // end = 'chicago, il';
-    // directionsService = new google.maps.DirectionsService;
-    // directionsDisplay = new google.maps.DirectionsRenderer;
+
     map: GoogleMap;
     temperatura: number;
-    // googlemap:any;
-  // address;
-  // public latitude: number;
-  // public longitude: number;
-  // public zoom: number;
-  // alerta:boolean= true;
+
 
   constructor(public navCtrl: NavController,
     public toastCtrl: ToastController,
     private geolocation: Geolocation,
     private climaService: ClimaService,
-    private mapsAPILoader: MapsAPILoader
-    // private ngZone: NgZone,
-    // private modalCtrl:ModalController
+
   ) {}
-
-  // calculateAndDisplayRoute() {
-  // this.directionsService.route({
-  //   origin: this.start,
-  //   destination: this.end,
-  //   travelMode: 'DRIVING'
-  // }, (response, status) => {
-  //   if (status === 'OK') {
-  //     this.directionsDisplay.setDirections(response);
-  //   } else {
-  //     window.alert('Directions request failed due to ' + status);
-  //   }
-  // });
-  // }
-
-  //ayer
-   // ionViewDidLoad(){
-   // this.initMap();
-
-    //  this.address = {
-    //   place: ''
-    // };
-    // this.zoom = 4;
-    // this.latitude = 39.8282;
-    // this.longitude = -98.5795;
-    //
-    // //create search FormControl
-    //
-    // //set current position
-
-  // }
-  //ayer
- //  initMap() {
- //  // esteno
- //  //   let watch = this.geolocation.watchPosition();
- //  //   watch.subscribe((data) => {
- //  //     this.climaService.getData(
- //  //       position.coords.latitude,
- //  //       position.coords.longitude
- //  //     )
- //  // });
- //  // .
- //   this.map = new google.maps.Map(this.mapElement.nativeElement, {
- //     zoom: 7,
- //     center: {lat: 41.85, lng: -87.65}
- //   });
- //
- //   this.directionsDisplay.setMap(this.map);
- // }
- //
-
-
-// alertas(){
-//   this.alerta= this.alerta;
-// }
-  // buscarLugar(text: string) {
-  //
-  //    this.geolocation.getCurrentPosition().then(position => {
-  //      this.latitude = position.coords.latitude;
-  //      this.longitude = position.coords.longitude;
-  //      this.zoom = 12;
-  //      this.climaService.getData(
-  //        position.coords.latitude,
-  //        position.coords.longitude
-  //      )
-  //    });
-  //
-  //   // set google maps defaults
-  //   this.zoom = 4;
-  //   this.latitude = 39.8282;
-  //   this.longitude = -98.5795;
-
-    //set current position
-    // this.setCurrentPosition();
-
-
-    //load Places Autocomplete
-  //   this.mapsAPILoader.load().then(() => {
-  //   let nativeHomeInputBox = document.getElementById('text').getElementsByTagName('input')[0];
-  //     let autocomplete = new google.maps.places.Autocomplete(nativeHomeInputBox, {
-  //       types: ["address"]
-  //     });
-  //     autocomplete.addListener("place_changed", () => {
-  //       this.ngZone.run(() => {
-  //         //get the place result
-  //         let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-  //
-  //         //verify result
-  //         if (place.geometry === undefined || place.geometry === null) {
-  //           return;
-  //         }
-  //
-  //         //set latitude, longitude and zoom
-  //         this.latitude = place.geometry.location.lat();
-  //         this.longitude = place.geometry.location.lng();
-  //         this.zoom = 12;
-  //       });
-  //     });
-  //   });
-  // }
-
 
   loadMap(): void {
 
@@ -252,18 +138,13 @@ export class HomePage {
             if (fab.radiacionmaxima > res.pronostico[0].n_indice &&
               fab.radiacionminima <= res.pronostico[0].n_indice) {
               fab.active = true;
-              // this.alerta=this.alerta;
-              // this.formVisibility=false;
+
             }
 
             else {
               fab.active = false;
             }
-            // this.formVisibility=false;
-            //   this.ShowForm=loadMap(){
-            //     this.formVisibility=true;
-            //
-            //   }
+
           });
 
           console.log(this.fabs)
@@ -293,23 +174,13 @@ export class HomePage {
 
       this.map = GoogleMaps.create('map_canvas', mapOptions);
 
-
-      // let modal = this.modalCtrl.create('map_canvas', mapOptions);
-      // let me = this;
-      // this.map.onDidDismiss(data => {
-      //   this.address.place = data;
-      // });
-      // this.map.present();
-
       console.log(position.coords.latitude,
         position.coords.longitude)
 
 
-      // this.searchControl = new FormControl();
-
       this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
 
-         this.presentToast('La radiación está muy fuerte');
+         this.presentToast('Espere un momento por favor');
 
          this.map.on(GoogleMapsEvent.MAP_LONG_CLICK)
            .subscribe((latLng: LatLng) => {
@@ -326,7 +197,7 @@ export class HomePage {
 
        });
      }, err => alert(err.message));
- 
+
   }
 
   presentToast(message: string = 'Cada 2h aplicate el bloqueador para una completa proteccion') {

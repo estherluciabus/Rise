@@ -12,15 +12,15 @@ export class LoginService {
     private db: AngularFireDatabase
   ) {}
 
-  logins(): Promise<any> {
+  login(): Promise<any> {
     return new Promise((resolve, reject) => {
-      // this.googlePlus.login({})
-      //   .then(tempUser => {
-          const tempUser = {
-            displayName: 'Alexander',
-            email: 'alwongm@gmail.com',
-            imageUrl: 'url'
-          };
+      this.googlePlus.login({})
+        .then(tempUser => {
+          // const tempUser = {
+          //   displayName: 'Alexander',
+          //   email: 'alwongm@gmail.com',
+          //   imageUrl: 'url'
+          // };
           this.user = tempUser;
           this.db.list('users',
             ref => ref.orderByChild('email').equalTo(tempUser.email)
@@ -34,7 +34,7 @@ export class LoginService {
             this.user = tempUser;
             resolve(this.user);
           });
-        // });
+        });
     });
   }
 

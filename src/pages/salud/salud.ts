@@ -21,15 +21,7 @@ export class SaludPage {
   alert.present();
 
  }
- CHATARRAAlert(){
-   let alert = this.alertCtrl.create({
-    title: 'TEN EN CEUNTA QUE:',
-    subTitle: 'TE HACE MAS PROPENSO A TENER CANCER',
-    buttons: ['LO LOGRARE']
-  });
-  alert.present();
 
- }
  notificacion(){
      this.navCtrl.push(HomePage)
  }

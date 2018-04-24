@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import{ Observable } from 'rxjs/Observable';
+import { LoginService } from './login.service';
 
 @Injectable()
 export class PreguntasService {
@@ -25,8 +26,8 @@ export class PreguntasService {
     return this.preguntasObservable;
   }
 
-    agregarRespuestaTest( pregunta: string,alternative: string, userId: string) {
-      this.db.list('users/' + userId + '/test').push({
+    agregarRespuestaTest( pregunta: string, alternative: string, tempUser: string) {
+      this.db.list('users/' + tempUser + '/test').push({
       pregunta: pregunta,
       respuesta: alternative
 

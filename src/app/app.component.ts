@@ -3,18 +3,10 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { PreguntasService} from '../shared/preguntas.service';
-import { LoginService } from '../shared/login.service';
-
 import { SplashScreen } from '@ionic-native/splash-screen';
-// import { App, ViewController } from 'ionic-angular';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
 import { TestimonioPage } from '../pages/testimonio/testimonio';
-import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
-import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
-// import { UsersService} from '../shared/users.service';
-
-import { AyudaPage } from '../pages/ayuda/ayuda';
-
+import { LoginService } from '../shared/login.service';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
@@ -33,8 +25,7 @@ export class  MyApp implements OnInit {
     splashScreen: SplashScreen,
     public loginService:LoginService,
     private googlePlus: GooglePlus
-    // public viewCtrl: ViewController,
-    // public appCtrl: App
+
   )
     {
 
@@ -46,8 +37,8 @@ export class  MyApp implements OnInit {
     });
     }
 
-  logins() {
-      this.loginService.logins().then(user => {
+  login() {
+      this.loginService.login().then(user => {
         this.user = user;
       });
     }
@@ -62,34 +53,21 @@ export class  MyApp implements OnInit {
      this.preguntas = preguntas;
       console.log(this.preguntas);
   })
-
+    this.user=this.loginService.getUser();
   }
+
   test(preguntaKey:string, respuesta: string) {
-      this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'user');
+      this.preguntasService.agregarRespuestaTest(preguntaKey, respuesta,'resultados');
   }
 
-
-
+  inicio() {
+    this.user = {};
+  }
   pushbloqueadores() {
     this.nav.push(BloqueadoresPage);
   }
   pushtestimonio() {
     this.nav.push(TestimonioPage);
   }
-  openPage() {
-    this.nav.push(ConfiguracionesPage);
-  }
-  pushsoporte() {
-    this.nav.push(SoportedeproblemaPage);
-  }
-
-  pushayuda() {
-    this.nav.push(AyudaPage);
-  }
-//aqui
-  inicio() {
-    this.user = {};
-  }
-
 
 }

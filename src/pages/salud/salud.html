@@ -1,6 +1,6 @@
 <ion-header>
 <ion-navbar>
-  <button ion-button icon-only clear menuToggle>
+  <button ion-button icon-only clear menuToggle class="menu">
       <ion-icon name="ios-menu"></ion-icon>
     </button> Salud
 </ion-navbar>
@@ -8,35 +8,35 @@
 <ion-navbar>
 </ion-navbar>
   <ion-toolbar style="background-color:#8A4B38">
-      <ion-segment [(ngModel)]="salud" color="dark" >
-      <ion-segment-button value="C">
-        C
-      </ion-segment-button>
+      <ion-segment [(ngModel)]="salud" color="orange" >
+        <ion-segment-button value="C">
+          C
+        </ion-segment-button>
 
-      <ion-segment-button value="A">
-        A
-      </ion-segment-button>
+        <ion-segment-button value="A">
+          A
+        </ion-segment-button>
 
-      <ion-segment-button value="P">
-      P
-      </ion-segment-button>
-      <ion-segment-button value="I">
-      I
-      </ion-segment-button>
-        </ion-segment>
+        <ion-segment-button value="P">
+        P
+        </ion-segment-button>
+        <ion-segment-button value="I">
+        I
+        </ion-segment-button>
+      </ion-segment>
     </ion-toolbar>
 
     <ion-content>
       <div [ngSwitch]="salud">
         <ion-list *ngSwitchCase="'C'">
-            <ion-card-content style="background-color:#FF8333">
+        <ion-card style="background-color:#92BFE5">
           <ion-navbar>
           </ion-navbar>
-          <ion-card>
+          <ion-card style="background-color:#EEEFEF">
               <h2>¿Qué es el Cáncer de piel?</h2>
               <p>Crecimiento excesivo,
                 desorganizado e <br/>invasivo de las células propias.</p>
-                <button ion-button style="background-color:#8A4B38">
+                <button ion-button style="background-color:#F9B616">
                   Cáncer de piel más comunes:
                 </button>
                  <ion-item>
@@ -57,7 +57,7 @@
                   </ion-thumbnail>
                   <h2>Melanoma maligno</h2>
                </ion-item>
-                 <button ion-button style="background-color:#8A4B38">
+                 <button ion-button style="background-color:#F9B616">
                   CAUSA/CONSECUENCIAS
                 </button>
                   <div class ="assets/img/cancerdepiel">
@@ -70,14 +70,14 @@
                        contaminar el medio ambiental</p>
                    <h2>*2Malformaciones cutáneas del ser vivo</h2>
                </ion-item>
-                 <div class ="cancerdepiel">
-                   <img src="assets/imgs/gif1-.gif"/>
-                 </div>
                </ion-card>
-            </ion-card-content>
+               <div class="gifs">
+               <img src="assets/img/gif 1.gif"/>
+             </div>
+            </ion-card>
           </ion-list>
         <ion-list *ngSwitchCase="'A'">
-          <ion-card-content style="background-color:#FF8333">
+          <ion-card style="background-color:#ff9800">
           <ion-navbar>
           </ion-navbar>
           <ion-card>
@@ -116,9 +116,6 @@
                    <img src="assets/img/embutidos.png">
                  </ion-thumbnail>
                </ion-item>
-               <button (click)="CHATARRAAlert()">
-                  <ion-icon ios="ios-alert" md="md-alert"></ion-icon>
-               </button>
                <h1>!HAY SOLUCION¡</h1><h2>sostituyendo por:</h2>
                <ion-item style="background-color: #EE9F8C66">
                  <ion-thumbnail item-start>
@@ -138,21 +135,21 @@
                <button (click)="cocinaAlert()">
                   <ion-icon ios="ios-alert" md="md-alert"></ion-icon>
                </button>
-               <div class="gif">
-                <img src="assets/img/gif4-.gif"  height="5px">
-               </div>
            </ion-card>
-          </ion-card-content>
+           <div class="gifs">
+           <img src="assets/img/gifou.gif"/>
+          </div>
+          </ion-card>
          </ion-list>
 
         <ion-list *ngSwitchCase="'P'">
-         <ion-card-content style="background-color:#FF8333">
+         <ion-card style="background-color:#f3dce3">
           <ion-navbar>
           </ion-navbar>
-          <ion-card>
+          <ion-card style="background-color:#EEEFEF">
            <ion-card>
-             <button ion-button mini style="background-color:#8A4B38">
-               Metodo del A B C D E del Melonoma
+             <button ion-button mini style="background-color:#81E3B7">
+               Método del A B C D E del Melonoma
              </button>
              <div class="lunares">
                <img src="assets/img/lunares.png"/>
@@ -162,18 +159,18 @@
             </p>
           </ion-card>
           <ion-card>
-            <button ion-button full block style="background-color:#8a4b38">
+            <button ion-button full block style="background-color:#81E3B7">
               AUTOEXAMINATE
             </button>
               <div style="background-color:#EE9F8C66">
                 <div class="AUTOEXAMINATE">
-                  <img src="assets/img/autoexaminate.png">
+                  <img src="assets/img/auto.png">
                 </div>
             </div>
           </ion-card>
           <ion-card>
             <ion-item>
-                <button ion-button full block style="background-color:#8a4b38">TIPS DE ROPA</button>
+                <button ion-button full block style="background-color:#81E3B7">TIPS DE ROPA</button>
               <ion-icon item-right name="home"><ion-icon item-top name="star"></ion-icon></ion-icon>
             </ion-item>
               <ion-item>
@@ -202,20 +199,19 @@
                 <p>Tela como la seda (delgada liviana) pasa más rayos UV</p>
             </ion-item>
           </ion-card>
-            <div>
-              <img src="assets/img/gif2-.gif">
-            </div>
           </ion-card>
-        </ion-card-content>
+          <div class="gifs">
+            <img src="assets/img/gif2-.gif">
+          </div>
+        </ion-card>
       </ion-list>
 
-        <ion-list *ngSwitchCase="'I'">
-        <ion-card-content style="background-color:#FF8333">
+      <ion-list *ngSwitchCase="'I'">
+        <ion-card style="background-color:#92BFE5">
           <ion-navbar>
           </ion-navbar>
 
-          <ion-card>
-             <ion-list>
+          <ion-card style="background-color:#EEEFEF">
                 <ion-card-title>
                   Centros estatales
                 </ion-card-title>
@@ -226,15 +222,14 @@
                     <h2>Entre los mas conocidos estan</h2>
                     <p>INEN - Instituto de Enfermedades Neoplásicas</p>
                 <button ion-button  outline item-end>
-                 <a href="http://www.minsa.gob.pe/?op=53">clickqueame</a><br/>
+                 <a href="http://www.minsa.gob.pe/?op=53">clickqueame</a></button>
+                 <button ion-button  outline item-end>
                  <a href="http://www.hnseb.gob.pe/servicios.html">clickqueame</a>
                </button>
               </ion-item>
-           </ion-list>
         </ion-card>
 
-             <ion-card>
-              <ion-list>
+             <ion-card style="background-color:#EEEFEF">
                 <ion-card-title>
                   ONG
                 </ion-card-title>
@@ -248,17 +243,16 @@
                       <a href="http://hablemosdepsicooncologia.com/asociaciones/hablemos-de-asociacionesgrupos-contra-el-cancer-en-peru">clickqueame</a>
                     </button>
                    </ion-item>
-                </ion-list>
             </ion-card>
 
-            <ion-card>
+            <ion-card style="background-color:#EEEFEF">
              <ion-list>
               <ion-card-title>
                 PRIVADAS
               </ion-card-title>
             <ion-item>
               <ion-thumbnail item-start>
-                <img src="assets/img/thumbnail-duckling-2.jpg">
+                <img src="assets/img/privado.png">
               </ion-thumbnail>
               <h2>Encontraras</h2>
                 <p>Hospital Solidaridad,Policlínico Peruano Japonés,
@@ -271,14 +265,14 @@
          </ion-list>
        </ion-card>
 
-       <ion-card>
+       <ion-card style="background-color:#EEEFEF">
         <ion-list>
           <ion-card-title>
             CAMPAÑA
           </ion-card-title>
             <ion-item >
               <ion-thumbnail item-start>
-              <img src="assets/img/ong1.png" />
+              <img src="assets/img/ong1.png">
               </ion-thumbnail>
                 <h2>Organo oficial de difusión</h2>
                 <p>y que lleve a cabo campañas de proyección a la comunidad</p>
@@ -287,8 +281,8 @@
               </button>
              </ion-item>
           </ion-list>
-      </ion-card>
-     </ion-card-content>
+        </ion-card>
+     </ion-card>
      </ion-list>
     </div>
     <ion-navbar></ion-navbar>

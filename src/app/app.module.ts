@@ -9,20 +9,13 @@ import { HomePage } from '../pages/home/home';
 import { SaludPage } from '../pages/salud/salud';
 import { BloqueadoresPage } from '../pages/bloqueadores/bloqueadores';
 import { TestimonioPage } from '../pages/testimonio/testimonio';
-import { ConfiguracionesPage } from '../pages/configuraciones/configuraciones';
-import { SoportedeproblemaPage } from '../pages/soportedeproblema/soportedeproblema';
-import { AyudaPage } from '../pages/ayuda/ayuda';
 import { NotificacionesPage } from '../pages/notificaciones/notificaciones';
-import { MitosPage } from '../pages/mitos/mitos';
-// import { BuscadorPage } from '../pages/buscador/buscador';
-
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { PreguntasService} from '../shared/preguntas.service';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { ClimaService } from '../shared/clima.service';
-import { AgmCoreModule } from '@agm/core';
 import { LoginService } from '../shared/login.service';
 
 import { config} from '../firebaseConfig';
@@ -39,11 +32,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     SaludPage,
     BloqueadoresPage,
     TestimonioPage,
-    ConfiguracionesPage,
-    SoportedeproblemaPage,
-    AyudaPage,
-    NotificacionesPage,
-    MitosPage
+    NotificacionesPage
+
 
   ],
   imports: [
@@ -52,10 +42,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
     HttpClientModule,
-    HttpClientJsonpModule,
-    AgmCoreModule.forRoot({
-       apiKey: "AIzaSyCNmgXY1Nzolo6EjqBtw1zdbl5odhO3MNM"
-     })
+    HttpClientJsonpModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -65,11 +53,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     SaludPage,
     BloqueadoresPage,
     TestimonioPage,
-    ConfiguracionesPage,
-    SoportedeproblemaPage,
-    AyudaPage,
-    NotificacionesPage,
-    MitosPage
+    NotificacionesPage
 
 
   ],
@@ -85,7 +69,6 @@ import { Geolocation } from '@ionic-native/geolocation';
     ClimaService
 
   ]
-
 
 })
 export class AppModule {}

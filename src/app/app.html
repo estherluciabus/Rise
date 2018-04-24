@@ -6,16 +6,14 @@
       <div class="logosline">
         <img src="assets/img/uno.png" />
       </div>
-      <p class="slide">En SUNRISE alimentaras <br/>tu cultura preventiva sobre<br/>el cancer de piel<br/> ¡Y mucho mas! porque la SALUD ES LO PRIMERO</p>
-      <button ion-button style="background-color:#2ec95c" (click)="logins()">
-        <ion-icon name="logo-google"> Entrar con tu Gmail</ion-icon>
-      </button>
+      <p class="slide" style="color: #795548">En SUNRISE alimentaras <br/>tu cultura preventiva sobre<br/>el cáncer de piel<br/> ¡Y mucho mas! porque la SALUD ES LO PRIMERO</p>
+
 
     </ion-slide>
     <ion-slide class="MiniFormulario">
-        <h2 >	"Una mancha que cambia, puede cambiar tu vida"</h2>
-        <p>Solo queremos conocerte más <br/> tu informacion esta protegida.</p>
-          <ion-card-content class="test-container" style="background-color:#e2afaf00">
+        <h2 >"Una mancha que cambia, puede cambiar tu vida"</h2>
+        <p style="color: #795548">Solo queremos conocerte más <br/> tu información esta protegida.</p>
+          <ion-card-content class="test-container" style="background-color:#3a792d26">
             <ion-list>
               <ion-item class="subtest" *ngFor="let pregunta of preguntas">
               {{pregunta.pregunta}}
@@ -35,23 +33,25 @@
       </ion-slide>
 
     <ion-slide>
-        <h2 class="slide-title">SABIAS QUE</h2>
-        <br/>
-        <ion-item  style="background-color:#5d636724" >
-            <ion-thumbnail item-start>
-              <img src="assets/img/cara.png">
-            </ion-thumbnail>
-            <h2>Antes de los 21 años recibes<br/> entre 50% y 80% de radiacion</h2>
-            <h2>En la infancia el sol daña <br/>TRES VECES MAS QUE EN LA ADULTEZ</h2>
-          </ion-item>
-        <button class="frase" ion-button clear color="primary">Nuestra piel tiene memoria</button>
-        <div><img scr="assets/img/gif5.gif"/></div>
-        <br/>
-        <br/>
-          <button class="Entrar"ion-button large clear icon-end color="primary" (click)="inicio()">
+        <h2 class="slide-title">SABíAS QUE:</h2>
+        <!-- <ion-item style="background-color:#5d636724" >
+            <h2><br/>Antes de los 21 años recibes entre <br/>50% y 80% de radiacion</h2>
+            <h2><br/>En la infancia el sol dañaTRES VECES<br/>MAS QUE EN LA ADULTEZ</h2> -->
+
+        <div>
+          <p style="color: #795548"><br/>Antes de los 21 años recibes <br/>entre 50% y 80% de radiación.</p>
+          <p style="color: #795548">En la infancia el sol daña TRES <br/>VECES MÁS QUE EN LA ADULTEZ.<br/>Nuestra piel tiene memoria</p>
+          </div>
+        <div class="logosline">
+          <img src="assets/img/gif.gif"/>
+        </div>
+        <button ion-button style="background-color:#2ec95c" (click)="login()">
+          <ion-icon name="logo-google"> Entrar con tu Gmail</ion-icon>
+        </button>
+          <!-- <button class="Entrar"ion-button large clear icon-end color="primary" (click)="inicio()">
             Entrar
             <ion-icon name="arrow-forward"></ion-icon>
-         </button>
+         </button> -->
     </ion-slide>
 
 
@@ -62,6 +62,7 @@
   <ion-menu [content]="content">
     <ion-header>
       <ion-title class="titulo">
+        <h2>{{user.displayName}}</h2>
         <h2>SUNRISE</h2>
       </ion-title>
     </ion-header>
@@ -74,22 +75,12 @@
 
         <button class="boton2" ion-item (click)="pushbloqueadores()">
           <ion-icon item-left name="ios-happy"></ion-icon>
-              Bloquead..
+            Información de Bloqueadores
           </button>
         <button class="boton3" ion-item (click)="pushtestimonio()">
             <ion-icon item-left class="testimonio" item-left name="ios-people"></ion-icon>
             Testimonio
          </button>
-        <button class="boton4" ion-item (click)="openPage(ConfiguracionesPage)">
-              <ion-icon item-left name="ios-cog"></ion-icon>
-            Configuraciones
-        </button>
-
-        <button ion-item (click)="pushsoporte()">
-              <ion-icon item-left name="construct"></ion-icon>
-            Soporte de problemas
-        </button>
-
         <button ion-item (click)="logout()">
           <ion-icon item-left ios="ios-log-out" md="md-log-out"></ion-icon>
               Salir
