@@ -23,25 +23,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Geolocation } from '@ionic-native/geolocation';
-// import { LocalNotifications } from '@ionic-native/local-notifications';
-// import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
-// const cloudSettings: CloudSettings = {
-// //   'core': {
-// //     'app_id': 'xxxxxxxxx',
-// //   },
-// //   'push': {
-// //     'sender_id': 'xxxxxxxxxx',
-// //     'pluginConfig': {
-// //       'ios': {
-// //         'badge': true,
-// //         'sound': true
-// //       },
-// //       'android': {
-// //         'iconColor': '#343434'
-// //       }
-// //     }
-// //   }
-// // };
 
 @NgModule({
   declarations: [
